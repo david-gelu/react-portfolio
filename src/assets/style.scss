@@ -101,11 +101,11 @@ p {
 }
 
 .modal-60w {
-  min-width: 60vw;
-  max-width: 60vw;
+  min-width: 65vw;
+  max-width: 65vw;
 }
 .modal-dialog {
-  margin: auto;
+  margin: auto !important;
 }
 /****** navbar ********/
 .navbar {

@@ -82,6 +82,11 @@ export const dataHtmlCssProjects = [
 export const itSchoolStudy = [
   {
     study: 'HTML 5',
+    certificate: 'Front-end Web Design',
+    link: '"http://site.anc.edu.ro/',
+    date: '(Date: July 2019 - December 2019)',
+    imgBig: 'img/it-big.jpg',
+    imgSmall: 'img/it-mic.jpg'
   },
   {
     study: 'CSS 3',
