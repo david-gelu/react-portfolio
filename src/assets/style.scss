@@ -1,4 +1,13 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:500|Source+Sans+Pro:400,600&display=swap");
+/*****************************************/
+
+$primary-color: #ffffff;
+$second-color: #fafafa;
+$third-color: #ffffff;
+$text-color: #242424;
+$link-color: #3c455c;
+
+/*****************************************/
 /* reset*/
 * {
   margin: 0;
@@ -45,25 +54,17 @@ select:focus {
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
-  background: var(--third-color);
+  background: $third-color;
   height: 100vh;
 }
 img {
   display: block;
   max-width: 100%;
-  box-shadow: 0px 0px 5px var(--link-color);
+  box-shadow: 0px 0px 5px $link-color;
 }
-/*****************************************/
-:root {
-  --primary-color: #ffffff;
-  --second-color: #fafafa;
-  --third-color: #ffffff;
-  --text-color: #242424;
-  --link-color: #3c455c;
-}
-/*****************************************/
+
 a {
-  color: var(--link-color);
+  color: $link-color;
 }
 h1 {
   font-size: 32px;
@@ -98,55 +99,45 @@ p {
   font-weight: 400;
   font-family: "Source Sans Pro", sans-serif;
 }
+
+.modal-60w {
+  min-width: 60vw;
+  max-width: 60vw;
+}
+.modal-dialog {
+  margin: auto;
+}
 /****** navbar ********/
-header .navbar {
+.navbar {
   background: rgba(255, 255, 255, 0.95);
   width: 100%;
   box-shadow: 0 3px 7px rgba(0, 0, 0, 0.25);
 }
-.navbar-right {
-  width: 100%;
-}
-@media (min-width: 768px) {
-  .navbar-right {
-    display: flex;
-  }
-  .navbar-right > li {
-    flex: 1;
-    text-align: center;
-  }
-}
+
 .navbar li {
-  color: var(--link-color);
-  font-size: 1.11rem;
+  color: $link-color;
+  font-size: 1.11em;
   font-weight: 400;
-}
-.navbar li a {
+
   font-family: "Playfair Display", serif;
   transition: color 0.3s;
 }
-.container-fluid > .navbar-collapse,
-.container-fluid > .navbar-header,
-.container > .navbar-collapse,
-.container > .navbar-header {
-  margin-right: 0px;
-  margin-left: 0px;
-  opacity: 1;
-}
-.navbar-toggle {
-  border: 1px solid var(--link-color);
+
+.navbar-toggler {
+  border: 1px solid $link-color;
 }
 .navbar-toggle .icon-bar {
   display: block;
   width: 22px;
   height: 2px;
   border-radius: 1px;
-  background: var(--link-color);
+  background: $link-color;
 }
-.nav > li > a:focus,
-.nav > li > a:hover {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link:focus,
+.navbar-nav .nav-link:hover {
   text-decoration: none;
-  color: #b37c57;
+  color: #b37c57 !important;
   background-color: unset;
 }
 
@@ -160,58 +151,58 @@ main {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background: url("./img/bg.jpg") center;
+  background: url("../../public/img/bg.jpg") center;
   background-size: cover;
   text-align: center;
   align-items: center;
   padding-top: 40vh;
   overflow: hidden;
-  color: var(--text-color);
-  border-radius: 1.11rem;
+  color: $text-color;
+  border-radius: 1.11em;
+  &-name-div {
+    position: absolute;
+    left: -5em;
+    top: 30vh;
+    width: 100%;
+    text-align: center;
+    padding: 0.5em 1em;
+    font-family: serif;
+    font-weight: 500;
+    font-style: bold;
+    color: #ffffff;
+  }
+
+  &-name-div h1 {
+    font-size: 7vh;
+    font-family: "Source Sans Pro", sans-serif;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+
+  &-name-div h1 span {
+    font-size: 1.5rem;
+    font-family: "Playfair Display", serif;
+  }
+
+  &-name-div h1 .fas,
+  &-name-div h1 .far {
+    color: $link-color;
+  }
+
+  &-last {
+    color: $link-color;
+    font-weight: 900;
+  }
 }
 
-.main-name-div {
-  position: absolute;
-  left: -5rem;
-  top: 30vh;
-  width: 100%;
-  text-align: center;
-  padding: 0.5rem 1rem;
-  font-family: serif;
-  font-weight: 500;
-  font-style: bold;
-  color: #ffffff;
-}
-
-.main-name-div h1 {
-  font-size: 7vh;
-  font-family: "Source Sans Pro", sans-serif;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-}
-
-.main-name-div h1 span {
-  font-size: 1.5em;
-  font-family: "Playfair Display", serif;
-}
-
-.main-name-div h1 .fas,
-.main-name-div h1 .far {
-  color: var(--link-color);
-}
-
-.main-last {
-  color: var(--link-color);
-  font-weight: 900;
-}
 /***** about me ******/
 
 .bio {
-  padding-top: 3rem;
-  margin: 1rem 0;
+  padding-top: 3em;
+  margin: 1em 0;
 }
 .bio .about-me {
   text-align: center;
-  padding-bottom: 2rem;
+  padding-bottom: 2em;
   font-family: serif;
   /* margin-top:-20vw; */
 }
@@ -222,55 +213,55 @@ main {
   margin-left: 10vw;
   margin-bottom: 60px;
   padding-right: 10vw;
-  color: var(--text-color);
-  background: var(--second-color);
-  border-radius: 1.11rem;
+  color: $text-color;
+  background: $second-color;
+  border-radius: 1.11em;
 }
 
 .professional {
-  margin: 1rem auto;
-  color: var(--text-color);
+  margin: 1em auto;
+  color: $text-color;
   width: 70vw;
-  padding: 0.5rem 0;
+  padding-block: 0.5em;
   align-items: left;
   text-align: left;
-  background: var(--second-color);
-  border-radius: 1.11rem;
+  background: $second-color;
+  border-radius: 1.11em;
 }
 .skills li {
   display: flex;
   flex-direction: row;
-  font-size: 1.1rem;
-  margin-top: 1rem;
+  font-size: 1.1em;
+  margin-top: 1em;
   font-weight: 600;
-  color: var(--link-color);
+  color: $link-color;
 }
 .skills .fa,
 .skills .fab {
-  padding-left: 0.5rem;
-  color: var(--link-color);
-  font-size: 2.3rem;
+  padding-left: 0.5em;
+  color: $link-color;
+  font-size: 2.3em;
 }
 .skills span {
-  width: 2.1rem;
-  height: 1.5rem;
+  width: 2.1em;
+  height: 1.5em;
   text-align: center;
   justify-content: center;
   align-items: center;
-  color: var(--second-color);
-  background: var(--link-color);
-  border: 0.1rem solid var(--text-color);
-  margin-left: 0.1rem;
-  margin-top: 0.4rem;
+  color: $second-color;
+  background: $link-color;
+  border: 0.1em solid $text-color;
+  margin-left: 0.1em;
+  margin-top: 0.4em;
 }
 .skills .no-color {
   background: transparent;
-  color: var(--text-color);
+  color: $text-color;
 }
 .skills .max {
-  border: 0.1rem solid var(--text-color);
-  color: var(--second-color);
-  background: var(--text-color);
+  border: 0.1em solid $text-color;
+  color: $second-color;
+  background: $text-color;
 }
 
 .left {
@@ -279,119 +270,123 @@ main {
 }
 
 .study {
-  color: var(--text-color);
+  color: $text-color;
   width: 70vw;
-  padding: 60px 0;
+  padding-block: 60px;
   margin: 0 auto;
   margin-bottom: 60px;
   align-items: left;
   text-align: center;
-  background: var(--second-color);
-  border-radius: 1.11rem;
+  background: $second-color;
+  border-radius: 1.11em;
 }
 .study h1 {
   font-weight: 600;
-  padding: 2rem 0;
-  padding-top: 5.2rem;
+  padding: 2em 0;
+  padding-top: 5.2em;
 }
 .study a {
   font-weight: 700;
-  color: var(--link-color);
+  color: $link-color;
   font-family: serif;
 }
 .study h3 {
-  padding: 2rem 0 1rem 0;
+  padding: 2em 0 1em 0;
   font-weight: 600;
 }
 .study h5 {
   position: relative;
   font-weight: 600;
-  padding: 0 3rem;
+  padding: 0 3em;
 }
 .study h5::before {
   content: "";
   position: absolute;
   top: 5px;
-  padding-left: 0.8rem;
-  margin-left: -1.25rem;
-  width: 1rem;
-  height: 1rem;
-  border-width: 0.5rem;
+  padding-left: 0.8em;
+  margin-left: -1.25em;
+  width: 1em;
+  height: 1em;
+  border-width: 0.5em;
   border-style: solid;
-  border-left-color: var(--link-color);
+  border-left-color: $link-color;
   border-top-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
 }
 .study h6 {
   position: relative;
-  padding: 0 3rem;
-}
-.study h6::before {
-  content: "";
-  position: absolute;
-  top: 0rem;
-  padding-left: 0.8rem;
-  margin-left: -1.25rem;
-  width: 0.5rem;
-  height: 0.5rem;
-  border-width: 0.35rem;
-  border-style: solid;
-  border-left-color: var(--link-color);
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
+  padding: 0 3em;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0em;
+    padding-left: 0.8em;
+    margin-left: -1.25em;
+    width: 0.5em;
+    height: 0.5rem;
+    border-width: 0.35em;
+    border-style: solid;
+    border-left-color: $link-color;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
 }
 .images {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-gap: 2rem;
-  margin: 2rem 11rem;
+  gap: 2em;
+  margin: 2em 11em;
 }
 .image {
   width: 90%;
   margin-left: 3vw;
+  transition: transform 0.25s linear;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
 .jobs {
-  color: var(--text-color);
+  color: $text-color;
   width: 70vw;
   padding-top: 60px;
   padding-bottom: 60px;
   margin: 0 auto 60px;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.5em;
   text-align: center;
-  background: var(--second-color);
-  border-radius: 1.11rem;
+  background: $second-color;
+  border-radius: 1.11em;
 }
 .jobs h1 {
   font-weight: 600;
 }
 .jobs h4 {
-  color: var(--text-color);
+  color: $text-color;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  padding: 0.5rem 0;
+  padding: 0.5em 0;
 }
 .jobs h5 {
   position: relative;
   font-weight: 600;
-  margin-left: 3rem;
+  margin-left: 3em;
 }
 
 .jobs h5::before {
   content: "";
   position: absolute;
-  top: 0rem;
-  padding-left: 0.8rem;
-  margin-left: -1.25rem;
-  width: 1rem;
-  height: 1rem;
-  border-width: 0.5rem;
+  top: 0em;
+  padding-left: 0.8em;
+  margin-left: -1.25em;
+  width: 1em;
+  height: 1em;
+  border-width: 0.5em;
   border-style: solid;
-  border-left-color: var(--link-color);
+  border-left-color: $link-color;
   border-top-color: transparent;
   border-right-color: transparent;
   border-bottom-color: transparent;
@@ -403,18 +398,18 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  padding-bottom: 2rem;
+  padding-bottom: 2em;
   padding-top: 60px;
-  margin-top: 1.5rem;
-  background: var(--second-color);
-  border-radius: 1.11rem;
+  margin-top: 1.5em;
+  background: $second-color;
+  border-radius: 1.11em;
 }
 .projects-title {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: var(--text-color);
+  color: $text-color;
   font-weight: 600;
   padding-bottom: 2rem;
 }
@@ -422,8 +417,8 @@ main {
   width: 40vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2rem;
-  padding: 0 0.5rem;
+  gap: 2em;
+  padding: 0 0.5em;
 }
 
 .projects__item {
@@ -431,12 +426,12 @@ main {
   overflow: hidden;
   cursor: pointer;
   border-radius: 5%;
-  box-shadow: 0px 0px 5px var(--link-color);
+  box-shadow: 0px 0px 5px $link-color;
 }
 
 .projects__item img {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.5em;
 }
 
 .projects__item::after {
@@ -470,8 +465,8 @@ main {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  padding: 0.5rem 1rem;
-  color: var(--text-color);
+  padding: 0.5em 1em;
+  color: $text-color;
 }
 
 .projects__btn {
@@ -495,9 +490,9 @@ main {
 /***** contact****/
 .contact {
   text-align: center;
-  background: var(--second-color);
-  color: var(--text-color);
-  border-radius: 1.11rem;
+  background: $second-color;
+  color: $text-color;
+  border-radius: 1.11em;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -510,23 +505,23 @@ main {
   text-align: center;
 }
 .contact-form {
-  color: var(--text-color);
-  padding: 0.01rem 3rem;
+  color: $text-color;
+  padding: 0.01em 3em;
   text-align: start;
 }
 .contact-form a {
-  color: var(--link-color);
+  color: $link-color;
 }
 
 .contact-info {
-  color: var(--text-color);
+  color: $text-color;
   font-weight: 600;
-  padding: 0.01rem 0.5rem;
+  padding: 0.01em 0.5em;
 }
 
 .fa-facebook-square,
 .fa-linkedin-square {
-  font-size: 2rem;
+  font-size: 2em;
 }
 .fa-facebook-square:hover {
   color: #4267b2;
@@ -543,8 +538,8 @@ main {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
-  margin: 2rem 6rem;
+  grid-gap: 2em;
+  margin: 2em 6em;
 }
 .projects {
   display: flex;
@@ -571,14 +566,14 @@ main {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
-    margin: 2rem 5rem;
+    gap: 2em;
+    margin: 2em 5em;
   }
   .study h6 {
-    padding: 0 3rem;
+    padding: 0 3em;
   }
   .study h5 {
-    padding: 0 3rem;
+    padding: 0 3em;
   }
   .contact {
     padding-top: 20vh;
@@ -688,7 +683,7 @@ main {
   }
   .projects__btns {
     padding: 0.1rem;
-    color: var(--text-color);
+    color: $text-color;
   }
   .projects__btn {
     padding: 0.1rem;

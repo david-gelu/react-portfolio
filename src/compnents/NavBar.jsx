@@ -1,30 +1,27 @@
+import { useState } from 'react'
+import { Container, Nav, Navbar } from "react-bootstrap"
+import { linkData } from '../data'
+
 const NavBar = () => {
+  const [activeId, setActiveId] = useState('')
+  const setId = () => setActiveId(l.id)
   return (
-    <header>
-      <nav class="navbar navbar-fixed-top ">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-              <li class="active"><a href="#main">Home</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#about">About Me</a></li>
-              <li><a href="#jobs">Work</a></li>
-              <li><a href="#study">Study</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <Navbar bg="light" expand="lg" fixed='top'>
+      <Container>
+        <Navbar.Brand href="#home">David Gelu</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end flex-grow-0">
+          <Nav className="me-auto">
+            {linkData.map((l) =>
+              <Nav.Link key={l.id} onClick={setId}
+                className={`${activeId === l.id ? 'active' : ''}`} href={`#${l.id}`}>
+                {l.link}
+              </Nav.Link>
+            )}
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   )
 }
 
