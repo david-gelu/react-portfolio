@@ -7,7 +7,7 @@ const WorkPage = () => {
       <div className="projects-image">
         <h3 className="projects-title ">Junior web-developer Everseen</h3>
         <div className="left">
-          {workMap[0].map(r => <h5>{r.responsability}</h5>)}
+          {workMap[0].map((r, idx) => <h5 key={idx}>{r.responsability}</h5>)}
         </div>
       </div>
       <h4 className="left">My sales experience from 2009 until today has taught me about:</h4>
