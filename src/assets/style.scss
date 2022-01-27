@@ -72,21 +72,22 @@ h1 {
 }
 h2 {
   font-family: "Playfair Display", serif;
-  font-size: 60px;
+  font-size: clamp(2rem, 4vh + 1rem, 4rem);
   line-height: 1.3;
-  margin-bottom: 60px;
+  color: #242424;
+  font-weight: 600;
 }
 h3 {
   font-family: "Playfair Display", serif;
-  font-size: 28px;
+  font-size: clamp(1.7rem, 3vh + 0.7rem, 3.7rem);
   line-height: 1.3;
   color: #2b2922;
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
 }
 h4 {
   font-size: 20px;
   font-weight: 400;
-  margin-bottom: 40px;
+  margin-bottom: 1rem;
 }
 h5 {
   font-size: 18px;
@@ -106,6 +107,12 @@ p {
 }
 .modal-dialog {
   margin: auto !important;
+}
+
+hr {
+  width: 80%;
+  margin-inline: auto;
+  border: 0.1em solid rgba(255, 255, 255, 0.95);
 }
 /****** navbar ********/
 .navbar {
@@ -145,7 +152,8 @@ p {
 
 main {
   width: 70vw;
-  margin: 0 auto;
+  margin: 1em auto;
+  padding-block: 2em;
 }
 .main {
   position: relative;
@@ -196,22 +204,15 @@ main {
 
 /***** about me ******/
 
-.bio {
-  padding-top: 3em;
-  margin: 1em 0;
-}
-.bio .about-me {
+.about-me {
   text-align: center;
-  padding-bottom: 2em;
   font-family: serif;
-  /* margin-top:-20vw; */
 }
 
 .bio-desc {
   margin: 0 auto;
   text-align: left;
   margin-left: 10vw;
-  margin-bottom: 60px;
   padding-right: 10vw;
   color: $text-color;
   background: $second-color;
@@ -219,10 +220,8 @@ main {
 }
 
 .professional {
-  margin: 1em auto;
   color: $text-color;
-  width: 70vw;
-  padding-block: 0.5em;
+  padding-block: 2em;
   align-items: left;
   text-align: left;
   background: $second-color;
@@ -231,16 +230,16 @@ main {
 .skills li {
   display: flex;
   flex-direction: row;
-  font-size: 1.1em;
-  margin-top: 1em;
+  font-size: 1.1rem;
   font-weight: 600;
   color: $link-color;
 }
 .skills .fa,
 .skills .fab {
   padding-left: 0.5em;
+  text-align: center;
   color: $link-color;
-  font-size: 2.3em;
+  font-size: clamp(1.3rem, 2.3rem, 2.5rem);
 }
 .skills span {
   width: 2.1em;
@@ -271,28 +270,21 @@ main {
 
 .study {
   color: $text-color;
-  width: 70vw;
-  padding-block: 60px;
+  padding-block: 2em;
   margin: 0 auto;
-  margin-bottom: 60px;
-  align-items: left;
+  margin-top: 1em;
   text-align: center;
   background: $second-color;
   border-radius: 1.11em;
 }
-.study h1 {
-  font-weight: 600;
-  padding: 2em 0;
-  padding-top: 5.2em;
-}
+
 .study a {
   font-weight: 700;
   color: $link-color;
   font-family: serif;
 }
 .study h3 {
-  padding: 2em 0 1em 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 .study h5 {
   position: relative;
@@ -338,7 +330,7 @@ main {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 2em;
-  margin: 2em 11em;
+  margin: 0 11em;
 }
 .image {
   width: 90%;
@@ -351,16 +343,15 @@ main {
 
 .jobs {
   color: $text-color;
-  width: 70vw;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin: 0 auto 60px;
-  margin-bottom: 0.5em;
+  padding-block: 2em;
+  margin: 0 auto;
+  margin-top: 1em;
   text-align: center;
   background: $second-color;
   border-radius: 1.11em;
 }
-.jobs h1 {
+.jobs h2 {
+  color: #242424;
   font-weight: 600;
 }
 .jobs h4 {
@@ -411,7 +402,6 @@ main {
   text-align: center;
   color: $text-color;
   font-weight: 600;
-  padding-bottom: 2rem;
 }
 .projects__items {
   width: 40vw;
@@ -503,6 +493,8 @@ main {
 .contact h2 {
   margin-inline: auto;
   text-align: center;
+  color: #242424;
+  font-weight: 600;
 }
 .contact-form {
   color: $text-color;
@@ -567,16 +559,13 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
-    margin: 2em 5em;
+    margin: 0 5em;
   }
   .study h6 {
     padding: 0 3em;
   }
   .study h5 {
     padding: 0 3em;
-  }
-  .contact {
-    padding-top: 20vh;
   }
 }
 @media screen and (max-width: 767px) {
@@ -608,13 +597,7 @@ main {
   .main {
     height: 85vh;
   }
-  .main,
-  .about,
-  .professional,
-  .study,
-  .jobs,
-  .projects,
-  .contact {
+  main {
     width: 95vw;
     margin: 0.5rem auto;
   }
@@ -623,9 +606,6 @@ main {
     top: 20vh;
     text-align: left;
     padding: 0.5rem 1rem;
-  }
-  .professional {
-    padding: 0 1rem;
   }
   .bio-desc {
     margin-left: 1vw;
@@ -638,13 +618,12 @@ main {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1rem;
-    margin: 2rem 0.2rem;
+    margin: 0 0.2rem;
   }
   .left {
     margin-left: 1vw;
   }
   .study {
-    padding: 0 1rem;
     text-align: center;
   }
   .study h5 {
@@ -675,7 +654,6 @@ main {
     border-width: 0.4rem;
   }
   .jobs {
-    padding: 0.5rem 1rem;
     text-align: center;
   }
   .projects__items {
@@ -687,9 +665,6 @@ main {
   }
   .projects__btn {
     padding: 0.1rem;
-  }
-  .contact {
-    padding-top: 10vh;
   }
   .fa,
   .fa a,

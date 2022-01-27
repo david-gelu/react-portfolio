@@ -4,18 +4,18 @@ const ContactPage = () => {
       <h2>
         Contact me..
       </h2>
-      <div className="left">
+      <div className="left mt-5">
         <h4 className="contact-form">
-          <i className="fa fa-envelope" aria-hidden="true"> Email:<a className="contact-info"
+          <i className="fa fa-envelope" aria-hidden="true"></i> Email:<a className="contact-info"
             href="mailto:david.gelu90@gmail.com">
-            david.gelu90@gmail.com</a></i>
+            david.gelu90@gmail.com</a>
         </h4>
         <h4 className="contact-form">
-          <i className="fa fa-mobile" aria-hidden="true"> Phone : <a className="contact-info" href="tel:+4 0744 598 995">+4 0744
-            598 995</a></i>
+          <i className="fa fa-mobile" aria-hidden="true"></i> Phone : <a className="contact-info" href="tel:+4 0744 598 995">+4 0744
+            598 995</a>
         </h4>
         <h4 className="contact-form">
-          <i className="fa fa-map-marker" aria-hidden="true"> Adress:</i> <span className="contact-info">Brasov</span>
+          <i className="fa fa-map-marker" aria-hidden="true"></i> Adress: <span className="contact-info">Brasov</span>
         </h4>
         <h4 className="contact-form">
           <a href="https://www.facebook.com/david.gf27" target="_blank">
