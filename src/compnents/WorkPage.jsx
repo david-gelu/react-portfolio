@@ -1,3 +1,6 @@
+import { work } from '../data'
+const workMap = work.map(w => w.everseen)
+console.log(workMap[0].map(r => r))
 const WorkPage = () => {
   return (
     <div className="jobs" id="jobs">
@@ -5,13 +8,7 @@ const WorkPage = () => {
       <div className="projects-image">
         <h3 className="projects-title ">Junior web-developer Everseen</h3>
         <div className="left">
-          <h5> Working with UX/UI designer to create responsive pages. </h5>
-          <h5> Using React and TypeScript to create new components or to add new functionalities.</h5>
-          <h5> UX/UI design improvements.</h5>
-          <h5> Stylings using Scss</h5>
-          <h5> Api call to get data from database</h5>
-          <h5> Use Jira/ Confluence</h5>
-          <h5> Use Git</h5>
+          {workMap[0].map(r => <h5>{r.responsability}</h5>)}
         </div>
       </div>
       <h4 className="left">My sales experience from 2009 until today has taught me about:</h4>

@@ -214,3 +214,17 @@ export const udemyStudy = [
     imgSmall: 'img/react-mic.jpg'
   }
 ]
+
+export const work = [
+  {
+    everseen: [
+      { responsability: 'Working with UX/UI designer to create responsive pages' },
+      { responsability: 'Using React and TypeScript to create new components or to add new functionalities' },
+      { responsability: 'UX/UI design improvements' },
+      { responsability: 'Stylings using Scss' },
+      { responsability: 'Api call to get data from database' },
+      { responsability: 'Use Jira/ Confluence' },
+      { responsability: 'Use Git' },
+    ]
+  }
+]
