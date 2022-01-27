@@ -100,7 +100,9 @@ p {
   font-weight: 400;
   font-family: "Source Sans Pro", sans-serif;
 }
-
+ul {
+  padding-left: 0;
+}
 .modal-60w {
   min-width: 65vw;
   max-width: 65vw;
@@ -113,6 +115,22 @@ hr {
   width: 80%;
   margin-inline: auto;
   border: 0.1em solid rgba(255, 255, 255, 0.95);
+}
+
+@mixin arrow() {
+  content: "";
+  position: absolute;
+  top: 5px;
+  padding-left: 0.8em;
+  margin-left: -1.25em;
+  width: 1em;
+  height: 1em;
+  border-width: 0.5em;
+  border-style: solid;
+  border-left-color: $link-color;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
 }
 /****** navbar ********/
 .navbar {
@@ -230,7 +248,7 @@ main {
 .professional {
   color: $text-color;
   padding-block: 2em;
-  align-items: left;
+  align-items: flex-start;
   text-align: left;
   background: $second-color;
   border-radius: 1.11em;
@@ -300,39 +318,9 @@ main {
   padding: 0 3em;
 }
 .study h5::before {
-  content: "";
-  position: absolute;
-  top: 5px;
-  padding-left: 0.8em;
-  margin-left: -1.25em;
-  width: 1em;
-  height: 1em;
-  border-width: 0.5em;
-  border-style: solid;
-  border-left-color: $link-color;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
+  @include arrow();
 }
-.study h6 {
-  position: relative;
-  padding: 0 3em;
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0em;
-    padding-left: 0.8em;
-    margin-left: -1.25em;
-    width: 0.5em;
-    height: 0.5rem;
-    border-width: 0.35em;
-    border-style: solid;
-    border-left-color: $link-color;
-    border-top-color: transparent;
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-  }
-}
+
 .images {
   width: 100%;
   display: grid;
@@ -376,19 +364,7 @@ main {
 }
 
 .jobs h5::before {
-  content: "";
-  position: absolute;
-  top: 0em;
-  padding-left: 0.8em;
-  margin-left: -1.25em;
-  width: 1em;
-  height: 1em;
-  border-width: 0.5em;
-  border-style: solid;
-  border-left-color: $link-color;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
+  @include arrow();
 }
 /****** projects *****/
 .projects {
@@ -640,27 +616,7 @@ main {
   .study h5:last-child {
     padding-bottom: 0.7rem;
   }
-  .study h5::before {
-    content: "";
-    position: absolute;
-    top: -0.2rem;
-    bottom: 0;
-  }
-  .study h6 {
-    padding: 0 2.5rem;
-  }
-  .study h6:last-child {
-    padding-bottom: 0.7rem;
-  }
-  .study h6::before {
-    top: -0.1rem;
-    bottom: 0;
-    padding-left: 0.6rem;
-    margin-left: -0.8rem;
-    width: 0.6rem;
-    height: 0.6rem;
-    border-width: 0.4rem;
-  }
+
   .jobs {
     text-align: center;
   }
