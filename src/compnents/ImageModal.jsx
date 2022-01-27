@@ -15,9 +15,6 @@ const ImageModal = ({ show, handleShow, imgSrc }) => {
             />
           </Carousel.Item>)}
         </Carousel>
-        <div className='w-100 d-flex justify-content-end mt-2'>
-          <Button className='ml-auto' size='sm' variant="dark" onClick={handleShow}>Close</Button>
-        </div>
       </Modal.Body>
     </Modal>
   )

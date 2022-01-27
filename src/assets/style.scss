@@ -481,6 +481,9 @@ main {
   font-weight: 600;
 }
 .contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   color: $text-color;
   padding: 0.01em 3em;
   text-align: start;
@@ -606,6 +609,19 @@ main {
   }
   .left {
     margin-left: 1vw;
+  }
+  .skills {
+    & li {
+      font-size: 0.9rem;
+    }
+    & span {
+      width: 2.5em;
+      height: 2em;
+    }
+    & .fa,
+    & .fab {
+      font-size: 1.5rem;
+    }
   }
   .study {
     text-align: center;

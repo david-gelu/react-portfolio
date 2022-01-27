@@ -4,7 +4,7 @@ import { linkData } from '../data'
 
 const NavBar = () => {
   const [activeId, setActiveId] = useState('')
-  const setId = () => setActiveId(l.id)
+  const setId = (id) => setActiveId(id)
   return (
     <Navbar bg="light" expand="lg" fixed='top'>
       <Container>
@@ -13,7 +13,7 @@ const NavBar = () => {
         <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end flex-grow-0">
           <Nav className="me-auto">
             {linkData.map((l) =>
-              <Nav.Link key={l.id} onClick={setId}
+              <Nav.Link key={l.id} onClick={() => setId(l.id)}
                 className={`${activeId === l.id ? 'active' : ''}`} href={`#${l.id}`}>
                 {l.link}
               </Nav.Link>
