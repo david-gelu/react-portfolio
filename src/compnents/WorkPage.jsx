@@ -1,6 +1,5 @@
 import { work } from '../data'
 const workMap = work.map(w => w.everseen)
-console.log(workMap[0].map(r => r))
 const WorkPage = () => {
   return (
     <div className="jobs" id="jobs">
