@@ -68,7 +68,7 @@ a {
 }
 h1 {
   font-size: 32px;
-  line-height: 1.05;
+  line-height: 1;
 }
 h2 {
   font-family: "Playfair Display", serif;
@@ -178,6 +178,14 @@ main {
     font-weight: 500;
     font-style: bold;
     color: #ffffff;
+    & h3 {
+      font-size: 1.85rem;
+      font-family: serif;
+      font-weight: 500;
+      font-style: bold;
+      color: #ffffff;
+      line-height: 1;
+    }
   }
 
   &-name-div h1 {
