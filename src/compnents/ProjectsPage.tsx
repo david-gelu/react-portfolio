@@ -1,5 +1,7 @@
+import React from "react"
+// @ts-ignore
 import { dataJsProjects, dataHtmlCssProjects } from '../data'
-
+import { DataProjects } from "src/types"
 const ProjectsPage = () => {
   return (
     <main className="projects" id="projects">
@@ -10,7 +12,7 @@ const ProjectsPage = () => {
         <h3 className="projects-title ">JavaScript / React Projects</h3>
       </div>
       <div className="projects__items">
-        {dataJsProjects.map(d => <div key={d.projectLink} className="projects__item">
+        {dataJsProjects.map((d: DataProjects) => <div key={d.projectLink} className="projects__item">
           <img src={d.imgUrl} alt={d.imgDesc} />
           <div className="projects__btns">
             <a href={d.projectLink} target="_blank" className="projects__btn">
@@ -27,7 +29,7 @@ const ProjectsPage = () => {
         <h3 className="projects-title ">HTML / CSS / Bootstrap Projects</h3>
       </div>
       <div className="projects__items">
-        {dataHtmlCssProjects.map(d => <div key={d.projectLink} className="projects__item">
+        {dataHtmlCssProjects.map((d: DataProjects) => <div key={d.projectLink} className="projects__item">
           <img src={d.imgUrl} alt={d.imgDesc} />
           <div className="projects__btns">
             <a href={d.projectLink} target="_blank" className="projects__btn">

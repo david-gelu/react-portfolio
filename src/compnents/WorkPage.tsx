@@ -1,5 +1,8 @@
+import React from "react"
+// @ts-ignore
 import { work } from '../data'
-const workMap = work.map(w => w.everseen)
+import { Work, Responsability } from "src/types"
+const workMap = work.map((w: Work) => w.everseen)
 const WorkPage = () => {
   return (
     <div className="jobs" id="jobs">
@@ -7,7 +10,7 @@ const WorkPage = () => {
       <div className="projects-image">
         <h3 className="projects-title ">Junior web-developer Everseen</h3>
         <div className="left">
-          {workMap[0].map((r, idx) => <h5 key={idx}>{r.responsability}</h5>)}
+          {workMap[0].map((r: Responsability, idx: string) => <h5 key={idx}>{r.responsability}</h5>)}
         </div>
       </div>
       <h4 className="left">My sales experience from 2009 until today has taught me about:</h4>

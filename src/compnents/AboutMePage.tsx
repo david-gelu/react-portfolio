@@ -1,3 +1,4 @@
+import React from "react"
 import StudyPage from "./StudyPage"
 import WorkPage from "./WorkPage"
 
