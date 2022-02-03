@@ -1,5 +1,5 @@
 import React from "react"
-// @ts-ignore
+
 import { work } from '../data'
 import { Work, Responsability } from "src/types"
 const workMap = work.map((w: Work) => w.everseen)

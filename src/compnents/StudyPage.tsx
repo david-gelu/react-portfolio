@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// @ts-ignore
 import { itSchoolStudy, freeCodeCampStudy, udemyStudy } from '../data'
 import ImageModal from './ImageModal'
 import { Studies } from 'src/types'

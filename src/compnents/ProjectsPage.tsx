@@ -1,5 +1,4 @@
 import React from "react"
-// @ts-ignore
 import { dataJsProjects, dataHtmlCssProjects } from '../data'
 import { DataProjects } from "src/types"
 const ProjectsPage = () => {

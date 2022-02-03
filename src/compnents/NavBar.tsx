@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Container, Nav, Navbar } from "react-bootstrap"
-// @ts-ignore
+
 import { linkData } from '../data.js'
 import { LinkData } from 'src/types.js'
 const NavBar = () => {
