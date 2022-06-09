@@ -7,14 +7,13 @@ const AboutMePage = () => {
     <main className="about" id="about">
       <div className="professional ">
         <div className="bio">
-          <h2 className="about-me ">About me</h2>
-          <h4 className="bio-desc "><span>I consider myself a modest and hard-working person who is constantly setting
-            realistic objectives. Once I define the criteria I take the necessary steps towards accomplishing the
-            desired results.
-            My professional growth is based on being an autodidact. When I get a specific task I can resolve it in a
-            personal, result-oriented way.
-            I believe in integrity and I strive to improve myself and my skills to help me become a better
-            professional.</span> </h4>
+          <h2 className="about-me">About me</h2>
+          <h4 className="bio-desc ">
+            <span>Task-driven, hard worker and very passionate about all the new things I can discover.
+              Having a high desire to contribute and work among people from whom I can learn, helps me to gain more skills,
+              improve and build the foundation of my career.
+            </span>
+          </h4>
         </div>
         <div className="professional-title left">
           <h3>Professional Skills</h3>

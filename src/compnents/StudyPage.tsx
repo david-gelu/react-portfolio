@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { itSchoolStudy, freeCodeCampStudy, udemyStudy } from '../data'
 import ImageModal from './ImageModal'
 import { Studies } from 'src/types'
+
 const StudyPage = () => {
 
   const [show, setShow] = useState(false)
@@ -10,11 +11,11 @@ const StudyPage = () => {
 
   return (
     <div className="study" id="study">
-      <h2 className="">Study</h2>
+      <h2 className="study-title">Study</h2>
       <h3 className="projects-title "><a href="http://itschool.ro" target="_blank">ItSchool </a> - hands on course</h3>
       <div className="images">
-        {itSchoolStudy.map((img: Studies) =>
-          <div key={img.imgSmall}>
+        {itSchoolStudy.map((img: Studies, idx: number) =>
+          <div key={`${img.imgSmall}-${idx}`}>
             <img className="image" src={img.imgSmall} onClick={() => { setShow(true); setImage(img.imgBig) }} />
             {show && img.imgBig === image &&
               <ImageModal show={show} handleShow={handleShow} imgSrc={itSchoolStudy} />}
@@ -28,10 +29,10 @@ const StudyPage = () => {
       </div>
       <hr />
       <h3 className="projects-title ">
-        <a href="http://freecodecamp.org" target="_blank">Freecodecamp</a> - online course</h3>
+        <a href="http://freecodecamp.org" target="_blank"> Freecodecamp </a> - online course</h3>
       {freeCodeCampStudy.map((c: Studies) => c.certificate &&
         <h4 key={c.link} className="left">{c.certificate}
-          <a href={c.link} target="_blank">Certification </a>
+          <a href={c.link} target="_blank"> Certification </a>
           {c.date}
         </h4>
       )}
@@ -51,7 +52,7 @@ const StudyPage = () => {
       <h3 className="projects-title "><a href="http://udemy.com" target="_blank">Udemy</a> - online course</h3>
       {udemyStudy.map((c: Studies) => c.certificate &&
         <h4 key={c.link} className="left">{c.certificate}
-          <a href={c.link} target="_blank">Certification </a>
+          <a href={c.link} target="_blank"> Certification </a>
           {c.date}
         </h4>)}
       <div className="images">

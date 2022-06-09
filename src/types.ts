@@ -19,10 +19,10 @@ export type Studies = {
   imgSmall?: string,
 }
 export type Responsability = {
-  responsability: string
+  responsability?: string
 }
 export type Work = {
-  everseen?: {
-    responsability: Responsability
+  everseen: {
+    responsability: string
   }
 }

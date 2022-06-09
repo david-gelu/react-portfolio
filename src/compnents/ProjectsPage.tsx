@@ -5,10 +5,11 @@ const ProjectsPage = () => {
   return (
     <main className="projects" id="projects">
       <div className="projects-image">
-        <h2 className="projects-title ">My Projects</h2>
+        <h2 className="projects-title">Projects</h2>
+        <h4 className="projects-title">Projects</h4>
       </div>
       <div className="projects-image">
-        <h3 className="projects-title ">JavaScript / React Projects</h3>
+        <h3 className="projects-title">JavaScript / React</h3>
       </div>
       <div className="projects__items">
         {dataJsProjects.map((d: DataProjects) => <div key={d.projectLink} className="projects__item">
@@ -25,7 +26,7 @@ const ProjectsPage = () => {
         )}
       </div>
       <div className="projects-image" style={{ marginTop: '1.5em' }}>
-        <h3 className="projects-title ">HTML / CSS / Bootstrap Projects</h3>
+        <h3 className="projects-title ">HTML / CSS / Bootstrap</h3>
       </div>
       <div className="projects__items">
         {dataHtmlCssProjects.map((d: DataProjects) => <div key={d.projectLink} className="projects__item">

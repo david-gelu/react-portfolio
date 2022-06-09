@@ -1,11 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:500|Source+Sans+Pro:400,600&display=swap");
 /*****************************************/
 
-$primary-color: #ffffff;
-$second-color: #fafafa;
-$third-color: #ffffff;
-$text-color: #242424;
-$link-color: #3c455c;
+[data-theme="light"] {
+  --primary-color: #ffffff;
+  --second-color: #fafafa;
+  --text-color: #242424;
+  --link-color: #3c455c;
+
+  --bg-img: url("../../public/img/light-bg-crop.jpg");
+}
+[data-theme="dark"] {
+  --primary-color: #222;
+  --second-color: #2a2a2a;
+  --text-color: #fafafa;
+  --link-color: #ffffff;
+
+  --bg-img: url("../../public/img/dark-bg-crop.jpg");
+}
+
+$primary-color: var(--primary-color);
+$second-color: var(--second-color);
+$text-color: var(--text-color);
+$link-color: var(--link-color);
+$bg-img: var(--bg-img);
 
 /*****************************************/
 /* reset*/
@@ -54,8 +71,14 @@ select:focus {
 }
 body {
   font-family: "Source Sans Pro", sans-serif;
-  background: $third-color;
+  background: $primary-color;
   height: 100vh;
+  background-image: $bg-img;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 img {
   display: block;
@@ -175,10 +198,8 @@ main {
 }
 .main {
   position: relative;
-  width: 100%;
+  // width: 100%;
   min-height: 100vh;
-  background: url("../../public/img/bg.jpg") center;
-  background-size: cover;
   text-align: center;
   align-items: center;
   padding-top: 40vh;
@@ -231,10 +252,13 @@ main {
 /***** about me ******/
 
 .about-me {
+  color: $text-color;
   text-align: center;
   font-family: serif;
 }
-
+.professional-title h3 {
+  color: $text-color;
+}
 .bio-desc {
   margin: 0 auto;
   text-align: left;
@@ -303,7 +327,9 @@ main {
   background: $second-color;
   border-radius: 1.11em;
 }
-
+.study-title {
+  color: $text-color;
+}
 .study a {
   font-weight: 700;
   color: $link-color;
@@ -336,6 +362,10 @@ main {
     transform: scale(1.05);
   }
 }
+.jobs-title {
+  color: $text-color;
+  font-weight: 600;
+}
 
 .jobs {
   color: $text-color;
@@ -346,10 +376,7 @@ main {
   background: $second-color;
   border-radius: 1.11em;
 }
-.jobs h2 {
-  color: #242424;
-  font-weight: 600;
-}
+
 .jobs h4 {
   color: $text-color;
   display: flex;
@@ -474,10 +501,10 @@ main {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-.contact h2 {
+.contact-title {
   margin-inline: auto;
   text-align: center;
-  color: #242424;
+  color: $text-color;
   font-weight: 600;
 }
 .contact-form {
@@ -487,9 +514,13 @@ main {
   color: $text-color;
   padding: 0.01em 3em;
   text-align: start;
-}
-.contact-form a {
-  color: $link-color;
+  & a {
+    color: $link-color;
+  }
+  & i {
+    min-width: 2rem;
+    color: $text-color;
+  }
 }
 
 .contact-info {

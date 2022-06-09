@@ -98,9 +98,6 @@ export const itSchoolStudy = [
     study: 'JavaScript',
   },
   {
-    study: 'jQuery',
-  },
-  {
     study: 'moment.js',
   }
 ]
@@ -136,9 +133,6 @@ export const freeCodeCampStudy = [
     date: '(Date: February 2020)',
     imgBig: 'img/d3-big.jpg',
     imgSmall: 'img/d3-mic.jpg'
-  },
-  {
-    study: 'jQuery',
   },
   {
     study: 'Sass / Scss',
@@ -218,13 +212,13 @@ export const udemyStudy = [
 export const work = [
   {
     everseen: [
-      { responsability: 'Working with UX/UI designer to create responsive pages' },
-      { responsability: 'Using React and TypeScript to create new components or to add new functionalities' },
-      { responsability: 'UX/UI design improvements' },
-      { responsability: 'Stylings using Scss' },
-      { responsability: 'Api call to get data from database' },
-      { responsability: 'Use Jira/ Confluence' },
-      { responsability: 'Use Git' },
+      { responsability: 'Collaborate with UX/UI designer for implementing new layouts' },
+      { responsability: 'Using React, Typescrit, Scss, Bootrstrap to create new components or to add new functionalities with cross-browser compatibility' },
+      { responsability: 'Building and enhancing available and scalable interfaces for the end users' },
+      { responsability: 'Working along with development team for achieving high quality results' },
+      { responsability: 'Debugging for improving functionalities' },
+      { responsability: 'Agile workflow using Jira/ Confluence' },
+      { responsability: 'Gitlab - version control' },
     ]
   }
 ]
