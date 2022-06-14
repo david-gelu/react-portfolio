@@ -25,9 +25,7 @@ const ThemeColor = () => {
   }
 
   return (
-    <Form>
-      <Form.Check type='switch' id='theme-switch' onClick={() => toggleTheme()} />
-    </Form>
+    <i onClick={() => toggleTheme()} className={`nav-link fas ${theme ? 'fa-moon' : 'fa-sun'}`}></i>
   )
 }
 

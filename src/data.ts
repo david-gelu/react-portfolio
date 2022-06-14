@@ -1,83 +1,94 @@
 export const linkData = [
-  { id: 'main', link: 'Home' },
-  { id: 'projects', link: 'Projects' },
-  { id: 'about', link: 'About Me' },
-  { id: 'jobs', link: 'Work' },
-  { id: 'study', link: 'Study' },
-  { id: 'contact', link: 'Contact' }
+  { id: 'main', icon: 'fa-house-user' },
+  { id: 'projects', icon: 'fa-laptop-code' },
+  { id: 'about', icon: 'fa-address-card' },
+  { id: 'jobs', icon: 'fa-briefcase' },
+  { id: 'study', icon: 'fa-graduation-cap' },
+  { id: 'contact', icon: 'fa-address-book' }
 ]
 
-export const dataJsProjects = [
+export const dataProjects = [
   {
+    key: 'js',
     imgUrl: '/img/book.png',
     imgDesc: 'Books project',
     projectLink: 'https://booksproject.netlify.app/',
-    projectGit: 'https://github.com/david-gelu/books-project'
+    projectGit: 'https://github.com/david-gelu/books-project',
+    teh: ['js', 'react', 'typescript', 'scss']
   },
   {
+    key: 'js',
     imgUrl: '/img/poke.png',
     imgDesc: 'Pokemon project',
     projectLink: 'https://proiect18.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect18'
+    projectGit: 'https://github.com/david-gelu/proiect18',
+    teh: ['js', 'react', 'css']
   },
   {
+    key: 'js',
     imgUrl: '/img/metal.png',
     imgDesc: 'Metal vision project',
     projectLink: 'https://project-metal.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect2'
+    projectGit: 'https://github.com/david-gelu/proiect2',
+    teh: ['js', 'css']
   },
   {
+    key: 'js',
     imgUrl: '/img/pf.png',
     imgDesc: 'Forum project',
     projectLink: 'https://proiect15.netlify.app/home',
-    projectGit: 'https://github.com/david-gelu/proiect15'
+    projectGit: 'https://github.com/david-gelu/proiect15',
+    teh: ['js', 'css']
   },
   {
+    key: 'js',
     imgUrl: '/img/pl.png',
     imgDesc: 'Walking through Romania project',
     projectLink: 'https://proiect-11.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect11'
-  }
-]
-
-export const dataHtmlCssProjects = [
-  {
+    projectGit: 'https://github.com/david-gelu/proiect11',
+    teh: ['js', 'css']
+  }, {
+    key: 'css',
     imgUrl: '/img/cv.png',
     imgDesc: 'My CV madein html and css',
     projectLink: 'https://proiect4.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect4'
+    projectGit: 'https://github.com/david-gelu/proiect4',
+    teh: ['html', 'css']
   },
   {
+    key: 'css',
     imgUrl: '/img/it.png',
     imgDesc: 'Copy ItSchool homepage project',
     projectLink: 'https://proiect16.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect16'
+    projectGit: 'https://github.com/david-gelu/proiect16',
+    teh: ['html', 'css', 'bootstrap']
   },
   {
+    key: 'css',
     imgUrl: '/img/ps.png',
     imgDesc: 'Project made after PSD file',
     projectLink: 'https://proiect14.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect14'
+    projectGit: 'https://github.com/david-gelu/proiect14',
+    teh: ['html', 'css']
   },
   {
+    key: 'css',
     imgUrl: '/img/7s.png',
     imgDesc: 'Walking through 7 stairs canyon in Romania project',
     projectLink: 'https://proiect7.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect7'
+    projectGit: 'https://github.com/david-gelu/proiect7',
+    teh: ['html', 'css']
   },
   {
+    key: 'css',
     imgUrl: '/img/ano.png',
     imgDesc: 'Year seasons animation',
     projectLink: 'http://proiect12.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect12'
-  },
-  {
-    imgUrl: '/img/pl.png',
-    imgDesc: 'Walking through Romania project',
-    projectLink: 'https://proiect-11.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect11'
+    projectGit: 'https://github.com/david-gelu/proiect12',
+    teh: ['html', 'css']
   }
 ]
+
 
 export const itSchoolStudy = [
   {
