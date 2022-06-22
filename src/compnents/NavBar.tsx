@@ -16,7 +16,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Button variant="primary" size='sm' onClick={toggleShow} className="mt-3 fixed-top w-auto btn-name">
+      <Button variant="primary" size='sm' onClick={toggleShow} className="mt-3 fixed-top w-auto light-name btn-name">
         David Gelu
       </Button>
       <Offcanvas show={show} onHide={handleClose} scroll backdrop={false} autoFocus={true}>

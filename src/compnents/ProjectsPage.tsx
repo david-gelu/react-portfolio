@@ -14,17 +14,17 @@ const ProjectsPage = () => {
   const noFilterBy = () => {
     setFiltered(dataProjects); setActive('all')
   }
-  const activeAll = `${active === 'all' ? 'success' : 'outline-success'}`
-  const activeJs = `${active === 'js' ? 'success' : 'outline-success'}`
-  const activeCss = `${active === 'css' ? 'success' : 'outline-success'}`
+  const activeAll = `${active === 'all' ? 'dark-btn' : 'outline-dark-btn'}`
+  const activeJs = `${active === 'js' ? 'dark-btn' : 'outline-dark-btn'}`
+  const activeCss = `${active === 'css' ? 'dark-btn' : 'outline-dark-btn'}`
 
   return (
     <main className='projects' id='projects'>
       <h2 className='projects-title'>Projects</h2>
       <div className='filter-btns'>
-        <Button variant={activeAll} size='sm' onClick={() => noFilterBy()}>All</Button>
-        <Button variant={activeJs} size='sm' onClick={() => filterBy('js')}>JavaScript / React</Button>
-        <Button variant={activeCss} size='sm' onClick={() => filterBy('css')}>HTML / CSS / Bootstrap</Button>
+        <Button className={activeAll} size='sm' onClick={() => noFilterBy()}>All</Button>
+        <Button className={activeJs} size='sm' onClick={() => filterBy('js')}>JavaScript / React</Button>
+        <Button className={activeCss} size='sm' onClick={() => filterBy('css')}>HTML / CSS / Bootstrap</Button>
       </div>
       <div className='projects__items'>
         {filtered.map((d: DataProjects) => <div key={d.projectLink} className='projects__item'>
