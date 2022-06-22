@@ -1,6 +1,6 @@
 
-import React, { useState } from "react"
-import { Carousel, Modal, Button } from "react-bootstrap"
+import React from "react"
+import { Carousel, Modal } from "react-bootstrap"
 import { Studies } from "src/types"
 
 const ImageModal = ({ show, handleShow, imgSrc }: any) => {
@@ -9,7 +9,9 @@ const ImageModal = ({ show, handleShow, imgSrc }: any) => {
       <Modal.Body>
         <Carousel variant="dark">
           {imgSrc.map((image: Studies) => image.imgBig && <Carousel.Item key={image.imgBig}>
-            <img
+            <img lazy-loading="lazy"
+              width='auto'
+              height='auto'
               className="d-block w-100"
               src={image.imgBig}
               alt="First slide"

@@ -1,13 +1,15 @@
 export type LinkData = {
   id: string,
-  link: string
+  icon: string
 }
 
 export type DataProjects = {
+  key: string,
   imgUrl: string,
   imgDesc: string,
   projectLink: string,
-  projectGit: string
+  projectGit: string,
+  teh: string[]
 }
 
 export type Studies = {
@@ -18,11 +20,7 @@ export type Studies = {
   imgBig?: string,
   imgSmall?: string,
 }
-export type Responsability = {
-  responsability: string
-}
+
 export type Work = {
-  everseen?: {
-    responsability: Responsability
-  }
+  everseen: string[];
 }

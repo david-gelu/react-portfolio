@@ -105,7 +105,8 @@
     // "skipLibCheck": true                                 /* Skip type checking all .d.ts files. */
   },
   "include": [
-    "./src/**/*"
+    "./src/**/*",
+    "reportWebVitals.ts"
   ],
   "exclude": [
     "./node_modules",
