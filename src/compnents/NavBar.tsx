@@ -28,7 +28,7 @@ const NavBar = () => {
         <Offcanvas.Body >
           <ThemeColor />
           {linkData.map((l: LinkData) =>
-            <Nav.Link key={l.id} onClick={() => setId(l.id)}
+            <Nav.Link key={l.id} onClick={() => setId(l.id)} title={l.id}
               className={`${activeId === l.id ? 'active' : ''}`} href={`#${l.id}`}>
               <i className={`fas ${l.icon}`}></i>
             </Nav.Link>

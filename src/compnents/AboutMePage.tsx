@@ -4,21 +4,18 @@ import WorkPage from "./WorkPage"
 
 const AboutMePage = () => {
   return (
-    <main className="about" id="about">
+    <main className="about" id="about"><h2 className="about-me">About me</h2>
       <div className="professional ">
-        <div className="bio">
-          <h2 className="about-me">About me</h2>
-          <h4 className="bio-desc ">
-            <span>Task-driven, hard worker and very passionate about all the new things I can discover.
-              Having a high desire to contribute and work among people from whom I can learn, helps me to gain more skills,
-              improve and build the foundation of my career.
-            </span>
-          </h4>
-        </div>
-        <div className="professional-title left">
-          <h3>Professional Skills</h3>
-        </div>
+        <h3 className="bio-desc ">
+          <span>Task-driven, hard worker and very passionate about all the new things I can discover.
+            Having a high desire to contribute and work among people from whom I can learn, helps me to gain more skills,
+            improve and build the foundation of my career.
+          </span>
+        </h3>
         <div className="skills left">
+          <div className="professional-title left">
+            <h3>Professional Skills</h3>
+          </div>
           <ul>
             <li>
               <span>H</span><span>T</span><span>M</span><span>L</span><span>5</span><span></span><span></span><span></span><span

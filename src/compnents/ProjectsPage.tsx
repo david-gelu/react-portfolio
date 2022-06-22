@@ -21,24 +21,26 @@ const ProjectsPage = () => {
   return (
     <main className='projects' id='projects'>
       <h2 className='projects-title'>Projects</h2>
-      <div className='my-5'>
-        <Button variant={activeAll} size='sm' className='me-3' onClick={() => noFilterBy()}>All</Button>
-        <Button variant={activeJs} size='sm' className='me-3' onClick={() => filterBy('js')}>JavaScript / React</Button>
-        <Button variant={activeCss} size='sm' className='me-3' onClick={() => filterBy('css')}>HTML / CSS / Bootstrap</Button>
+      <div className='filter-btns'>
+        <Button variant={activeAll} size='sm' onClick={() => noFilterBy()}>All</Button>
+        <Button variant={activeJs} size='sm' onClick={() => filterBy('js')}>JavaScript / React</Button>
+        <Button variant={activeCss} size='sm' onClick={() => filterBy('css')}>HTML / CSS / Bootstrap</Button>
       </div>
       <div className='projects__items'>
         {filtered.map((d: DataProjects) => <div key={d.projectLink} className='projects__item'>
-          <img src={d.imgUrl} alt={d.imgDesc} />
+          <img width='auto' height='auto' src={d.imgUrl} alt={d.imgDesc} />
           <div className='projects__btns'>
             <a href={d.projectLink} target='_blank' className='projects__btn'>
               <i className='fas fa-eye' aria-hidden='true'></i>
+              <span className='d-block'>link</span>
             </a>
             <a href={d.projectGit} target='_blank' className='projects__btn'>
               <i className='fab fa-github' aria-hidden='true'></i>
+              <span className='d-block'>git</span>
             </a>
           </div>
           <div>
-            {d.teh.map((t: string) => <span className='teh-title'>{t}</span>)}
+            {d.teh.map((title: string) => <span key={title} className='teh-title'>{title}</span>)}
           </div>
         </div>
         )}

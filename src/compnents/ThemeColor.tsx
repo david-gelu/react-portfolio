@@ -10,12 +10,10 @@ const ThemeColor = () => {
   const toggleLightTheme = () => {
     localStorage.setItem('dark-mode', '')
     setTheme(true)
-    console.log('light')
   }
   const toggleDarkTheme = () => {
     localStorage.setItem('dark-mode', 'enabled')
     setTheme(false)
-    console.log('dark');
   }
 
   const toggleTheme = () => {
