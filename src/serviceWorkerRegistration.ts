@@ -17,7 +17,7 @@ export function register(config?: Config) {
     }
 
     window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.ts`;
+      const swUrl = `${process.env.PUBLIC_URL}/dist/service-worker.js`;
 
       if (isLocalhost) {
         checkValidServiceWorker(swUrl, config);
