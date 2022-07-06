@@ -15,8 +15,7 @@
   },
   "include": [
     "./src/**/*",
-    "reportWebVitals.ts",
-    "public/service-worker.ts"
+    "reportWebVitals.ts"
   ],
   "exclude": [
     "./node_modules",
