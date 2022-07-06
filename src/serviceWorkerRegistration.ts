@@ -17,19 +17,19 @@ export function register(config?: Config) {
     }
 
     window.addEventListener('load', () => {
-      const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
+      const swUrl = `${process.env.PUBLIC_URL}/service-worker.ts`;
 
-      // if (isLocalhost) {
-      //   checkValidServiceWorker(swUrl, config);
-      //   navigator.serviceWorker.ready.then(() => {
-      //     console.log(
-      //       'This web app is being served cache-first by a service ' +
-      //       'worker. To learn more, visit https://cra.link/PWA'
-      //     );
-      //   });
-      // } else {
-      registerValidSW(swUrl, config);
-      // }
+      if (isLocalhost) {
+        checkValidServiceWorker(swUrl, config);
+        navigator.serviceWorker.ready.then(() => {
+          console.log(
+            'This web app is being served cache-first by a service ' +
+            'worker. To learn more, visit https://cra.link/PWA'
+          );
+        });
+      } else {
+        registerValidSW(swUrl, config);
+      }
     });
   }
 }
