@@ -1,0 +1,21 @@
+@use "./variables.scss" as *;
+@use "./resets.scss" as *;
+@use "./utils.scss" as *;
+
+.jobs {
+  padding-block: 2em;
+  margin: 0 auto;
+  margin-top: 1em;
+  & h4 {
+    color: $text-color;
+    @include display(flex-start, flex-start);
+  }
+  & h5 {
+    position: relative;
+    font-weight: 600;
+    margin-left: 2em;
+    &::before {
+      @include arrow();
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "./variables.scss" as *;
+@use "./resets.scss" as *;
+
+.study {
+  padding-block: 2em;
+  margin: 0 auto;
+  margin-top: 1em;
+}
+
+.study a {
+  font-weight: 700;
+  color: $link-color;
+  font-family: serif;
+}
+.study h3 {
+  font-weight: 500;
+}
+.study h5 {
+  position: relative;
+  font-weight: 600;
+  padding: 0 2em;
+}
+.study h5::before {
+  @include arrow();
+}
+
+.images {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(4em, 1fr));
+  gap: 2em;
+  padding: 0 0.2em 0 0;
+}
+.image {
+  margin-block: 0 1em;
+  transition: transform 0.25s linear;
+  &:hover {
+    transform: scale(1.05);
+  }
+}

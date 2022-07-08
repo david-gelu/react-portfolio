@@ -1,0 +1,39 @@
+[data-theme="light"] {
+  --primary-color: #ffffff;
+  --second-color: #fafafa;
+  --text-color: #242424;
+  --link-color: #3c455c;
+  --nav-color: #87aec0;
+  --nav-bg: #242424;
+  --key-color: #242424;
+  --property-color: #064664;
+  --light-name-color: var(--text-color);
+  --button-color: var(--text-color);
+  --bg-color: #ebe6da;
+  // --bg-img: url("../../public/img/light-bg-crop.jpg");
+}
+[data-theme="dark"] {
+  --primary-color: #222;
+  --second-color: #2a2a2a;
+  --text-color: #ffffff;
+  --link-color: var(--text-color);
+  --nav-color: #87aec0;
+  --nav-bg: transparent;
+  --key-color: #87aec0;
+  --property-color: #0e76a8;
+  --bg-img: url("../../public/img/dark-bg.webp");
+  --bg-color: #0c1625;
+  --button-color: var(--text-color);
+}
+
+$primary-color: var(--primary-color);
+$second-color: var(--second-color);
+$text-color: var(--text-color);
+$link-color: var(--link-color);
+$nav-color: var(--nav-color);
+$nav-bg: var(--nav-bg);
+$key-color: var(--key-color);
+$property-color: var(--property-color);
+$bg-img: var(--bg-img);
+$bg-color: var(--bg-color);
+$button-color: var(--button-color);

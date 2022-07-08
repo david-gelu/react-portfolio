@@ -1,0 +1,22 @@
+@use "./variables.scss" as *;
+
+main {
+  width: 78vw;
+  margin: 1em auto;
+  padding-inline: 1em;
+}
+
+.left {
+  text-align: left;
+}
+
+.title-text {
+  color: $text-color;
+  text-align: center;
+}
+
+@mixin display($align: null, $justify: null) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}

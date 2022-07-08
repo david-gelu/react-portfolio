@@ -1,0 +1,54 @@
+@use "./variables.scss" as *;
+
+.professional-title h3 {
+  color: $text-color;
+}
+.bio-desc {
+  font-size: clamp(1.2rem, 3vh + 0.7rem, 1.2rem);
+  margin: 0 auto;
+  text-align: left;
+  color: $text-color;
+}
+
+.professional {
+  color: $text-color;
+  padding-block: 2em;
+  display: flex;
+  gap: 2em;
+  text-align: left;
+}
+.skills {
+  & .fa,
+  & .fab {
+    padding-left: 0.5em;
+    text-align: center;
+    color: $link-color;
+    font-size: clamp(1.3rem, 2.3rem, 2.5rem);
+  }
+  & li {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: $link-color;
+  }
+  & span {
+    width: 2.1em;
+    height: 1.5em;
+    text-align: center;
+    color: $second-color;
+    background: $link-color;
+    border: 0.1em solid $text-color;
+    margin-left: 0.1em;
+    margin-top: 0.4em;
+  }
+  & .no-color {
+    background: transparent;
+    color: $text-color;
+  }
+  & .max {
+    border: 0.1em solid $text-color;
+    color: $second-color;
+    background: $text-color;
+  }
+}

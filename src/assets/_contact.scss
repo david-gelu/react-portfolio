@@ -1,0 +1,53 @@
+@use "./variables.scss" as *;
+@use "./utils.scss" as *;
+
+.contact {
+  margin: 0 auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.contact-title {
+  margin-inline: auto;
+  font-weight: 600;
+}
+.contact-form {
+  flex-wrap: wrap;
+  @include display(center, null);
+  color: $text-color;
+  font-size: clamp(1rem, 2vh + 0.1rem, 1rem);
+  padding: 0.01em 2em 0.01em 0;
+  text-align: start;
+  & a {
+    color: $link-color;
+    word-break: break-all;
+  }
+  & i {
+    min-width: 2rem;
+    color: $text-color;
+  }
+}
+
+.contact-info {
+  color: $text-color;
+  font-weight: 600;
+  padding: 0.01em 0.5em;
+}
+
+.fa-facebook-square,
+.fa-linkedin-square {
+  font-size: 2em;
+}
+.fa-facebook-square:hover {
+  color: #4267b2;
+}
+.fa-linkedin-square:hover {
+  color: #0e76a8;
+}
+
+.contact__list {
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer-img {
+  width: 60%;
+  margin-inline: auto;
+}

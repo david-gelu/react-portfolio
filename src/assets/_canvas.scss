@@ -1,0 +1,70 @@
+@use "./variables.scss" as *;
+@use "./utils.scss" as *;
+
+.btn-primary,
+.btn-primary:focus,
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: $key-color;
+  box-shadow: none;
+}
+.dark-btn,
+.dark-btn:focus,
+.dark-btn:hover {
+  background-color: $button-color;
+  border-color: $button-color;
+  color: $primary-color;
+  box-shadow: none;
+}
+.outline-dark-btn,
+.outline-dark-btn:focus,
+.outline-dark-btn:hover {
+  background-color: transparent;
+  color: $text-color;
+  border-color: $text-color;
+  box-shadow: none;
+}
+.fixed-top {
+  right: auto;
+}
+.offcanvas {
+  background-color: $nav-bg;
+  color: $text-color;
+  border-color: $nav-bg;
+}
+.offcanvas-start {
+  width: auto;
+}
+.btn-name {
+  border: 1px solid $key-color;
+  font-size: 0.9em;
+}
+.light-name {
+  &,
+  &:hover,
+  &:focus {
+    color: var(--light-name-color);
+  }
+}
+.offcanvas-header {
+  padding: 1em 0;
+}
+.offcanvas-body {
+  flex-grow: 0;
+  padding: 0;
+  flex-direction: column;
+  @include display(center, null);
+  & > * {
+    margin-block: 1em;
+  }
+  .nav-link {
+    color: $nav-color;
+    &.active,
+    &:focus,
+    &:hover {
+      text-decoration: none;
+      color: $property-color !important;
+      background-color: unset;
+    }
+  }
+}

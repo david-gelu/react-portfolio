@@ -1,0 +1,61 @@
+@use "./variables.scss" as *;
+
+.main {
+  overflow: hidden;
+  color: $text-color;
+  border-radius: 1.11em;
+  display: flex;
+  gap: 2em;
+  &-name-div {
+    width: 60%;
+    padding: 0.5em 1em 0.5em;
+    text-align: center;
+    margin-top: 9em;
+    font-family: serif;
+    font-weight: 500;
+    & h2 {
+      font-family: serif;
+      font-size: clamp(1.2rem, 3vh + 0.7rem, 1.2rem);
+      font-weight: 500;
+      line-height: 1;
+      justify-content: center;
+    }
+  }
+
+  &-name-div h1 {
+    color: $text-color;
+    span {
+      font-size: clamp(2rem, 4vh + 1rem, 4rem);
+    }
+  }
+}
+.tx-color {
+  background: linear-gradient(177deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+.show-text {
+  width: 12ch;
+  animation: typing 2s steps(12, end);
+  white-space: nowrap;
+  overflow: hidden;
+  color: $text-color;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+.obj-info {
+  margin-left: 3rem;
+  font-size: 0.9rem;
+}
+.key {
+  color: $key-color;
+  font-weight: 600;
+}
+.property {
+  font-weight: 600;
+  color: $property-color;
+}
