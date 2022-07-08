@@ -4,7 +4,7 @@ import WorkPage from "./WorkPage"
 
 const AboutMePage = () => {
   return (
-    <main className="about" id="about"><h2 className="about-me">About me</h2>
+    <main className="about" id="about"><h2 className="title-text">About me</h2>
       <div className="professional ">
         <h3 className="bio-desc ">
           <span>Task-driven, hard worker and very passionate about all the new things I can discover.

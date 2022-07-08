@@ -2,7 +2,7 @@ import React from "react"
 
 const ContactPage = () => {
   return (
-    <main className="contact" id="contact">
+    <main className="contact title-text" id="contact">
       <h2 className="contact-title">Contact</h2>
       <div className="d-flex flex-wrap">
         <div className="left mt-5">
@@ -25,7 +25,7 @@ const ContactPage = () => {
             <i className="fa fa-map-marker" aria-hidden="true"></i> Adress: <span className="contact-info">Brasov</span>
           </h3>
         </div>
-        <img lazy-loading="lazy" width='60%' height='auto' className="footer-img" alt='frontend desktop' src='img/footer-bg.png' />
+        <img lazy-loading="lazy" width='60%' height='auto' className="footer-img" alt='frontend desktop' src='img/footer-bg.webp' />
       </div>
     </main>
   )

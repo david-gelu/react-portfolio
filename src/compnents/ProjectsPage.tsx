@@ -19,8 +19,8 @@ const ProjectsPage = () => {
   const activeCss = `${active === 'css' ? 'dark-btn' : 'outline-dark-btn'}`
 
   return (
-    <main className='projects' id='projects'>
-      <h2 className='projects-title'>Projects</h2>
+    <main className='title-text' id='projects'>
+      <h2>Projects</h2>
       <div className='filter-btns'>
         <Button className={activeAll} size='sm' onClick={() => noFilterBy()}>All</Button>
         <Button className={activeJs} size='sm' onClick={() => filterBy('js')}>JavaScript / React</Button>

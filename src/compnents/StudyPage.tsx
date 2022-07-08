@@ -15,9 +15,9 @@ const StudyPage = () => {
   }
 
   return (
-    <div className="study" id="study">
-      <h2 className="study-title">Study</h2>
-      <h3 className="projects-title "><a href="http://itschool.ro" target="_blank">ItSchool </a> - hands on course</h3>
+    <div className="study title-text" id="study">
+      <h2>Study</h2>
+      <h3 className="title-text"><a href="http://itschool.ro" target="_blank">ItSchool </a> - hands on course</h3>
       <div className="images">
         {itSchoolStudy.map((img: Studies, idx: number) =>
           img.imgSmall && <div key={`${img.imgSmall}-${idx + 22}`}>
