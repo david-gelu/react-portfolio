@@ -29,6 +29,10 @@
     }
   }
 }
+.max-content {
+  min-width: max-content;
+  max-width: max-content;
+}
 .tx-color {
   background: linear-gradient(177deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
   background-clip: text;

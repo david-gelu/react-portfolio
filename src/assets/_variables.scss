@@ -7,7 +7,7 @@
   --nav-bg: #242424;
   --key-color: #242424;
   --property-color: #064664;
-  --light-name-color: var(--text-color);
+  --theme-name-color: var(--text-color);
   --button-color: var(--text-color);
   --bg-color: #ebe6da;
   // --bg-img: url("../../public/img/light-bg-crop.jpg");
@@ -20,6 +20,7 @@
   --nav-color: #87aec0;
   --nav-bg: transparent;
   --key-color: #87aec0;
+  --theme-name-color: var(--text-color);
   --property-color: #0e76a8;
   --bg-img: url("../../public/img/dark-bg.webp");
   --bg-color: #0c1625;
@@ -37,3 +38,4 @@ $property-color: var(--property-color);
 $bg-img: var(--bg-img);
 $bg-color: var(--bg-color);
 $button-color: var(--button-color);
+$theme-name-color: var(--theme-name-color);

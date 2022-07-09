@@ -6,7 +6,7 @@ const HomePage = () => {
       <div className="main-name-div">
         <h1><span>I'm</span> Gelu</h1>
         <br />
-        <h2 className="d-flex fsize-minus">
+        <h2 className="d-flex max-content">
           <i className="bi bi-chevron-left tx-color"></i>
           <div className="show-text">WebDeveloper</div>
           <i className="bi bi-slash-lg tx-color ms-1"></i>

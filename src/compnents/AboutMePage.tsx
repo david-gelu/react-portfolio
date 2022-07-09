@@ -16,7 +16,7 @@ const AboutMePage = () => {
           <div className="professional-title left">
             <h3>Professional Skills</h3>
           </div>
-          <ul>
+          <ul className="d-flex flex-column">
             <li>
               <span>H</span><span>T</span><span>M</span><span>L</span><span>5</span><span></span><span></span><span></span><span
                 className="max"></span><span className="no-color"></span> <i className="fab fa-html5" aria-hidden="true"> </i>

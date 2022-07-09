@@ -38,12 +38,13 @@
 .btn-name {
   border: 1px solid $key-color;
   font-size: 0.9em;
+  padding: 0 0.05em;
 }
-.light-name {
+.theme-color-name {
   &,
   &:hover,
   &:focus {
-    color: var(--light-name-color);
+    color: $theme-name-color;
   }
 }
 .offcanvas-header {
