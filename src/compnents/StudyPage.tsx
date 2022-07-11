@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState, Suspense } from 'react'
 import { itSchoolStudy, freeCodeCampStudy, udemyStudy } from '../data'
-import ImageModal from './ImageModal'
+const ImageModal = React.lazy(() => import('./ImageModal'))
 import { Studies } from 'src/types'
 
 const StudyPage = () => {
@@ -23,7 +23,10 @@ const StudyPage = () => {
           img.imgSmall && <div key={`${img.imgSmall}-${idx + 22}`}>
             <img lazy-loading="lazy" width='auto' height='auto' alt={img.certificate} className="image" src={img.imgSmall} onClick={() => showImg(img.imgBig)} />
             {show && img.imgBig === image &&
-              <ImageModal show={show} handleShow={handleShow} imgSrc={itSchoolStudy} />}
+              <Suspense fallback={<div className='loading'>Loading...</div>}>
+                <ImageModal show={show} handleShow={handleShow} imgSrc={itSchoolStudy} />
+              </Suspense>
+            }
           </div>
         )}
       </div>
@@ -46,7 +49,10 @@ const StudyPage = () => {
           img.imgSmall && <div key={`${img.imgSmall}-${idx + 21}`}>
             <img lazy-loading="lazy" width='auto' height='auto' alt={img.certificate} className="image" src={img.imgSmall} onClick={() => showImg(img.imgBig)} />
             {show && img.imgBig === image &&
-              <ImageModal show={show} handleShow={handleShow} imgSrc={freeCodeCampStudy} />}
+              <Suspense fallback={<div className='loading'>Loading...</div>}>
+                <ImageModal show={show} handleShow={handleShow} imgSrc={freeCodeCampStudy} />
+              </Suspense>
+            }
           </div>
         )}
       </div>
@@ -65,7 +71,10 @@ const StudyPage = () => {
           <div key={`${img.imgSmall}-${idx + 21}`}>
             <img lazy-loading="lazy" width='auto' height='auto' alt={img.certificate} className="image" src={img.imgSmall} onClick={() => showImg(img.imgBig)} />
             {show && img.imgBig === image &&
-              <ImageModal show={show} handleShow={handleShow} imgSrc={udemyStudy} />}
+              <Suspense fallback={<div className='loading'>Loading...</div>}>
+                <ImageModal show={show} handleShow={handleShow} imgSrc={udemyStudy} />
+              </Suspense>
+            }
           </div>
         )}
       </div>

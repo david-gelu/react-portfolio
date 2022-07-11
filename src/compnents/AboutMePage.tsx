@@ -1,6 +1,6 @@
-import React from "react"
-import StudyPage from "./StudyPage"
-import WorkPage from "./WorkPage"
+import React, { Suspense } from "react"
+const StudyPage = React.lazy(() => import("./StudyPage"))
+const WorkPage = React.lazy(() => import("./WorkPage"))
 
 const AboutMePage = () => {
   return (
@@ -42,8 +42,13 @@ const AboutMePage = () => {
           </ul>
         </div>
       </div>
-      <WorkPage />
-      <StudyPage />
+      <Suspense fallback={<div className="loading">Loading...</div>}>
+        <WorkPage />
+      </Suspense>
+      <Suspense fallback={<div className="loading">Loading...</div>}>
+        <StudyPage />
+      </Suspense>
+
     </main>
   )
 }

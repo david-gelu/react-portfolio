@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Form } from 'react-bootstrap'
 
 const ThemeColor = () => {
   let darkMode = localStorage.getItem('dark-mode')

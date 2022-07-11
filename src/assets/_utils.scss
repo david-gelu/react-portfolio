@@ -20,3 +20,12 @@ main {
   align-items: $align;
   justify-content: $justify;
 }
+
+.loading {
+  min-height: 100vh;
+  min-width: 100vw;
+  color: $text-color;
+  font-size: 2rem;
+  background: $second-color;
+  @include display(center, center);
+}

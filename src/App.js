@@ -1,24 +1,24 @@
 
-import React from "react"
+import React, { Suspense } from "react"
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import "./assets/style.scss";
-import HomePage from './compnents/HomePage';
-import NavBar from './compnents/NavBar';
-import ProjectsPage from './compnents/ProjectsPage';
-import AboutMePage from './compnents/AboutMePage';
-import ContactPage from './compnents/ContactPage';
+const HomePage = React.lazy(() => import('./compnents/HomePage'));
+const NavBar = React.lazy(() => import('./compnents/NavBar'));
+const ProjectsPage = React.lazy(() => import('./compnents/ProjectsPage'));
+const AboutMePage = React.lazy(() => import('./compnents/AboutMePage'));
+const ContactPage = React.lazy(() => import('./compnents/ContactPage'));
 
-function App() {
+const App = () => {
   return (
-    <>
+    <Suspense fallback={<div className="loading">Loading...</div>}>
       <NavBar />
       <HomePage />
       <ProjectsPage />
       <AboutMePage />
       <ContactPage />
-    </>
+    </Suspense>
   );
 }
 
