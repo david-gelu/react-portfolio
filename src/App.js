@@ -11,9 +11,26 @@ const AboutMePage = React.lazy(() => import('./compnents/AboutMePage'));
 const ContactPage = React.lazy(() => import('./compnents/ContactPage'));
 
 const App = () => {
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    showInstallPromotion();
+    console.log(`'beforeinstallprompt' event was fired.`);
+  })
+
+  const btnAdd = async () => {
+    hideInstallPromotion();
+    deferredPrompt.prompt();
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log(`User response to the install prompt: ${outcome}`);
+    deferredPrompt = null;
+  }
   return (
     <Suspense fallback={<div className="loading">Loading...</div>}>
       <NavBar />
+      <button style={{ marginLeft: '5rem' }} onClick={btnAdd}>sdfdf</button>
       <HomePage />
       <ProjectsPage />
       <AboutMePage />
