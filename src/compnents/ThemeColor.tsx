@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import TooltipWrap from './TooltipWrap'
 
 const ThemeColor = () => {
   let darkMode = localStorage.getItem('dark-mode')
@@ -22,7 +23,9 @@ const ThemeColor = () => {
   }
 
   return (
-    <i onClick={() => toggleTheme()} className={`nav-link fas ${theme ? 'fa-moon' : 'fa-sun'}`}></i>
+    <TooltipWrap desc={`Theme color ${theme ? 'light' : 'dark'}`}>
+      <i onClick={() => toggleTheme()} className={`nav-link fas ${theme ? 'fa-moon' : 'fa-sun'}`}></i>
+    </TooltipWrap>
   )
 }
 

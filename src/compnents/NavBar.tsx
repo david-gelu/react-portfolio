@@ -4,6 +4,7 @@ import { Button, Nav, Offcanvas } from "react-bootstrap"
 import { linkData } from '../data'
 import { LinkData } from 'src/types.js'
 import ThemeColor from './ThemeColor'
+import TooltipWrap from './TooltipWrap'
 
 
 const NavBar = () => {
@@ -28,10 +29,12 @@ const NavBar = () => {
         <Offcanvas.Body >
           <ThemeColor />
           {linkData.map((l: LinkData) =>
-            <Nav.Link key={l.id} onClick={() => setId(l.id)} title={l.id}
-              className={`${activeId === l.id ? 'active' : ''}`} href={`#${l.id}`}>
-              <i className={`fas ${l.icon}`}></i>
-            </Nav.Link>
+            <TooltipWrap desc={l.id}>
+              <Nav.Link key={l.id} onClick={() => setId(l.id)}
+                className={`${activeId === l.id ? 'active' : ''}`} href={`#${l.id}`}>
+                <i className={`fas ${l.icon}`}></i>
+              </Nav.Link>
+            </TooltipWrap>
           )}
         </Offcanvas.Body>
       </Offcanvas>
