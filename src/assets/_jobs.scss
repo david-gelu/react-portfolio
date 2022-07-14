@@ -4,8 +4,6 @@
 
 .jobs {
   padding-block: 2em 0;
-  // margin: 0 auto;
-  // margin-top: 1em;
   & h4 {
     color: $text-color;
     @include display(flex-start, flex-start);

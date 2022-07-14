@@ -31,9 +31,9 @@ const HomePage = () => {
               </a>
             </TooltipWrap>
             <TooltipWrap desc='Brasov, Romania'>
-              <a >
+              <span >
                 <i className="fa fa-map-marker" aria-hidden="true" />
-              </a>
+              </span>
             </TooltipWrap>
           </div>
         </Suspense>
