@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
 }
 ul,
 ol {
@@ -37,6 +38,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 img {
   display: block;
   max-width: 100%;
