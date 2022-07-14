@@ -16,12 +16,12 @@ const HomePage = () => {
         <Suspense fallback={<div className="loading">Loading...</div>}>
           <div className="left contact-data">
             <TooltipWrap desc='david.gelu90@gmail.com'>
-              <a href="mailto:david.gelu90@gmail.com">
+              <a href="mailto:david.gelu90@gmail.com" alt='email'>
                 <i className="fa fa-envelope" aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='tel:+4 0744 598 995'>
-              <a href="tel:+4 0744 598 995">
+              <a href="tel:+4 0744 598 995" alt='phone number'>
                 <i className="fa fa-mobile" aria-hidden="true" />
               </a>
             </TooltipWrap>
@@ -31,7 +31,7 @@ const HomePage = () => {
               </a>
             </TooltipWrap>
             <TooltipWrap desc='Brasov, Romania'>
-              <span >
+              <span alt='location'>
                 <i className="fa fa-map-marker" aria-hidden="true" />
               </span>
             </TooltipWrap>
