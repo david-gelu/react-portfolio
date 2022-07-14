@@ -51,3 +51,27 @@ main {
     margin-left: 0.5rem;
   }
 }
+
+.tooltip {
+  &.events-none {
+    pointer-events: none;
+  }
+  &.bs-tooltip-start .tooltip-arrow::before {
+    border-left-color: $text-color;
+  }
+  &.bs-tooltip-top .tooltip-arrow::before {
+    border-top-color: $text-color;
+  }
+  &.bs-tooltip-end .tooltip-arrow::before {
+    border-right-color: $text-color;
+  }
+  &.bs-tooltip-bottom .tooltip-arrow::before {
+    border-bottom-color: $text-color;
+  }
+  .tooltip-inner {
+    border-radius: calc(0.3em - 1px);
+    color: $text-color;
+    background-color: $bg-color;
+    border: 1px solid $text-color;
+  }
+}

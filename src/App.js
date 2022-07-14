@@ -8,7 +8,6 @@ const HomePage = React.lazy(() => import('./compnents/HomePage'));
 const NavBar = React.lazy(() => import('./compnents/NavBar'));
 const ProjectsPage = React.lazy(() => import('./compnents/ProjectsPage'));
 const AboutMePage = React.lazy(() => import('./compnents/AboutMePage'));
-const ContactPage = React.lazy(() => import('./compnents/ContactPage'));
 
 const App = () => {
   // let deferredPrompt;
@@ -34,7 +33,6 @@ const App = () => {
       <HomePage />
       <ProjectsPage />
       <AboutMePage />
-      <ContactPage />
     </Suspense>
   );
 }

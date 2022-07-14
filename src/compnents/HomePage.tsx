@@ -1,4 +1,5 @@
-import React from "react"
+import React, { Suspense } from "react"
+const TooltipWrap = React.lazy(() => import('./TooltipWrap'))
 
 const HomePage = () => {
   return (
@@ -12,6 +13,30 @@ const HomePage = () => {
           <i className="bi bi-slash-lg tx-color ms-1"></i>
           <i className="bi bi-chevron-right tx-color"></i>
         </h2>
+        <Suspense fallback={<div className="loading">Loading...</div>}>
+          <div className="left contact-data">
+            <TooltipWrap desc='david.gelu90@gmail.com'>
+              <a href="mailto:david.gelu90@gmail.com">
+                <i className="fa fa-envelope" aria-hidden="true" />
+              </a>
+            </TooltipWrap>
+            <TooltipWrap desc='tel:+4 0744 598 995'>
+              <a href="tel:+4 0744 598 995">
+                <i className="fa fa-mobile" aria-hidden="true" />
+              </a>
+            </TooltipWrap>
+            <TooltipWrap desc='https://www.linkedin.com/in/gelu-fanel-david/'>
+              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/">
+                <i className="fab fa-linkedin" aria-hidden="true" />
+              </a>
+            </TooltipWrap>
+            <TooltipWrap desc='Brasov, Romania'>
+              <a >
+                <i className="fa fa-map-marker" aria-hidden="true" />
+              </a>
+            </TooltipWrap>
+          </div>
+        </Suspense>
       </div>
       <div className="d-flex flex-column obj-info">
         <span>&#123;</span>

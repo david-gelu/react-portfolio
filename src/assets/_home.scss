@@ -69,3 +69,12 @@
   word-break: break-all;
   overflow-wrap: break-word;
 }
+.contact-data {
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+  gap: 1em;
+  a {
+    color: $text-color;
+  }
+}

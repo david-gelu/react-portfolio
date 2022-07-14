@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Container, Nav, Navbar, Offcanvas } from "react-bootstrap"
+import { Button, Nav, Offcanvas } from "react-bootstrap"
 
 import { linkData } from '../data'
 import { LinkData } from 'src/types.js'

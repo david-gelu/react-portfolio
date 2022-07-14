@@ -4,7 +4,6 @@ export const linkData = [
   { id: 'about', icon: 'fa-address-card' },
   { id: 'jobs', icon: 'fa-briefcase' },
   { id: 'study', icon: 'fa-graduation-cap' },
-  { id: 'contact', icon: 'fa-address-book' }
 ]
 
 export const dataProjects = [
