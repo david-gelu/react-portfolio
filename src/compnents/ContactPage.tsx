@@ -5,7 +5,7 @@ const ContactPage = () => {
     <main className="contact title-text" id="contact">
       <h2 className="contact-title">Contact</h2>
       <div className="d-flex flex-wrap">
-        <div className="left mt-5">
+        <div className="left">
           <h3 className="contact-form">
             <i className="fa fa-envelope" aria-hidden="true"></i> Email:<a className="contact-info"
               href="mailto:david.gelu90@gmail.com">

@@ -39,7 +39,7 @@ const ProjectsPage = () => {
               <span className='d-block'>git</span>
             </a>
           </div>
-          <div>
+          <div className='teh-title-container'>
             {d.teh.map((title: string) => <span key={title} className='teh-title'>{title}</span>)}
           </div>
         </div>

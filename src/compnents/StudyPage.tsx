@@ -18,6 +18,8 @@ const StudyPage = () => {
     <div className="study title-text" id="study">
       <h2>Study</h2>
       <h3 className="title-text"><a href="http://itschool.ro" target="_blank">ItSchool </a> - hands on course</h3>
+      <h4 className="left">{itSchoolStudy[0].certificate} <a href={itSchoolStudy[0].link} target="_blank">Certification : ANC </a>
+        {itSchoolStudy[0].date}</h4>
       <div className="images">
         {itSchoolStudy.map((img: Studies, idx: number) =>
           img.imgSmall && <div key={`${img.imgSmall}-${idx + 22}`}>
@@ -30,8 +32,6 @@ const StudyPage = () => {
           </div>
         )}
       </div>
-      <h4 className="left">{itSchoolStudy[0].certificate} <a href={itSchoolStudy[0].link} target="_blank">Certification : ANC </a>
-        {itSchoolStudy[0].date}</h4>
       <div className="left">
         {itSchoolStudy.map(({ study }: Studies, idx: number) => <h5 key={study + (idx + 1)}> {study}</h5>)}
       </div>

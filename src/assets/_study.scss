@@ -2,9 +2,8 @@
 @use "./resets.scss" as *;
 
 .study {
-  padding-block: 2em;
+  padding-block: 2em 0;
   margin: 0 auto;
-  margin-top: 1em;
 }
 
 .study a {
@@ -27,7 +26,7 @@
 .images {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(4em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(4em, 1fr));
   gap: 2em;
   padding: 0 0.2em 0 0;
 }

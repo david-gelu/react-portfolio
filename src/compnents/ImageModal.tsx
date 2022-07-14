@@ -7,7 +7,7 @@ const ImageModal = ({ show, handleShow, imgSrc }: any) => {
   return (
     <Modal dialogClassName="modal-60w" centered show={show} onHide={handleShow}>
       <Modal.Body>
-        <Carousel variant="dark">
+        <Carousel controls={false}>
           {imgSrc.map((image: Studies) => image.imgBig && <Carousel.Item key={image.imgBig}>
             <img lazy-loading="lazy"
               width='auto'

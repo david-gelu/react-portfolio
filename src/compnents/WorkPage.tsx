@@ -6,7 +6,7 @@ import { Work } from "src/types"
 const WorkPage = () => {
   const workMap = work.map((w: Work) => w.everseen)
   return (
-    <div className="title-text" id="jobs">
+    <div className="title-text jobs" id="jobs">
       <h2>Work</h2>
       <div className="projects-image">
         <h3 className="projects-title ">Junior web-developer Everseen</h3>

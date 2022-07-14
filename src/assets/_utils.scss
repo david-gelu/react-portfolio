@@ -29,3 +29,25 @@ main {
   background: $second-color;
   @include display(center, center);
 }
+
+.modal-content {
+  background-color: $text-color;
+}
+
+.carousel-indicators button {
+  width: 0.8em !important;
+  height: 0.8em !important;
+  border-radius: 50%;
+}
+
+.carousel-indicators > button {
+  background-color: $text-color !important;
+  border: 3px solid #302f2f !important;
+  &.active {
+    border: 3px solid #302f2f !important;
+    background-color: #414141 !important;
+  }
+  &:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
