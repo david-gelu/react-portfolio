@@ -72,9 +72,11 @@
   display: flex;
   justify-content: center;
   margin-top: 2em;
-  gap: 1em;
+  margin-left: -1em;
+  gap: 0.5em;
   a,
   span {
     color: $text-color;
+    padding: 1em;
   }
 }
