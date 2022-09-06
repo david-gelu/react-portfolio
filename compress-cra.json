@@ -1,0 +1,18 @@
+{
+  "algorithms": [
+    "br",
+    "gz"
+  ],
+  "filetypes": [
+    ".html",
+    ".js",
+    ".css",
+    ".svg",
+    ".webp",
+    ".mp3",
+    ".wav",
+    ".tff",
+    ".woff2"
+  ],
+  "directory": "/build"
+}
