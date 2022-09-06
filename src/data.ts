@@ -1,3 +1,11 @@
+const importAll = (r: any) => {
+  let images: any = {};
+  r.keys().forEach((item: string) => { images[item.replace('./', '').replace('.webp', '').replace('-', '')] = r(item) });
+  return images
+}
+const images = importAll(require.context('./assets/img', false, /\.(webp)$/));
+console.log(images.book)
+
 export const linkData = [
   { id: 'main', icon: 'fa-house-user' },
   { id: 'projects', icon: 'fa-laptop-code' },
@@ -9,7 +17,7 @@ export const linkData = [
 export const dataProjects = [
   {
     key: 'js',
-    imgUrl: '/img/book.webp',
+    imgUrl: images.book,
     imgDesc: 'Books project',
     projectLink: 'https://booksproject.netlify.app/',
     projectGit: 'https://github.com/david-gelu/books-project',
@@ -17,7 +25,7 @@ export const dataProjects = [
   },
   {
     key: 'js',
-    imgUrl: '/img/poke.webp',
+    imgUrl: images.poke,
     imgDesc: 'Pokemon project',
     projectLink: 'https://proiect18.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect18',
@@ -25,7 +33,7 @@ export const dataProjects = [
   },
   {
     key: 'js',
-    imgUrl: '/img/metal.webp',
+    imgUrl: images.metal,
     imgDesc: 'Metal vision project',
     projectLink: 'https://project-metal.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect2',
@@ -33,7 +41,7 @@ export const dataProjects = [
   },
   {
     key: 'js',
-    imgUrl: '/img/pf.webp',
+    imgUrl: images.pf,
     imgDesc: 'Forum project',
     projectLink: 'https://proiect15.netlify.app/home',
     projectGit: 'https://github.com/david-gelu/proiect15',
@@ -41,14 +49,14 @@ export const dataProjects = [
   },
   {
     key: 'js',
-    imgUrl: '/img/pl.webp',
+    imgUrl: images.pl,
     imgDesc: 'Walking through Romania project',
     projectLink: 'https://proiect-11.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect11',
     teh: ['js', 'css']
   }, {
     key: 'css',
-    imgUrl: '/img/cv.webp',
+    imgUrl: images.cv,
     imgDesc: 'My CV madein html and css',
     projectLink: 'https://proiect4.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect4',
@@ -56,7 +64,7 @@ export const dataProjects = [
   },
   {
     key: 'css',
-    imgUrl: '/img/it.webp',
+    imgUrl: images.it,
     imgDesc: 'Copy ItSchool homepage project',
     projectLink: 'https://proiect16.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect16',
@@ -64,7 +72,7 @@ export const dataProjects = [
   },
   {
     key: 'css',
-    imgUrl: '/img/ps.webp',
+    imgUrl: images.ps,
     imgDesc: 'Project made after PSD file',
     projectLink: 'https://proiect14.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect14',
@@ -72,7 +80,7 @@ export const dataProjects = [
   },
   {
     key: 'css',
-    imgUrl: '/img/7s.webp',
+    imgUrl: images.sevens,
     imgDesc: 'Walking through 7 stairs canyon in Romania project',
     projectLink: 'https://proiect7.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect7',
@@ -80,7 +88,7 @@ export const dataProjects = [
   },
   {
     key: 'css',
-    imgUrl: '/img/ano.webp',
+    imgUrl: images.ano,
     imgDesc: 'Year seasons animation',
     projectLink: 'http://proiect12.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect12',
@@ -95,8 +103,8 @@ export const itSchoolStudy = [
     certificate: 'Front-end Web Design',
     link: '"http://site.anc.edu.ro/',
     date: '(Date: July 2019 - December 2019)',
-    imgBig: 'img/it-big.webp',
-    imgSmall: 'img/it-mic.webp'
+    imgBig: images.itbig,
+    imgSmall: images.itmic
   },
   {
     study: 'CSS 3',
@@ -117,38 +125,38 @@ export const freeCodeCampStudy = [
     certificate: 'Responsive Web Design',
     link: 'https://www.freecodecamp.org/certification/davidgelu/responsive-web-design',
     date: '(Date: December 2019)',
-    imgBig: 'img/res-big.webp',
-    imgSmall: 'img/res-mic.webp'
+    imgBig: images.resbig,
+    imgSmall: images.resmic
   },
   {
     study: 'CSS 3',
     certificate: 'Front End Libraries',
     link: 'https://www.freecodecamp.org/certification/davidgelu/front-end-libraries',
     date: '( Date: January 2020)',
-    imgBig: 'img/js-big.webp',
-    imgSmall: 'img/js-mic.webp'
+    imgBig: images.jsbig,
+    imgSmall: images.jsmic
   },
   {
     study: 'Bootstrap',
     certificate: 'JavaScript Algorithms and Data Structures',
     link: 'https://www.freecodecamp.org/certification/davidgelu/javascript-algorithms-and-data-structures',
     date: '(Date: January 2020)',
-    imgBig: 'img/lib-big.webp',
-    imgSmall: 'img/lib-mic.webp'
+    imgBig: images.libbig,
+    imgSmall: images.libmic
   },
   {
     study: 'JavaScript',
     certificate: 'Data Visualization D3.Js',
     link: 'https://www.freecodecamp.org/certification/davidgelu/data-visualization',
     date: '(Date: February 2020)',
-    imgBig: 'img/d3-big.webp',
-    imgSmall: 'img/d3-mic.webp'
+    imgBig: images.d3big,
+    imgSmall: images.d3mic
   },
   {
     study: 'Sass / Scss',
   },
   {
-    study: 'React - beginner',
+    study: 'Reactbeginner',
   }
 ]
 export const udemyStudy = [
@@ -166,56 +174,56 @@ export const udemyStudy = [
     certificate: 'Json beginner ',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f87c2851-16d9-4ef5-82e3-fe292e08eb8a.jpg',
     date: '(Date: February 2020)',
-    imgBig: 'img/json-big.webp',
-    imgSmall: 'img/json-mic.webp'
+    imgBig: images.jsonbig,
+    imgSmall: images.jsonmic
   },
   {
-    study: 'Photoshop - beginner',
+    study: 'Photoshopbeginner',
     certificate: 'Photoshop for Web Design Beginners',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-384533ff-a9f4-45e9-aedc-391c1fe86103.jpg',
     date: '(Date: February 2020)',
-    imgBig: 'img/ps-big.webp',
-    imgSmall: 'img/ps-mic.webp'
+    imgBig: images.psbig,
+    imgSmall: images.psmic
   },
   {
-    study: 'Sass - beginner',
+    study: 'Sassbeginner',
     certificate: 'Sass for Beginners',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-5286b0a4-b7ef-47ee-8960-3c0d48594077.jpg',
     date: '(Date: February 2020)',
-    imgBig: 'img/sass-big.webp',
-    imgSmall: 'img/sass-mic.webp'
+    imgBig: images.sassbig,
+    imgSmall: images.sassmic
   },
   {
-    study: 'Git - beginner',
+    study: 'Gitbeginner',
     certificate: 'Git started with GitHub',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f3f4b61f-5158-40c6-b6cd-97931e1dadbe.jpg',
     date: '(Date: February 2020)',
-    imgBig: 'img/git-big.webp',
-    imgSmall: 'img/git-mic.webp'
+    imgBig: images.gitbig,
+    imgSmall: images.gitmic
   },
   {
-    study: 'Agile, Scum and Product delivery - beginner',
+    study: 'Agile, Scum and Product deliverybeginner',
     certificate: 'Basic of Scrum',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-bbef744b-b1e3-4af4-9b9c-a5b1765727ab.jpg',
     date: '(Date: February 2020)',
-    imgBig: 'img/scrum-big.webp',
-    imgSmall: 'img/scrum-mic.webp'
+    imgBig: images.scrumbig,
+    imgSmall: images.scrummic
   },
   {
-    study: 'Node Js API Development - beginner',
+    study: 'Node Js API Developmentbeginner',
     certificate: 'Node Js API Development Beginner',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f366e802-7a42-4084-9cda-05b4b80cb62c.jpg',
     date: '(Date: April 2020)',
-    imgBig: 'img/node-big.webp',
-    imgSmall: 'img/node-mic.webp'
+    imgBig: images.nodebig,
+    imgSmall: images.nodemic
   },
   {
     study: 'React',
     certificate: 'React JS Front end web development for beginners',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-6b03db04-a689-4bef-bd25-1f53e69302d7.jpg',
     date: '(Date: May 2020)',
-    imgBig: 'img/react-big.webp',
-    imgSmall: 'img/react-mic.webp'
+    imgBig: images.reactbig,
+    imgSmall: images.reactmic
   }
 ]
 
