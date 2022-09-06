@@ -26,7 +26,7 @@ const HomePage = () => {
               </a>
             </TooltipWrap>
             <TooltipWrap desc='https://www.linkedin.com/in/gelu-fanel-david/'>
-              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/">
+              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/" alt='linkedin'>
                 <i className="fab fa-linkedin" aria-hidden="true" />
               </a>
             </TooltipWrap>

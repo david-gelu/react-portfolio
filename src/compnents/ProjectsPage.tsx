@@ -28,7 +28,7 @@ const ProjectsPage = () => {
       </div>
       <div className='projects__items'>
         {filtered.map((d: DataProjects) => <div key={d.projectLink} className='projects__item'>
-          <img width='auto' height='auto' src={d.imgUrl} alt={d.imgDesc} />
+          <img src={d.imgUrl} alt={d.imgDesc} />
           <div className='projects__btns'>
             <a href={d.projectLink} target='_blank' className='projects__btn'>
               <i className='fas fa-eye' aria-hidden='true'></i>
