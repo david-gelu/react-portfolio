@@ -23,7 +23,7 @@
 .projects__item {
   position: relative;
   margin-inline: auto;
-  max-width: 80%;
+  width: min(90vmin, 13em);
   overflow: hidden;
   cursor: pointer;
   border-radius: 5%;
@@ -31,7 +31,9 @@
 }
 
 .projects__item img {
-  width: 100%;
+  width: min(90vmin, 13em);
+  height: min(90vmin, 13em);
+
   padding: 0.5em;
 }
 
