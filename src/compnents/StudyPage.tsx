@@ -31,7 +31,7 @@ const StudyPage = () => {
           </div>
         )}
       </div>
-      <div className="left">
+      <div className="left d-flex flex-wrap">
         {itSchoolStudy.map(({ study }: Studies, idx: number) => <h5 key={study + (idx + 1)}> {study}</h5>)}
       </div>
       <hr />
@@ -55,7 +55,7 @@ const StudyPage = () => {
           </div>
         )}
       </div>
-      <div className="left">
+      <div className="left d-flex flex-wrap">
         {freeCodeCampStudy.map(({ study }: Studies, idx: number) => <h5 key={study + (idx + 2)}> {study}</h5>)}
       </div>
       <hr />
@@ -77,7 +77,7 @@ const StudyPage = () => {
           </div>
         )}
       </div>
-      <div className="left mt-2">
+      <div className="left mt-2 d-flex flex-wrap">
         {udemyStudy.map(({ study }: Studies, idx: number) => <h5 key={study + (idx + 3)}> {study}</h5>)}
       </div>
     </div>
