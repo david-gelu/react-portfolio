@@ -151,7 +151,7 @@ export const freeCodeCampStudy = [
     study: 'Sass / Scss',
   },
   {
-    study: 'Reactbeginner',
+    study: 'React ',
   }
 ]
 export const udemyStudy = [
@@ -166,49 +166,49 @@ export const udemyStudy = [
   },
   {
     study: 'Json',
-    certificate: 'Json beginner ',
+    certificate: 'Json  ',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f87c2851-16d9-4ef5-82e3-fe292e08eb8a.jpg',
     date: '(Date: February 2020)',
     imgBig: images.jsonbig,
   },
   {
-    study: 'Photoshopbeginner',
-    certificate: 'Photoshop for Web Design Beginners',
+    study: 'Photoshop ',
+    certificate: 'Photoshop for Web Design s',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-384533ff-a9f4-45e9-aedc-391c1fe86103.jpg',
     date: '(Date: February 2020)',
     imgBig: images.psbig,
   },
   {
-    study: 'Sassbeginner',
-    certificate: 'Sass for Beginners',
+    study: 'Sass ',
+    certificate: 'Sass for s',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-5286b0a4-b7ef-47ee-8960-3c0d48594077.jpg',
     date: '(Date: February 2020)',
     imgBig: images.sassbig,
   },
   {
-    study: 'Gitbeginner',
+    study: 'Git - version control',
     certificate: 'Git started with GitHub',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f3f4b61f-5158-40c6-b6cd-97931e1dadbe.jpg',
     date: '(Date: February 2020)',
     imgBig: images.gitbig,
   },
   {
-    study: 'Agile, Scum and Product deliverybeginner',
+    study: 'Agile, Scum and Product delivery ',
     certificate: 'Basic of Scrum',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-bbef744b-b1e3-4af4-9b9c-a5b1765727ab.jpg',
     date: '(Date: February 2020)',
     imgBig: images.scrumbig,
   },
   {
-    study: 'Node Js API Developmentbeginner',
-    certificate: 'Node Js API Development Beginner',
+    study: 'Node Js API Development',
+    certificate: 'Node Js API Development ',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f366e802-7a42-4084-9cda-05b4b80cb62c.jpg',
     date: '(Date: April 2020)',
     imgBig: images.nodebig,
   },
   {
     study: 'React',
-    certificate: 'React JS Front end web development for beginners',
+    certificate: 'React JS Front end web development for s',
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-6b03db04-a689-4bef-bd25-1f53e69302d7.jpg',
     date: '(Date: May 2020)',
     imgBig: images.reactbig,
