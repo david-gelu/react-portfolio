@@ -3,9 +3,9 @@ import React from "react"
 import { Carousel, Modal } from "react-bootstrap"
 import { Studies } from "src/types"
 
-const ImageModal = ({ show, handleShow, imgSrc }: any) => {
+const ImageModal = ({ show, setShow, imgSrc }: any) => {
   return (
-    <Modal dialogClassName="modal-60w" centered show={show} onHide={handleShow}>
+    <Modal dialogClassName="modal-60w" centered show={show} onHide={() => setShow(false)}>
       <Modal.Body>
         <Carousel controls={false}>
           {imgSrc.map((image: Studies) => image.imgBig && <Carousel.Item key={image.imgBig}>

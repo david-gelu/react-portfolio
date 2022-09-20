@@ -6,12 +6,11 @@ import { Studies } from 'src/types'
 const StudyPage = () => {
 
   const [show, setShow] = useState(false)
-  const [image, setImage] = useState('')
+  const [study, setStudy] = useState('')
 
-  const handleShow = () => setShow(!show)
-  const showImg = (img: string) => {
-    setShow(true)
-    setImage(img)
+  const handleShow = (text: string) => {
+    setShow(!show)
+    setStudy(text)
   }
 
   return (
@@ -20,13 +19,13 @@ const StudyPage = () => {
       <h3 className="title-text"><a href="http://itschool.ro" target="_blank">ItSchool </a> - hands on course</h3>
       <h4 className="left">{itSchoolStudy[0].certificate} <a href={itSchoolStudy[0].link} target="_blank">Certification : ANC </a>
         {itSchoolStudy[0].date}</h4>
-      <div className="images">
+      <div className="left">
+        <button className='show-modal' onClick={() => handleShow('itschool')} >diplomas</button>
         {itSchoolStudy.map((img: Studies, idx: number) =>
-          img.imgSmall && <div key={`${img.imgSmall}-${idx + 22}`}>
-            <img lazy-loading="lazy" width='auto' height='auto' alt={img.certificate} className="image" src={img.imgSmall} onClick={() => showImg(img.imgBig)} />
-            {show && img.imgBig === image &&
-              <Suspense fallback={<div className='loading'>Loading...</div>}>
-                <ImageModal show={show} handleShow={handleShow} imgSrc={itSchoolStudy} />
+          <div key={`${img.imgBig}-${idx + 22}`}>
+            {show && 'itschool' === study &&
+              <Suspense fallback={<div className='loading-modal'>Loading...</div>}>
+                <ImageModal show={show} setShow={setShow} imgSrc={itSchoolStudy} />
               </Suspense>
             }
           </div>
@@ -44,13 +43,13 @@ const StudyPage = () => {
           {c.date}
         </h4>
       )}
-      <div className="images">
+      <div className="left">
+        <button className='show-modal' onClick={() => handleShow('freecodecamp')} >diplomas</button>
         {freeCodeCampStudy.map((img: Studies, idx: number) =>
-          img.imgSmall && <div key={`${img.imgSmall}-${idx + 21}`}>
-            <img lazy-loading="lazy" width='auto' height='auto' alt={img.certificate} className="image" src={img.imgSmall} onClick={() => showImg(img.imgBig)} />
-            {show && img.imgBig === image &&
-              <Suspense fallback={<div className='loading'>Loading...</div>}>
-                <ImageModal show={show} handleShow={handleShow} imgSrc={freeCodeCampStudy} />
+          <div key={`${img.imgBig}-${idx + 21}`}>
+            {show && 'freecodecamp' === study &&
+              <Suspense fallback={<div className='loading-modal'>Loading...</div>}>
+                <ImageModal show={show} setShow={setShow} imgSrc={freeCodeCampStudy} />
               </Suspense>
             }
           </div>
@@ -66,13 +65,13 @@ const StudyPage = () => {
           <a href={c.link} target="_blank"> Certification </a>
           {c.date}
         </h4>)}
-      <div className="images">
-        {udemyStudy.map((img: Studies, idx: number) => img.imgSmall &&
-          <div key={`${img.imgSmall}-${idx + 21}`}>
-            <img lazy-loading="lazy" width='auto' height='auto' alt={img.certificate} className="image" src={img.imgSmall} onClick={() => showImg(img.imgBig)} />
-            {show && img.imgBig === image &&
-              <Suspense fallback={<div className='loading'>Loading...</div>}>
-                <ImageModal show={show} handleShow={handleShow} imgSrc={udemyStudy} />
+      <div className="left">
+        <button className='show-modal' onClick={() => handleShow('udemy')} >diplomas</button>
+        {udemyStudy.map((img: Studies, idx: number) =>
+          <div key={`${img.imgBig}-${idx + 21}`}>
+            {show && 'udemy' === study &&
+              <Suspense fallback={<div className='loading-modal'>Loading...</div>}>
+                <ImageModal show={show} setShow={setShow} imgSrc={udemyStudy} />
               </Suspense>
             }
           </div>

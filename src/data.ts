@@ -104,7 +104,6 @@ export const itSchoolStudy = [
     link: '"http://site.anc.edu.ro/',
     date: '(Date: July 2019 - December 2019)',
     imgBig: images.itbig,
-    imgSmall: images.itmic
   },
   {
     study: 'CSS 3',
@@ -126,7 +125,6 @@ export const freeCodeCampStudy = [
     link: 'https://www.freecodecamp.org/certification/davidgelu/responsive-web-design',
     date: '(Date: December 2019)',
     imgBig: images.resbig,
-    imgSmall: images.resmic
   },
   {
     study: 'CSS 3',
@@ -134,7 +132,6 @@ export const freeCodeCampStudy = [
     link: 'https://www.freecodecamp.org/certification/davidgelu/front-end-libraries',
     date: '( Date: January 2020)',
     imgBig: images.jsbig,
-    imgSmall: images.jsmic
   },
   {
     study: 'Bootstrap',
@@ -142,7 +139,6 @@ export const freeCodeCampStudy = [
     link: 'https://www.freecodecamp.org/certification/davidgelu/javascript-algorithms-and-data-structures',
     date: '(Date: January 2020)',
     imgBig: images.libbig,
-    imgSmall: images.libmic
   },
   {
     study: 'JavaScript',
@@ -150,7 +146,6 @@ export const freeCodeCampStudy = [
     link: 'https://www.freecodecamp.org/certification/davidgelu/data-visualization',
     date: '(Date: February 2020)',
     imgBig: images.d3big,
-    imgSmall: images.d3mic
   },
   {
     study: 'Sass / Scss',
@@ -175,7 +170,6 @@ export const udemyStudy = [
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f87c2851-16d9-4ef5-82e3-fe292e08eb8a.jpg',
     date: '(Date: February 2020)',
     imgBig: images.jsonbig,
-    imgSmall: images.jsonmic
   },
   {
     study: 'Photoshopbeginner',
@@ -183,7 +177,6 @@ export const udemyStudy = [
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-384533ff-a9f4-45e9-aedc-391c1fe86103.jpg',
     date: '(Date: February 2020)',
     imgBig: images.psbig,
-    imgSmall: images.psmic
   },
   {
     study: 'Sassbeginner',
@@ -191,7 +184,6 @@ export const udemyStudy = [
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-5286b0a4-b7ef-47ee-8960-3c0d48594077.jpg',
     date: '(Date: February 2020)',
     imgBig: images.sassbig,
-    imgSmall: images.sassmic
   },
   {
     study: 'Gitbeginner',
@@ -199,7 +191,6 @@ export const udemyStudy = [
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f3f4b61f-5158-40c6-b6cd-97931e1dadbe.jpg',
     date: '(Date: February 2020)',
     imgBig: images.gitbig,
-    imgSmall: images.gitmic
   },
   {
     study: 'Agile, Scum and Product deliverybeginner',
@@ -207,7 +198,6 @@ export const udemyStudy = [
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-bbef744b-b1e3-4af4-9b9c-a5b1765727ab.jpg',
     date: '(Date: February 2020)',
     imgBig: images.scrumbig,
-    imgSmall: images.scrummic
   },
   {
     study: 'Node Js API Developmentbeginner',
@@ -215,7 +205,6 @@ export const udemyStudy = [
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-f366e802-7a42-4084-9cda-05b4b80cb62c.jpg',
     date: '(Date: April 2020)',
     imgBig: images.nodebig,
-    imgSmall: images.nodemic
   },
   {
     study: 'React',
@@ -223,7 +212,6 @@ export const udemyStudy = [
     link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-6b03db04-a689-4bef-bd25-1f53e69302d7.jpg',
     date: '(Date: May 2020)',
     imgBig: images.reactbig,
-    imgSmall: images.reactmic
   }
 ]
 
