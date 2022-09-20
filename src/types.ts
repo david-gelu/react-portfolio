@@ -18,7 +18,6 @@ export type Studies = {
   link?: string,
   date?: string,
   imgBig?: string,
-  imgSmall?: string,
 }
 
 export type Work = {

@@ -29,6 +29,14 @@ main {
   background: $second-color;
   @include display(center, center);
 }
+.loading-modal {
+  min-height: 10vh;
+  min-width: 10vw;
+  color: $text-color;
+  font-size: 2rem;
+  background: $second-color;
+  @include display(center, center);
+}
 
 .modal-content {
   background-color: $text-color;
