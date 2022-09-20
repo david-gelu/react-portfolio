@@ -4,7 +4,7 @@ const importAll = (r: any) => {
   return images
 }
 const images = importAll(require.context('./assets/img', false, /\.(webp)$/));
-console.log(images.book)
+console.log(images.ano)
 
 export const linkData = [
   { id: 'main', icon: 'fa-house-user' },

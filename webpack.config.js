@@ -52,7 +52,7 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|j?g|svg|gif)?$/,
+        test: /\.(png|j?g|svg|gif|webp)?$/,
         use: 'file-loader?name=./static/media/[name].[ext]',
       },
     ],
