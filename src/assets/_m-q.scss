@@ -25,10 +25,8 @@
     margin: 0.5rem auto 0.5rem 3.5em;
   }
   .main {
-    flex-direction: column;
     .main-name-div {
       margin-top: 1em;
-      width: auto;
     }
     .obj-info {
       margin-left: 0;
@@ -36,7 +34,6 @@
   }
   .professional {
     gap: 2em;
-    flex-direction: column;
   }
   .skills {
     & li {

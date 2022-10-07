@@ -5,14 +5,15 @@ const HomePage = () => {
   return (
     <main className="main" id="main">
       <div className="main-name-div">
-        <h1><span>I'm</span> Gelu</h1>
-        <br />
-        <h2 className="d-flex max-content">
-          <i className="bi bi-chevron-left tx-color"></i>
-          <div className="show-text">WebDeveloper</div>
-          <i className="bi bi-slash-lg tx-color ms-1"></i>
-          <i className="bi bi-chevron-right tx-color"></i>
-        </h2>
+        <h1><span>I'm</span> David Gelu
+          <br />
+          <div className="d-flex max-content mt-2 mx-auto">
+            <i className="bi bi-chevron-left tx-color"></i>
+            <div className="show-text">Web Developer</div>
+            <i className="bi bi-slash-lg tx-color ms-1"></i>
+            <i className="bi bi-chevron-right tx-color"></i>
+          </div>
+        </h1>
         <Suspense fallback={<div className="loading">Loading...</div>}>
           <div className="left contact-data">
             <TooltipWrap desc='david.gelu90@gmail.com'>

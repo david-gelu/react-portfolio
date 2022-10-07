@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { dataProjects } from '../data'
 import { DataProjects } from '../types'
 import { Button } from 'react-bootstrap'
+
 const ProjectsPage = () => {
   const [filtered, setFiltered] = useState(dataProjects)
   const [active, setActive] = useState('all')
-  let activeBy = ''
+
   const filterBy = (key: string) => {
     const filteredData = dataProjects.filter((k) => k.key.includes(key))
     setFiltered(filteredData)
@@ -23,24 +24,20 @@ const ProjectsPage = () => {
       <h2>Projects</h2>
       <div className='filter-btns'>
         <Button className={activeAll} size='sm' onClick={() => noFilterBy()}>All</Button>
-        <Button className={activeJs} size='sm' onClick={() => filterBy('js')}>JavaScript / React</Button>
-        <Button className={activeCss} size='sm' onClick={() => filterBy('css')}>HTML / CSS / Bootstrap</Button>
+        <Button className={activeJs} size='sm' onClick={() => filterBy('js')}>Js / Ts / React</Button>
+        <Button className={activeCss} size='sm' onClick={() => filterBy('css')}>HTML / CSS </Button>
       </div>
       <div className='projects__items'>
         {filtered.map((d: DataProjects) => <div key={d.projectLink} className='projects__item'>
           <img src={d.imgUrl} alt={d.imgDesc} />
-          <div className='projects__btns'>
-            <a href={d.projectLink} target='_blank' className='projects__btn'>
-              <i className='fas fa-eye' aria-hidden='true'></i>
-              <span className='d-block'>link</span>
-            </a>
-            <a href={d.projectGit} target='_blank' className='projects__btn'>
-              <i className='fab fa-github' aria-hidden='true'></i>
-              <span className='d-block'>git</span>
-            </a>
-          </div>
           <div className='teh-title-container'>
-            {d.teh.map((title: string) => <span key={title} className='teh-title'>{title}</span>)}
+            <a href={d.projectLink} target='_blank' className='teh-title full-bg'>
+              <i className='fas fa-link' aria-hidden='true'></i>
+            </a>
+            <a href={d.projectGit} target='_blank' className='teh-title full-bg'>
+              <i className='fab fa-github' aria-hidden='true'></i>
+            </a>
+            {d.teh.map((icon: string) => <span key={icon} className='teh-title'><i key={icon} className={icon} /> </span>)}
           </div>
         </div>
         )}

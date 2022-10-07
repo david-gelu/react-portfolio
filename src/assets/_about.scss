@@ -6,7 +6,7 @@
   color: $text-color;
 }
 .bio-desc {
-  max-width: 70ch;
+  max-width: 60ch;
   font-size: clamp(1.2rem, 3vh + 0.7rem, 1.2rem);
   margin: 0 auto;
   text-align: left;
@@ -16,6 +16,8 @@
 .professional {
   color: $text-color;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2em;
   text-align: left;
 }

@@ -33,14 +33,16 @@
   }
 }
 .show-modal {
-  background-color: $key-color;
-  border: 1px solid $key-color;
+  background-color: transparent;
+  border: 1px solid $text-color;
   border-radius: 0.3em;
-  color: $second-color;
+  color: $text-color;
   font-size: 1.3rem;
-  padding: 0.25em 1em;
+  padding: 0.05em 0.5em;
   margin-bottom: 0.5em;
+  transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
   &:hover {
-    background-color: $property-color;
+    background-color: $text-color;
+    color: $primary-color;
   }
 }

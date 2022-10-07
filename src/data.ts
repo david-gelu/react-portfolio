@@ -4,7 +4,6 @@ const importAll = (r: any) => {
   return images
 }
 const images = importAll(require.context('./assets/img', false, /\.(webp)$/));
-console.log(images.ano)
 
 export const linkData = [
   { id: 'main', icon: 'fa-house-user' },
@@ -21,46 +20,7 @@ export const dataProjects = [
     imgDesc: 'Books project',
     projectLink: 'https://booksproject.netlify.app/',
     projectGit: 'https://github.com/david-gelu/books-project',
-    teh: ['js', 'react', 'typescript', 'scss']
-  },
-  {
-    key: 'js',
-    imgUrl: images.poke,
-    imgDesc: 'Pokemon project',
-    projectLink: 'https://proiect18.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect18',
-    teh: ['js', 'react', 'css']
-  },
-  {
-    key: 'js',
-    imgUrl: images.metal,
-    imgDesc: 'Metal vision project',
-    projectLink: 'https://project-metal.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect2',
-    teh: ['js', 'css']
-  },
-  {
-    key: 'js',
-    imgUrl: images.pf,
-    imgDesc: 'Forum project',
-    projectLink: 'https://proiect15.netlify.app/home',
-    projectGit: 'https://github.com/david-gelu/proiect15',
-    teh: ['js', 'css']
-  },
-  {
-    key: 'js',
-    imgUrl: images.pl,
-    imgDesc: 'Walking through Romania project',
-    projectLink: 'https://proiect-11.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect11',
-    teh: ['js', 'css']
-  }, {
-    key: 'css',
-    imgUrl: images.cv,
-    imgDesc: 'My CV madein html and css',
-    projectLink: 'https://proiect4.netlify.app',
-    projectGit: 'https://github.com/david-gelu/proiect4',
-    teh: ['html', 'css']
+    teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
   },
   {
     key: 'css',
@@ -68,7 +28,30 @@ export const dataProjects = [
     imgDesc: 'Copy ItSchool homepage project',
     projectLink: 'https://proiect16.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect16',
-    teh: ['html', 'css', 'bootstrap']
+    teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-bootstrap']
+  },
+  {
+    key: 'js',
+    imgUrl: images.poke,
+    imgDesc: 'Pokemon project',
+    projectLink: 'https://proiect18.netlify.app',
+    projectGit: 'https://github.com/david-gelu/proiect18',
+    teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-css3-alt']
+  }, {
+    key: 'css',
+    imgUrl: images.cv,
+    imgDesc: 'My CV madein html and css',
+    projectLink: 'https://proiect4.netlify.app',
+    projectGit: 'https://github.com/david-gelu/proiect4',
+    teh: ['fab fa-html5', 'fab fa-css3-alt']
+  },
+  {
+    key: 'js',
+    imgUrl: images.metal,
+    imgDesc: 'Metal vision project',
+    projectLink: 'https://project-metal.netlify.app',
+    projectGit: 'https://github.com/david-gelu/proiect2',
+    teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-bootstrap', 'fab fa-js-square']
   },
   {
     key: 'css',
@@ -76,15 +59,30 @@ export const dataProjects = [
     imgDesc: 'Project made after PSD file',
     projectLink: 'https://proiect14.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect14',
-    teh: ['html', 'css']
+    teh: ['fab fa-html5', 'fab fa-css3-alt']
   },
   {
+    key: 'js',
+    imgUrl: images.pf,
+    imgDesc: 'Forum project',
+    projectLink: 'https://proiect15.netlify.app/home',
+    projectGit: 'https://github.com/david-gelu/proiect15',
+    teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-bootstrap', 'fab fa-js-square']
+  }, {
     key: 'css',
     imgUrl: images.sevens,
     imgDesc: 'Walking through 7 stairs canyon in Romania project',
     projectLink: 'https://proiect7.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect7',
-    teh: ['html', 'css']
+    teh: ['fab fa-html5', 'fab fa-css3-alt']
+  },
+  {
+    key: 'js',
+    imgUrl: images.pl,
+    imgDesc: 'Walking through Romania project',
+    projectLink: 'https://proiect-11.netlify.app',
+    projectGit: 'https://github.com/david-gelu/proiect11',
+    teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-js-square']
   },
   {
     key: 'css',
@@ -92,7 +90,15 @@ export const dataProjects = [
     imgDesc: 'Year seasons animation',
     projectLink: 'http://proiect12.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect12',
-    teh: ['html', 'css']
+    teh: ['fab fa-html5', 'fab fa-css3-alt']
+  },
+  {
+    key: 'css',
+    imgUrl: images.inv,
+    imgDesc: 'Trying to make anpaper folding',
+    projectLink: 'https://invitatie.netlify.app/',
+    projectGit: 'https://github.com/david-gelu/invitatie-test',
+    teh: ['fab fa-html5', 'fab fa-css3-alt']
   }
 ]
 
@@ -106,7 +112,7 @@ export const itSchoolStudy = [
     imgBig: images.itbig,
   },
   {
-    study: 'CSS 3',
+    study: 'Css 3',
   },
   {
     study: 'Bootstrap',
@@ -127,7 +133,7 @@ export const freeCodeCampStudy = [
     imgBig: images.resbig,
   },
   {
-    study: 'CSS 3',
+    study: 'Css 3',
     certificate: 'Front End Libraries',
     link: 'https://www.freecodecamp.org/certification/davidgelu/front-end-libraries',
     date: '( Date: January 2020)',
@@ -159,7 +165,7 @@ export const udemyStudy = [
     study: 'HTML 5'
   },
   {
-    study: 'CSS 3'
+    study: 'Css 3'
   },
   {
     study: 'JavaScript'
