@@ -11,8 +11,18 @@ main {
 }
 
 .title-text {
+  margin-top: min(20vmin, 15em);
+
   color: $text-color;
   text-align: center;
+}
+
+.fancy-border {
+  border-inline: 0.4em solid;
+  border-block: 0.4em solid;
+  border-image-source: linear-gradient(-45deg, var(--text-color), transparent 25%, transparent 75%, var(--text-color));
+  border-image-slice: 1;
+  padding: 0.5em;
 }
 
 @mixin display($align: null, $justify: null) {

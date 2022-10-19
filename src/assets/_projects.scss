@@ -5,7 +5,6 @@
 .projects {
   padding-bottom: 0;
   padding-top: 3.75em;
-  margin-top: 1.5em;
   font-weight: 600;
 }
 .filter-btns {
@@ -24,7 +23,7 @@
 .projects__item {
   max-width: min(80vmin, 17em);
   border-radius: 5%;
-  box-shadow: 0px 0px 5px $link-color;
+  box-shadow: 0px 0px 5px 3px $link-color;
   & img {
     padding: 0.5em;
   }
@@ -63,7 +62,7 @@
     font-weight: 700;
     &.full-bg {
       color: $second-color;
-      border: 1px solid;
+      border: 1px solid $property-color;
       cursor: pointer;
       background-color: $property-color;
       transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;

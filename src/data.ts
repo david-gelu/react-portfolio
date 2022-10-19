@@ -225,11 +225,11 @@ export const work = [
   {
     everseen: [
       'Collaborate with UX/UI designer for implementing new layouts',
-      'Using React, Typescrit, Scss, Bootrstrap to create new components or to add new functionalities with cross-browser compatibility',
+      'Using React, Typescrit, Scss, Bootrstrap, Styled Components to create new components or to add new functionalities with cross-browser compatibility',
       'Building and enhancing available and scalable interfaces for the end users',
       'Working along with development team for achieving high quality results',
       'Debugging for improving functionalities',
-      'Agile workflow using Jira/ Confluence',
+      'Agile workflow using Jira / Confluence',
       'Gitlab - version control',
     ]
   }

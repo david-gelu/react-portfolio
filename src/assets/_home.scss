@@ -7,12 +7,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 2em;
   &-name-div {
-    min-width: 50vmin;
-    padding: 0.5em 0;
+    min-width: 50ch;
     text-align: center;
-    margin-top: 9em;
     font-family: serif;
     font-weight: 500;
     & h2 {
@@ -35,7 +34,7 @@
 .max-content {
   min-width: max-content;
   max-width: max-content;
-  font-size: clamp(1.7rem, 3.5vmin + 1rem, 3.7rem);
+  font-size: clamp(1.4rem, 3vmin + 1rem, 3rem);
 }
 .tx-color {
   background: linear-gradient(177deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);

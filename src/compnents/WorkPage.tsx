@@ -9,7 +9,7 @@ const WorkPage = () => {
     <div className="title-text jobs" id="jobs">
       <h2>Work</h2>
       <div className="projects-image">
-        <h3 className="projects-title ">Junior web-developer Everseen</h3>
+        <h3 className="projects-title ">Web Developer Everseen</h3>
         <div className="left">
           {workMap[0].map((responsability: string, idx: number) => <h4 key={idx}>{responsability}</h4>)}
         </div>

@@ -4,7 +4,7 @@ const TooltipWrap = React.lazy(() => import('./TooltipWrap'))
 const HomePage = () => {
   return (
     <main className="main" id="main">
-      <div className="main-name-div">
+      <div className="main-name-div fancy-border">
         <h1><span>I'm</span> David Gelu
           <br />
           <div className="d-flex max-content mt-2 mx-auto">
@@ -65,6 +65,7 @@ const HomePage = () => {
           <div> <span className="ms-3 key">"typescript"</span> : <span className="property">"^4.5.5",</span></div>
           <div><span className="ms-3 key">"bootstrap"</span> : <span className="property">"^5.1.3",</span></div>
           <div><span className="ms-3 key">"sass"</span> : <span className="property">"^1.49.0",</span></div>
+          {/* <div><span className="ms-3 key">"styled-components"</span> : <span className="property">"^5.3.6",</span></div> */}
           <div><span className="ms-3 key">"@fortawesome/fontawesome-free"</span> : <span className="property">"^5.15.4",</span></div>
           <div><span className="ms-3"> &#125;, </span></div>
         </div>

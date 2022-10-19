@@ -3,7 +3,7 @@
 @use "./utils.scss" as *;
 
 .jobs {
-  padding-block: 2em 0;
+  // padding-block: 2em 0;
   & h4 {
     color: $text-color;
     @include display(flex-start, flex-start);

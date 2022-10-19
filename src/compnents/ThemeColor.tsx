@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import TooltipWrap from './TooltipWrap'
 
 const ThemeColor = () => {
   let darkMode = localStorage.getItem('dark-mode')
+
   const [theme, setTheme] = useState(darkMode === 'enabled' ? false : true)
   const themeData = document.querySelector('[data-theme') as HTMLElement
-  themeData.dataset.theme = `${theme ? 'dark' : 'light'}`
-
+  themeData.dataset.theme = `${!theme ? 'dark' : 'light'}`
   const toggleLightTheme = () => {
-    localStorage.setItem('dark-mode', '')
+    localStorage.setItem('dark-mode', 'disabled')
     setTheme(true)
   }
   const toggleDarkTheme = () => {
@@ -21,6 +21,18 @@ const ThemeColor = () => {
     if (darkMode !== 'enabled') toggleDarkTheme()
     else toggleLightTheme()
   }
+
+  useEffect(() => {
+    if (localStorage.getItem('dark-mode') === null) {
+      if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        localStorage.setItem('dark-mode', 'enabled')
+        setTheme(false)
+      } else {
+        localStorage.setItem('dark-mode', 'disabled')
+        setTheme(true)
+      }
+    }
+  }, [])
 
   return (
     <TooltipWrap desc={`Theme color ${theme ? 'light' : 'dark'}`}>

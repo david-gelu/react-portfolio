@@ -1,9 +1,12 @@
 @use "./variables.scss" as *;
 @use "./resets.scss" as *;
 
-.study {
-  padding-block: 2em 0;
-  margin: 0 auto;
+.study-cards-container {
+  display: grid;
+  justify-content: center;
+  align-items: start;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  gap: 1.5rem;
 }
 
 .study a {
@@ -39,8 +42,10 @@
   color: $text-color;
   font-size: 1.3rem;
   padding: 0.05em 0.5em;
-  margin-bottom: 0.5em;
+  margin-inline: 50%;
+  transform: translateX(-50%);
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+  font-weight: 700;
   &:hover {
     background-color: $text-color;
     color: $primary-color;
