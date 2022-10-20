@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { dataProjects } from '../data'
 import { DataProjects } from '../types'
 import { Button } from 'react-bootstrap'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 const ProjectsPage = () => {
   const [filtered, setFiltered] = useState(dataProjects)
@@ -29,7 +31,13 @@ const ProjectsPage = () => {
       </div>
       <div className='projects__items'>
         {filtered.map((d: DataProjects) => <div key={d.projectLink} className='projects__item'>
-          <img src={d.imgUrl} alt={d.imgDesc} />
+          <LazyLoadImage
+            useIntersectionObserver={true}
+            threshold={100}
+            visibleByDefault={false}
+            effect="blur"
+            src={d.imgUrl}
+            alt={d.imgDesc} />
           <div className='teh-title-container'>
             <a href={d.projectLink} target='_blank' className='teh-title full-bg'>
               <i className='fas fa-link' aria-hidden='true'></i>

@@ -2,6 +2,8 @@
 import React from "react"
 import { Carousel, Modal } from "react-bootstrap"
 import { Studies } from "src/types"
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 const ImageModal = ({ show, setShow, imgSrc }: any) => {
   return (
@@ -9,7 +11,7 @@ const ImageModal = ({ show, setShow, imgSrc }: any) => {
       <Modal.Body>
         <Carousel controls={false}>
           {imgSrc.map((image: Studies) => image.imgBig && <Carousel.Item key={image.imgBig}>
-            <img lazy-loading="lazy"
+            <LazyLoadImage
               width='auto'
               height='auto'
               className="d-block w-100"
