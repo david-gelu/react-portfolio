@@ -29,10 +29,13 @@ const NavBar = () => {
         <Offcanvas.Body >
           <ThemeColor />
           {linkData.map((l: LinkData) =>
-            <TooltipWrap key={l.id} desc={l.id.charAt(0).toUpperCase() + l.id.slice(1)}>
+            <TooltipWrap placement="right" key={l.id} desc={l.id.charAt(0).toUpperCase() + l.id.slice(1)}>
               <Nav.Link key={`${l.id}-id`} onClick={() => setId(l.id)}
-                className={`${activeId === l.id ? 'active' : ''}`} href={`#${l.id}`}>
+                className={`${activeId === l.id ? 'active' : ''} d-flex flex-column text-center`} href={`#${l.id}`}>
                 <i className={`fas ${l.icon}`}></i>
+                <span style={{ transform: 'scale(0.1)', visibility: 'hidden', lineHeight: 0.3 }}>
+                  {l.id.charAt(0).toUpperCase() + l.id.slice(1)}
+                </span>
               </Nav.Link>
             </TooltipWrap>
           )}
