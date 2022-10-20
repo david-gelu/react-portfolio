@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Nav, Offcanvas } from "react-bootstrap"
+import { Alert, Button, Nav, Offcanvas } from "react-bootstrap"
 
 import { linkData } from '../data'
 import { LinkData } from 'src/types.js'
@@ -17,7 +17,7 @@ const NavBar = () => {
 
   let beforeInstallPrompt: any
   useEffect(() => {
-    window.addEventListener("beforeinstallprompt", eventHandler) as any
+    window.addEventListener("beforeinstallprompt", eventHandler)
   }, [])
 
   const eventHandler = (event: Event) => {
@@ -29,9 +29,23 @@ const NavBar = () => {
 
 
   const install = () => {
-    if (beforeInstallPrompt) beforeInstallPrompt.prompt()
+    if (beforeInstallPrompt) {
+      beforeInstallPrompt.prompt()
+      beforeInstallPrompt.userChoice.then((choiceResult: any) => {
+        if (choiceResult.outcome === 'accepted') {
+          return <Alert key='success' variant='success'>
+            Thank you for installing this PWA
+          </Alert>
+        } else {
+          return <Alert key='info' variant='info'>
+            No problem, maybe next time you will install it
+          </Alert>
+        }
+        beforeInstallPrompt = null;
+      });
+    }
   }
-
+  console.log(beforeInstallPrompt, 'sdr')
   const checkIfInstaled = window.matchMedia('(display-mode: standalone)').matches
 
   return (
@@ -60,7 +74,7 @@ const NavBar = () => {
           )}
           {!checkIfInstaled &&
             <TooltipWrap placement="right" key='download' desc={'Download on device'}>
-              <Button className='dark-btn mt-auto' size='sm' onClick={install} >
+              <Button variant='success' className='mt-auto' size='sm' onClick={install} >
                 <i className="fas fa-download"></i>
                 <span className='d-block nav-text'>PWA</span>
               </Button>

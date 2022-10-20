@@ -42,8 +42,8 @@
   color: $text-color;
   font-size: 1.3rem;
   padding: 0.05em 0.5em;
-  margin-inline: 50%;
-  transform: translateX(-50%);
+  width: 50%;
+  margin-inline: 25%;
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
   font-weight: 700;
   &:hover {
