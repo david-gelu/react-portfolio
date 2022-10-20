@@ -32,8 +32,8 @@
   color: $text-color;
   border-color: $nav-bg;
 }
-.offcanvas-start {
-  width: auto;
+.offcanvas.offcanvas-start {
+  width: max-content;
 }
 .btn-name {
   border: 1px solid $key-color;
