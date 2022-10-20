@@ -79,6 +79,8 @@
   a,
   span {
     color: $text-color;
-    padding: 1em;
+    & i {
+      padding: 1em 1em 0;
+    }
   }
 }

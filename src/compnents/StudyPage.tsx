@@ -23,7 +23,7 @@ const StudyPage = () => {
           <h3 className="projects-title">
             <a href="http://itschool.ro" target="_blank">ItSchool </a> - hands on course
           </h3>
-          {itSchoolStudy.map(({ study }: Studies, idx: number) => <h5 key={study + (idx + 1)}> {study}</h5>)}
+          {itSchoolStudy.map(({ study }: Studies, idx: number) => <h4 key={study + (idx + 1)}> {study}</h4>)}
           <button className='show-modal' onClick={() => handleShow('itschool')} >Diploma</button>
           {itSchoolStudy.map((img: Studies, idx: number) =>
             <div key={`${img.imgBig}-${idx + 22}`}>
@@ -44,7 +44,7 @@ const StudyPage = () => {
           <h3 className="projects-title">
             <a href="http://freecodecamp.org" target="_blank"> Freecodecamp </a> - online course
           </h3>
-          {freeCodeCampStudy.map(({ study }: Studies, idx: number) => <h5 key={study + (idx + 2)}> {study}</h5>)}
+          {freeCodeCampStudy.map(({ study }: Studies, idx: number) => <h4 key={study + (idx + 2)}> {study}</h4>)}
           <button className='show-modal' onClick={() => handleShow('freecodecamp')} >Diplomas</button>
           {freeCodeCampStudy.map((img: Studies, idx: number) =>
             <div key={`${img.imgBig}-${idx + 21}`}>
@@ -65,7 +65,7 @@ const StudyPage = () => {
           <h3 className="projects-title ">
             <a href="http://udemy.com" target="_blank">Udemy</a> - online course
           </h3>
-          {udemyStudy.map(({ study }: Studies, idx: number) => <h5 key={study + (idx + 3)}> {study}</h5>)}
+          {udemyStudy.map(({ study }: Studies, idx: number) => <h4 key={study + (idx + 3)}> {study}</h4>)}
           <button className='show-modal' onClick={() => handleShow('udemy')} >Diplomas</button>
           {udemyStudy.map((img: Studies, idx: number) =>
             <div key={`${img.imgBig}-${idx + 21}`}>

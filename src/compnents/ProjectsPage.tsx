@@ -41,9 +41,15 @@ const ProjectsPage = () => {
           <div className='teh-title-container'>
             <a href={d.projectLink} target='_blank' className='teh-title full-bg'>
               <i className='fas fa-link' aria-hidden='true'></i>
+              <span style={{ transform: 'scale(0.01)', visibility: 'hidden', lineHeight: 0 }}>
+                link
+              </span>
             </a>
             <a href={d.projectGit} target='_blank' className='teh-title full-bg'>
               <i className='fab fa-github' aria-hidden='true'></i>
+              <span style={{ transform: 'scale(0.01)', visibility: 'hidden', lineHeight: 0 }}>
+                github
+              </span>
             </a>
             {d.teh.map((icon: string) => <span key={icon} className='teh-title'><i key={icon} className={icon} /> </span>)}
           </div>

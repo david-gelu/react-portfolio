@@ -8,21 +8,31 @@
   border-color: $key-color;
   box-shadow: none;
 }
-.dark-btn,
-.dark-btn:focus,
-.dark-btn:hover {
+.dark-btn {
   background-color: $button-color;
   border-color: $button-color;
   color: $primary-color;
   box-shadow: none;
+  &:focus,
+  &:hover {
+    background-color: transparent;
+    color: $text-color;
+    border-color: $text-color;
+    box-shadow: none;
+  }
 }
-.outline-dark-btn,
-.outline-dark-btn:focus,
-.outline-dark-btn:hover {
+.outline-dark-btn {
   background-color: transparent;
   color: $text-color;
   border-color: $text-color;
   box-shadow: none;
+  &:focus,
+  &:hover {
+    background-color: $button-color;
+    border-color: $button-color;
+    color: $primary-color;
+    box-shadow: none;
+  }
 }
 .fixed-top {
   right: auto;
@@ -34,6 +44,7 @@
 }
 .offcanvas.offcanvas-start {
   width: max-content;
+  height: 100%;
 }
 .btn-name {
   border: 1px solid $key-color;
@@ -54,6 +65,7 @@
   flex-grow: 0;
   padding: 0;
   flex-direction: column;
+  height: 100vh;
   @include display(center, null);
   & > * {
     margin-block: 1em;
@@ -69,4 +81,10 @@
       background-color: unset;
     }
   }
+}
+
+.nav-text {
+  transform: scale(0.7);
+  margin-top: 0.3em;
+  line-height: 0.3;
 }

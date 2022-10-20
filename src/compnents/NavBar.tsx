@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button, Nav, Offcanvas } from "react-bootstrap"
 
 import { linkData } from '../data'
@@ -15,6 +15,25 @@ const NavBar = () => {
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
 
+  let beforeInstallPrompt: any
+  useEffect(() => {
+    window.addEventListener("beforeinstallprompt", eventHandler) as any
+  }, [])
+
+  const eventHandler = (event: Event) => {
+    try {
+      beforeInstallPrompt = event
+    }
+    catch (e) { console.log(`Error ${e}`) }
+  }
+
+
+  const install = () => {
+    if (beforeInstallPrompt) beforeInstallPrompt.prompt()
+  }
+
+  const checkIfInstaled = window.matchMedia('(display-mode: standalone)').matches
+
   return (
     <>
       <Button variant="primary" size='sm' onClick={toggleShow} className="mt-3 fixed-top w-auto theme-color-name btn-name">
@@ -26,19 +45,27 @@ const NavBar = () => {
             David Gelu
           </Button>
         </Offcanvas.Header>
-        <Offcanvas.Body >
+        <Offcanvas.Body>
           <ThemeColor />
           {linkData.map((l: LinkData) =>
             <TooltipWrap placement="right" key={l.id} desc={l.id.charAt(0).toUpperCase() + l.id.slice(1)}>
               <Nav.Link key={`${l.id}-id`} onClick={() => setId(l.id)}
                 className={`${activeId === l.id ? 'active' : ''} d-flex flex-column text-center`} href={`#${l.id}`}>
                 <i className={`fas ${l.icon}`}></i>
-                <span style={{ transform: 'scale(0.1)', visibility: 'hidden', lineHeight: 0.3 }}>
+                <span className={`${activeId === l.id ? 'active' : ''} nav-text`}>
                   {l.id.charAt(0).toUpperCase() + l.id.slice(1)}
                 </span>
               </Nav.Link>
             </TooltipWrap>
           )}
+          {!checkIfInstaled &&
+            <TooltipWrap placement="right" key='download' desc={'Download on device'}>
+              <Button className='dark-btn mt-auto' size='sm' onClick={install} >
+                <i className="fas fa-download"></i>
+                <span className='d-block nav-text'>PWA</span>
+              </Button>
+            </TooltipWrap>
+          }
         </Offcanvas.Body>
       </Offcanvas>
     </>

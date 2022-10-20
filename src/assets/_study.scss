@@ -17,12 +17,12 @@
 .study h3 {
   font-weight: 500;
 }
-.study h5 {
+.study h4 {
   position: relative;
   font-weight: 600;
   padding: 0 2em;
 }
-.study h5::before {
+.study h4::before {
   @include arrow();
 }
 

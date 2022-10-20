@@ -17,23 +17,35 @@ const HomePage = () => {
         <Suspense fallback={<div className="loading">Loading...</div>}>
           <div className="left contact-data">
             <TooltipWrap desc='david.gelu90@gmail.com'>
-              <a href="mailto:david.gelu90@gmail.com" alt='email'>
+              <a href="mailto:david.gelu90@gmail.com" alt='email' className='d-flex flex-column text-center'>
                 <i className="fa fa-envelope" aria-hidden="true" />
+                <span className="nav-text text-center" >
+                  email
+                </span>
               </a>
             </TooltipWrap>
-            <TooltipWrap desc='tel:+4 0744 598 995'>
-              <a href="tel:+4 0744 598 995" alt='phone number'>
+            <TooltipWrap desc='+4 0744 598 995'>
+              <a href="tel:+4 0744 598 995" alt='phone number' className='d-flex flex-column text-center'>
                 <i className="fa fa-mobile" aria-hidden="true" />
+                <span className="nav-text text-center">
+                  phone no
+                </span>
               </a>
             </TooltipWrap>
             <TooltipWrap desc='https://www.linkedin.com/in/gelu-fanel-david/'>
-              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/" alt='linkedin'>
+              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/" alt='linkedin' className='d-flex flex-column text-center'>
                 <i className="fab fa-linkedin" aria-hidden="true" />
+                <span className="nav-text text-center" >
+                  linkedin
+                </span>
               </a>
             </TooltipWrap>
             <TooltipWrap desc='Brasov, Romania'>
-              <span alt='location'>
+              <span alt='location' className='d-flex flex-column text-center'>
                 <i className="fa fa-map-marker" aria-hidden="true" />
+                <span className="nav-text text-center" >
+                  location
+                </span>
               </span>
             </TooltipWrap>
           </div>
