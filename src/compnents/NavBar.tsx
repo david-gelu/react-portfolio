@@ -9,8 +9,21 @@ import TooltipWrap from './TooltipWrap'
 
 const NavBar = () => {
   const [activeId, setActiveId] = useState('')
-  const setId = (id: string) => setActiveId(id)
   const [show, setShow] = useState(true);
+  const [showBtn, setShowBtn] = useState(true);
+  const [size, setSize] = useState(0)
+  const setId = (id: string) => setActiveId(id)
+
+  useEffect(() => {
+    const resize = () => setSize(window.innerWidth)
+    window.addEventListener('resize', resize)
+    resize()
+  }, [])
+
+  useEffect(() => {
+    if (size < 900) setShowBtn(false)
+    else setShowBtn(true)
+  }, [size])
 
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
@@ -45,9 +58,6 @@ const NavBar = () => {
       });
     }
   }
-  console.log(beforeInstallPrompt, 'sdr')
-  const checkIfInstaled = window.matchMedia('(display-mode: standalone)').matches
-
   return (
     <>
       <Button variant="primary" size='sm' onClick={toggleShow} className="mt-3 fixed-top w-auto theme-color-name btn-name">
@@ -72,7 +82,7 @@ const NavBar = () => {
               </Nav.Link>
             </TooltipWrap>
           )}
-          {!checkIfInstaled &&
+          {showBtn &&
             <TooltipWrap placement="right" key='download' desc={'Download on device'}>
               <Button variant='success' className='mt-auto' size='sm' onClick={install} >
                 <i className="fas fa-download"></i>
