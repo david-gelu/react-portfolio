@@ -6,27 +6,14 @@ import { LinkData } from 'src/types.js'
 import ThemeColor from './ThemeColor'
 import TooltipWrap from './TooltipWrap'
 
-
 const NavBar = () => {
   const [activeId, setActiveId] = useState('')
   const [show, setShow] = useState(true);
-  const [showBtn, setShowBtn] = useState(true);
-  const [size, setSize] = useState(0)
+
   const setId = (id: string) => setActiveId(id)
-
-  useEffect(() => {
-    const resize = () => setSize(window.innerWidth)
-    window.addEventListener('resize', resize)
-    resize()
-  }, [])
-
-  useEffect(() => {
-    if (size < 900) setShowBtn(false)
-    else setShowBtn(true)
-  }, [size])
-
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
+
 
   let beforeInstallPrompt: any
   useEffect(() => {
@@ -37,27 +24,20 @@ const NavBar = () => {
     try {
       beforeInstallPrompt = event
     }
-    catch (e) { console.log(`Error ${e}`) }
+    catch (e) { console.error(`Error ${e}`) }
   }
-
 
   const install = () => {
     if (beforeInstallPrompt) {
       beforeInstallPrompt.prompt()
-      beforeInstallPrompt.userChoice.then((choiceResult: any) => {
-        if (choiceResult.outcome === 'accepted') {
-          return <Alert key='success' variant='success'>
-            Thank you for installing this PWA
-          </Alert>
-        } else {
-          return <Alert key='info' variant='info'>
-            No problem, maybe next time you will install it
-          </Alert>
-        }
-        beforeInstallPrompt = null;
-      });
+      // beforeInstallPrompt.userChoice.then((choiceResult: any) => {
+      //   if (choiceResult.outcome === 'accepted') do something
+      //   if (choiceResult.outcome === 'dismissed') do something
+      //   beforeInstallPrompt = null;
+      // })
     }
   }
+  const checkIfInstaled = window.matchMedia('(display-mode: standalone)').matches
   return (
     <>
       <Button variant="primary" size='sm' onClick={toggleShow} className="mt-3 fixed-top w-auto theme-color-name btn-name">
@@ -82,9 +62,9 @@ const NavBar = () => {
               </Nav.Link>
             </TooltipWrap>
           )}
-          {showBtn &&
+          {!checkIfInstaled &&
             <TooltipWrap placement="right" key='download' desc={'Download on device'}>
-              <Button variant='success' className='mt-auto' size='sm' onClick={install} >
+              <Button variant='success' className='mt-auto d-none d-lg-inline-block' size='sm' onClick={install} >
                 <i className="fas fa-download"></i>
                 <span className='d-block nav-text'>PWA</span>
               </Button>
