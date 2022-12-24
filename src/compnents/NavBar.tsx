@@ -65,7 +65,8 @@ const NavBar = () => {
           )}
           {!checkIfInstaled &&
             <TooltipWrap placement="right" key='download' desc={'Download on device'}>
-              <Button variant='success' className='mt-auto d-none d-lg-inline-block' size='sm' onClick={install} >
+              <Button variant='success' className='mt-auto ' size='sm' onClick={install} >
+                {/* d-none d-lg-inline-block */}
                 <i className="fas fa-download"></i>
                 <span className='d-block nav-text'>PWA</span>
               </Button>
