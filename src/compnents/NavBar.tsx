@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import { Alert, Button, Nav, Offcanvas } from "react-bootstrap"
+import React, { useEffect, useState, useContext } from 'react'
+import { Button, Nav, Offcanvas } from "react-bootstrap"
+import { NavBarContext } from '../context/NavBarContext'
 
-import { linkData } from '../data'
 import { LinkData } from 'src/types.js'
 import ThemeColor from './ThemeColor'
 import TooltipWrap from './TooltipWrap'
@@ -14,7 +14,8 @@ const NavBar = () => {
   const handleClose = () => setShow(false);
   const toggleShow = () => setShow((s) => !s);
 
-
+  const { linkData } = useContext(NavBarContext)
+  console.log(linkData)
   let beforeInstallPrompt: any
   useEffect(() => {
     window.addEventListener("beforeinstallprompt", eventHandler)
