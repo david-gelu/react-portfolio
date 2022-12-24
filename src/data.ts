@@ -5,13 +5,7 @@ const importAll = (r: any) => {
 }
 const images = importAll(require.context('./assets/img', false, /\.(webp)$/));
 
-export const linkData = [
-  { id: 'main', icon: 'fa-house-user' },
-  { id: 'projects', icon: 'fa-laptop-code' },
-  { id: 'about', icon: 'fa-address-card' },
-  { id: 'jobs', icon: 'fa-briefcase' },
-  { id: 'study', icon: 'fa-graduation-cap' },
-]
+
 
 export const dataProjects = [
   {
