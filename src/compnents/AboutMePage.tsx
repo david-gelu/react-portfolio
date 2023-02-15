@@ -7,10 +7,25 @@ const AboutMePage = () => {
     <main className="about" id="about"><h2 className="title-text">About me</h2>
       <div className="professional fancy-border">
         <h3 className="bio-desc ">
-          <span>Task-driven, hard worker and very passionate about all the new things I can discover.
-            Having a high desire to contribute and work among people from whom I can learn, helps me to gain more skills,
-            improve and build the foundation of my career.
-          </span>
+          <p>
+            &emsp;&emsp; Greetings!
+            <br />
+            <br />
+            &emsp;&emsp; I am excited to introduce myself as a hardworking and passionate individual with a desire to learn and contribute to the field of web development.
+            My skillset includes expertise in React, JavaScript, TypeScript, HTML, CSS/SASS, Styled-components, Bootstrap, and Git.
+            I am always looking for new opportunities to expand my knowledge and improve upon my skills.
+            If you're interested in seeing my work, please feel free to visit my GitHub repository at
+            <a style={{ color: 'var(--nav-color)', fontWeight: 700 }}
+              href='https://github.com/david-gelu?tab=repositories'
+              alt='https://github.com/david-gelu?tab=repositories'
+            >
+              https://github.com/david-gelu?tab=repositories</a>
+            <br />
+            I am always open to learning from others and working together to achieve great results.
+            <br />
+            <br />
+            Thank you for your time and consideration.
+          </p>
         </h3>
         <div className="skills left">
           <div className="professional-title left">
