@@ -15,7 +15,7 @@ const AboutMePage = () => {
             My skillset includes expertise in React, JavaScript, TypeScript, HTML, CSS/SASS, Styled-components, Bootstrap, and Git.
             I am always looking for new opportunities to expand my knowledge and improve upon my skills.
             If you're interested in seeing my work, please feel free to visit my GitHub repository at
-            <a style={{ color: 'var(--nav-color)', fontWeight: 700 }}
+            <a style={{ marginLeft: '0.2rem', color: 'var(--property-color)', fontWeight: 700 }}
               href='https://github.com/david-gelu?tab=repositories'
               alt='https://github.com/david-gelu?tab=repositories'
             >

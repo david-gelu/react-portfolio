@@ -71,8 +71,8 @@ const HomePage = () => {
         </div>
         <div className="ms-2">
           <div><span className='key'>"dependencies"</span> : <span className="ms-2">&#123;</span></div>
-          <div><span className="ms-3 key">"react"</span> : <span className="property">"^17.0.2",</span></div>
-          <div><span className="ms-3 key">"react-bootstrap"</span> : <span className="property">"^2.4.0",</span></div>
+          <div><span className="ms-3 key">"react"</span> : <span className="property">"^18.2.0",</span></div>
+          <div><span className="ms-3 key">"react-bootstrap"</span> : <span className="property">"^2.7.2",</span></div>
           <div> <span className="ms-3 key">"typescript"</span> : <span className="property">"^4.5.5",</span></div>
           <div><span className="ms-3 key">"bootstrap"</span> : <span className="property">"^5.2.3",</span></div>
           <div><span className="ms-3 key">"sass"</span> : <span className="property">"^1.49.0",</span></div>
