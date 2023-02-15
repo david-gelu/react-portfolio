@@ -9,8 +9,8 @@
   box-shadow: none;
 }
 .dark-btn {
-  background-color: $button-color;
-  border-color: $button-color;
+  background-color: $property-color;
+  border-color: $property-color;
   color: $primary-color;
   box-shadow: none;
   &:focus,
@@ -23,13 +23,13 @@
 }
 .outline-dark-btn {
   background-color: transparent;
-  color: $text-color;
-  border-color: $text-color;
+  color: $property-color;
+  border-color: $property-color;
   box-shadow: none;
   &:focus,
   &:hover {
-    background-color: $button-color;
-    border-color: $button-color;
+    background-color: $property-color;
+    border-color: $property-color;
     color: $primary-color;
     box-shadow: none;
   }
