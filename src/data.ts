@@ -218,13 +218,15 @@ export const udemyStudy = [
 export const work = [
   {
     everseen: [
-      'Collaborate with UX/UI designer for implementing new layouts',
-      'Using React, Typescrit, Scss, Bootrstrap, Styled Components to create new components or to add new functionalities with cross-browser compatibility',
+      'Using React, Typescript, SCSS, Bootstrap, and Styled Components to create new components and add new functionalities with cross-browser compatibility.',
+      'Collaborating with UX/UI designers has provided me with the ability to implement new layouts, build and enhance user-friendly interfaces, and debug to improve functionalities.',
+      'Knowledge of Agile workflow using Jira and Confluence, as well as version control using Gitlab, have equipped me with the ability to work in a fast-paced development environment and deliver high-quality results.',
       'Building and enhancing available and scalable interfaces for the end users',
       'Working along with development team for achieving high quality results',
-      'Debugging for improving functionalities',
-      'Agile workflow using Jira / Confluence',
-      'Gitlab - version control',
+      // 'Using React, Typescrit, Scss, Bootrstrap, Styled Components to create new components or to add new functionalities with cross-browser compatibility',
+      // 'Debugging for improving functionalities',
+      // 'Agile workflow using Jira / Confluence',
+      // 'Gitlab - version control',
     ]
   }
 ]
