@@ -1,16 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorkerRegistration';
+import React, { StrictMode } from 'react'
+import './index.css'
+import App from './App'
+import * as serviceWorker from './serviceWorkerRegistration'
 // import reportWebVitals from './reportWebVitals'
+import { createRoot } from "react-dom/client"
 
-ReactDOM.render(
-  <React.StrictMode>
+
+const rootElement = document.getElementById("root")
+const root = createRoot(rootElement)
+
+root.render(
+  <StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  </StrictMode>
+)
 
-serviceWorker.register();
-// reportWebVitals(console.log);
+serviceWorker.register()
+// reportWebVitals(console.log)
