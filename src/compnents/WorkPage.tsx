@@ -14,12 +14,15 @@ const WorkPage = () => {
           {workMap[0].map((responsability: string, idx: number) => <h4 key={idx}>{responsability}</h4>)}
         </div>
       </div>
-      <h4 className="left">My sales experience from 2009 until today has taught me about:</h4>
+      <br />
+      <br />
+      <br />
+      <h4 className="left">My background in retail has given me valuable experience and taught me:</h4>
       <div className="left">
-        <h5> Organizing and planning my work time for specific tasks in order to increase effectiveness, efficiency, and
-          productivity </h5>
-        <h5> Working collaboratively with a group of people using personal skills and competencies</h5>
-        <h5> Ability to work regardless of disruptive factors</h5>
+        <h5> The importance of organizing and planning my work time to increase effectiveness, efficiency, and productivity.</h5>
+        <h5> I am a team player and enjoy working collaboratively with others, utilizing my personal skills and competencies to achieve high-quality results.</h5>
+        <h5> I am also able to work effectively despite disruptive factors.</h5>
+        {/* <h5> I am ready to join a development team and make meaningful contributions to achieve great results.</h5> */}
       </div>
     </div>
   )
