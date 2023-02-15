@@ -61,7 +61,7 @@
     .tech-used-#{$i} {
       position: absolute;
       inset: 0 0.5em auto;
-      top: calc(12% * #{$i}.#{22});
+      top: calc(12% * calc(#{$i}* 1.05));
       max-width: 3em;
     }
   }
