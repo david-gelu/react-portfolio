@@ -15,7 +15,6 @@ const NavBar = () => {
   const toggleShow = () => setShow((s) => !s);
 
   const { linkData } = useContext(NavBarContext)
-  console.log(linkData)
   let beforeInstallPrompt: any
   useEffect(() => {
     window.addEventListener("beforeinstallprompt", eventHandler)
@@ -65,8 +64,7 @@ const NavBar = () => {
           )}
           {!checkIfInstaled &&
             <TooltipWrap placement="right" key='download' desc={'Download on device'}>
-              <Button variant='success' className='mt-auto ' size='sm' onClick={install} >
-                {/* d-none d-lg-inline-block */}
+              <Button variant='success' className='mt-auto d-none d-lg-inline-block' size='sm' onClick={install} >
                 <i className="fas fa-download"></i>
                 <span className='d-block nav-text'>PWA</span>
               </Button>
