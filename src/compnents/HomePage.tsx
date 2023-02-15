@@ -8,10 +8,10 @@ const HomePage = () => {
         <h1><span>I'm</span> David Gelu
           <br />
           <div className="d-flex max-content mt-2 mx-auto">
-            <i className="bi bi-chevron-left tx-color"></i>
+            <i className="bi bi-chevron-left tx-color">&#60;</i>
             <div className="show-text">Web Developer</div>
             <i className="bi bi-slash-lg tx-color ms-1"></i>
-            <i className="bi bi-chevron-right tx-color"></i>
+            <i className="bi bi-chevron-right tx-color">&#47; &#62;</i>
           </div>
         </h1>
         <Suspense fallback={<div className="loading">Loading...</div>}>
@@ -75,7 +75,7 @@ const HomePage = () => {
           <div><span className="ms-3 key">"react"</span> : <span className="property">"^17.0.2",</span></div>
           <div><span className="ms-3 key">"react-bootstrap"</span> : <span className="property">"^2.4.0",</span></div>
           <div> <span className="ms-3 key">"typescript"</span> : <span className="property">"^4.5.5",</span></div>
-          <div><span className="ms-3 key">"bootstrap"</span> : <span className="property">"^5.1.3",</span></div>
+          <div><span className="ms-3 key">"bootstrap"</span> : <span className="property">"^5.2.3",</span></div>
           <div><span className="ms-3 key">"sass"</span> : <span className="property">"^1.49.0",</span></div>
           {/* <div><span className="ms-3 key">"styled-components"</span> : <span className="property">"^5.3.6",</span></div> */}
           <div><span className="ms-3 key">"@fortawesome/fontawesome-free"</span> : <span className="property">"^5.15.4",</span></div>

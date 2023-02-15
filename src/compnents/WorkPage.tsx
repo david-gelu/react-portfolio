@@ -1,9 +1,10 @@
-import React from "react"
-
-import { work } from '../data'
-import { Work } from "src/types"
+import React, { useContext } from "react"
+import { WorkContext } from "../context/WorkContext"
+import { Work } from "../types"
 
 const WorkPage = () => {
+  const { work } = useContext(WorkContext)
+
   const workMap = work.map((w: Work) => w.everseen)
   return (
     <div className="title-text jobs" id="jobs">

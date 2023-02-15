@@ -1,9 +1,10 @@
-import React, { useState, Suspense } from 'react'
-import { itSchoolStudy, freeCodeCampStudy, udemyStudy } from '../data'
+import React, { useState, Suspense, useContext } from 'react'
 const ImageModal = React.lazy(() => import('./ImageModal'))
-import { Studies } from 'src/types'
+import { Studies } from '../types'
+import { StudyContext } from '../context/StudyContext'
 
 const StudyPage = () => {
+  const { itSchoolStudy, freeCodeCampStudy, udemyStudy } = useContext(StudyContext)
 
   const [show, setShow] = useState(false)
   const [study, setStudy] = useState('')

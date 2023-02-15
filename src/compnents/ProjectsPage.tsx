@@ -1,16 +1,20 @@
-import React, { useState } from 'react'
-import { dataProjects } from '../data'
+import React, { useState, useContext } from 'react'
+import { ProjectsContext } from '../context/ProjectsContext'
+
 import { DataProjects } from '../types'
 import { Button } from 'react-bootstrap'
 import { LazyLoadImage } from 'react-lazy-load-image-component'
 import 'react-lazy-load-image-component/src/effects/blur.css'
 
+
 const ProjectsPage = () => {
+  const { dataProjects } = useContext(ProjectsContext)
+
   const [filtered, setFiltered] = useState(dataProjects)
   const [active, setActive] = useState('all')
 
   const filterBy = (key: string) => {
-    const filteredData = dataProjects.filter((k) => k.key.includes(key))
+    const filteredData = dataProjects.filter((k: DataProjects) => k.key.includes(key))
     setFiltered(filteredData)
     setActive(key)
   }
