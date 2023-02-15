@@ -4,14 +4,13 @@ const TooltipWrap = React.lazy(() => import('./TooltipWrap'))
 const HomePage = () => {
   return (
     <main className="main" id="main">
-      <div className="main-name-div fancy-border">
+      <div className="main-name-div fancy-border p-3">
         <h1><span>I'm</span> David Gelu
           <br />
-          <div className="d-flex max-content mt-2 mx-auto">
-            <i className="bi bi-chevron-left tx-color">&#60;</i>
+          <div className="d-flex max-content mt-2 mx-auto align-items-center">
+            <span className="tx-color">&#60; </span>
             <div className="show-text">Web Developer</div>
-            <i className="bi bi-slash-lg tx-color ms-1"></i>
-            <i className="bi bi-chevron-right tx-color">&#47; &#62;</i>
+            <span className="tx-color"> &#47;&#62;</span>
           </div>
         </h1>
         <Suspense fallback={<div className="loading">Loading...</div>}>
