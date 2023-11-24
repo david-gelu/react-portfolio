@@ -60,9 +60,10 @@
   @for $i from 0 through 10 {
     .tech-used-#{$i} {
       position: absolute;
-      inset: 0 0.5em auto;
+      // inset: auto 0.5em auto;
       top: calc(12% * calc(#{$i} * 1.05));
-      max-width: 3em;
+      left: 0.5em;
+      max-width: 2em;
       transform: translateY(25%);
     }
   }

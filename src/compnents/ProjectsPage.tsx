@@ -63,7 +63,7 @@ const ProjectsPage = () => {
                     github
                   </span>
                 </a>
-                {d.teh.map((icon: string, idx: number) => <span key={icon} className={`teh-title tech-used-${idx}`}><i key={icon} className={icon} /> </span>)}
+                {d?.teh?.map((icon: string, idx: number) => <span key={icon} className={`teh-title tech-used-${idx}`}><i key={icon} className={icon} /> </span>)}
               </div>
             </motion.div>
           )}
