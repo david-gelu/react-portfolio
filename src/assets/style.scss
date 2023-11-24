@@ -10,8 +10,12 @@
 @use "./m-q.scss";
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:500|Source+Sans+Pro:400,600&display=swap");
 
+* {
+  scrollbar-color: $text-color transparent;
+  scrollbar-width: thin;
+}
 ::-webkit-scrollbar {
-  width: 0.65em;
+  width: 0.35em;
 }
 
 ::-webkit-scrollbar-track {
