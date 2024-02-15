@@ -41,7 +41,7 @@ const NavBar = () => {
       </Button>
       <Offcanvas show={show} onHide={handleClose} scroll backdrop={false}>
         <Offcanvas.Header>
-          <Button variant="primary" className='btn-name w-75 d-flex flex-wrap' size='sm' onClick={toggleShow}>
+          <Button variant="primary" className='btn-name' size='sm' onClick={toggleShow}>
             David Gelu
           </Button>
         </Offcanvas.Header>
