@@ -15,5 +15,5 @@ root.render(
   </StrictMode>
 )
 
-serviceWorker.register()
+window.navigator.onLine ? serviceWorker.unregister() : serviceWorker.register()
 // reportWebVitals(console.log)

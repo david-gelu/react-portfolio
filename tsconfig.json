@@ -11,7 +11,7 @@
     "resolveJsonModule": true,
     "sourceMap": true,
     "target": "es2019",
-    "suppressExcessPropertyErrors": true
+    "ignoreDeprecations": "5.0",
   },
   "include": [
     "./src/**/*",
