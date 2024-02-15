@@ -7,12 +7,12 @@ import { NavBarProvider } from "./context/NavBarContext"
 import { ProjectsProvider } from "./context/ProjectsContext"
 import { StudyProvider } from "./context/StudyContext"
 import { WorkProvider } from "./context/WorkContext"
-import { eventHandler } from "./compnents/NavBar"
+import { eventHandler } from "./components/NavBar"
 
-const HomePage = React.lazy(() => import('./compnents/HomePage'))
-const NavBar = React.lazy(() => import('./compnents/NavBar'))
-const ProjectsPage = React.lazy(() => import('./compnents/ProjectsPage'))
-const AboutMePage = React.lazy(() => import('./compnents/AboutMePage'))
+const HomePage = React.lazy(() => import('./components/HomePage'))
+const NavBar = React.lazy(() => import('./components/NavBar'))
+const ProjectsPage = React.lazy(() => import('./components/ProjectsPage'))
+const AboutMePage = React.lazy(() => import('./components/AboutMePage'))
 
 const App = () => {
 
@@ -21,7 +21,7 @@ const App = () => {
   }, [])
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behaviour: 'smooth' })
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
   return (
