@@ -11,13 +11,22 @@ export const eventHandler = (event: Event) => installPrompt = event
 
 const NavBar = () => {
   const [activeId, setActiveId] = useState('')
-  const [show, setShow] = useState(true)
   const { linkData } = useContext(NavBarContext)
 
   const setId = (id: string) => setActiveId(id)
-  const handleClose = () => setShow(!show)
-  const toggleShow = () => setShow((s) => !s)
+  const [width, setWidth] = useState(0);
 
+  const updateWindowDimensions = () => {
+    const newWidth = window.innerWidth
+    setWidth(newWidth);
+  }
+  useEffect(() => {
+    updateWindowDimensions()
+    window.addEventListener("resize", updateWindowDimensions)
+    return () =>
+      window.removeEventListener("resize", updateWindowDimensions)
+
+  }, [])
 
   const install = () => {
     if (installPrompt) {
@@ -36,29 +45,24 @@ const NavBar = () => {
 
   return (
     <>
-      <Button variant="primary" size='sm' onClick={toggleShow} className="mt-3 fixed-top w-auto theme-color-name btn-name">
-        David Gelu
-      </Button>
-      <Offcanvas show={show} onHide={handleClose} scroll backdrop={false}>
+      <Offcanvas show={true} placement={width > 1000 ? 'start' : 'bottom'} scroll backdrop={false} aria-labelledby="navbar">
         <Offcanvas.Header>
-          <Button variant="primary" className='btn-name' size='sm' onClick={toggleShow}>
+          <div className='btn-name' >
             David Gelu
-          </Button>
+          </div>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body className={`${width > 1000 ? '' : 'bottom-navbar'}`}>
           <ThemeColor />
           {linkData.map((l: LinkData) =>
-            <TooltipWrap placement="right" key={l.id} desc={l.id.charAt(0).toUpperCase() + l.id.slice(1)}>
-              <Nav.Link key={`${l.id}-id`} onClick={() => setId(l.id)}
-                className={`${activeId === l.id ? 'active' : ''} d-flex flex-column text-center`} href={`#${l.id}`}>
-                <i className={`fas ${l.icon}`}></i>
-                <span className={`${activeId === l.id ? 'active' : ''} nav-text`}>
-                  {l.id.charAt(0).toUpperCase() + l.id.slice(1)}
-                </span>
-              </Nav.Link>
-            </TooltipWrap>
+            <Nav.Link key={`${l.id}-id`} onClick={() => setId(l.id)}
+              className={`${activeId === l.id ? 'active' : ''} d-flex flex-column text-center`} href={`#${l.id}`}>
+              <i className={`fas ${l.icon}`}></i>
+              <span className={`${activeId === l.id ? 'active' : ''} nav-text`}>
+                {l.id.charAt(0).toUpperCase() + l.id.slice(1)}
+              </span>
+            </Nav.Link>
           )}
-          {!showDownloadBtn() ? <></> :
+          {width > 1000 && !showDownloadBtn() ? <></> :
             <TooltipWrap placement="right" key='download' desc={'Download on device'}>
               <Button variant='success' className='mt-auto d-none d-lg-inline-block' size='sm' onClick={install} >
                 <i className="fas fa-download"></i>

@@ -2,21 +2,24 @@
 
 .main {
   overflow: hidden;
-  color: $text-color;
+  color: $link-color;
   border-radius: 1.11em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 2em;
+  // gap: 2em;
+  min-height: 60dvh;
+
   &-name-div {
     min-width: 50ch;
     text-align: center;
     font-family: serif;
     font-weight: 500;
+
     & h2 {
       font-family: serif;
-      font-size: clamp(1.2rem, 3vh + 0.7rem, 1.2rem);
+      font-size: clamp(1.2rem, 3dvh + 0.7rem, 1.2rem);
       font-weight: 500;
       line-height: 1;
       justify-content: center;
@@ -25,17 +28,20 @@
   }
 
   &-name-div h1 {
-    color: $text-color;
+    color: $link-color;
+
     span {
-      font-size: clamp(2rem, 4vh + 1rem, 4rem);
+      font-size: clamp(2rem, 4dvh + 1rem, 4rem);
     }
   }
 }
+
 .max-content {
   min-width: max-content;
   max-width: max-content;
-  font-size: clamp(1.4rem, 3vmin + 1rem, 3rem);
+  font-size: clamp(1.4rem, 3dvmin + 1rem, 3rem);
 }
+
 .tx-color {
   background: linear-gradient(177deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
   background-clip: text;
@@ -47,38 +53,26 @@
   animation: typing 2s steps(12, end);
   white-space: nowrap;
   overflow: hidden;
-  color: $text-color;
+  color: $link-color;
 }
+
 @keyframes typing {
   from {
     width: 0;
   }
 }
-.obj-info {
-  margin-left: 3rem;
-  font-size: 0.9rem;
-}
-.key {
-  color: $key-color;
-  font-weight: 600;
-  word-break: break-all;
-  overflow-wrap: break-word;
-}
-.property {
-  font-weight: 600;
-  color: $property-color;
-  word-break: break-all;
-  overflow-wrap: break-word;
-}
+
 .contact-data {
   display: flex;
   justify-content: center;
   margin-top: 2em;
   margin-left: -1em;
   gap: 0.5em;
+
   a,
   span {
     color: $text-color;
+
     & i {
       padding: 1em 1em 0;
     }

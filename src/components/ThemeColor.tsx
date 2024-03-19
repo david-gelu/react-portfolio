@@ -35,7 +35,7 @@ const ThemeColor = () => {
   }, [])
 
   return (
-    <TooltipWrap placement="right" desc={`Set ${theme ? 'light' : 'dark'} theme color`}>
+    <TooltipWrap placement="right" desc={`Set ${!theme ? 'light' : 'dark'} theme color`}>
       <div className='d-flex flex-column text-center nav-link'>
         <i onClick={() => toggleTheme()} className={`fas ${theme ? 'fa-moon' : 'fa-lightbulb'}`} />
         <span className='nav-text'>Theme</span>

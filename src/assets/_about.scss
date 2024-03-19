@@ -1,7 +1,11 @@
 @use "./variables.scss" as *;
+
 .professional-title h3 {
   color: $text-color;
+  width: 100%;
+  text-align: start;
 }
+
 .bio-desc {
   max-width: 60ch;
   font-size: clamp(1.2rem, 3vh + 0.7rem, 1.2rem);
@@ -17,38 +21,46 @@
   justify-content: center;
   gap: 2em;
   text-align: left;
+  font-size: 1rem;
 }
+
 .skills {
+
   & .fa,
   & .fab {
     padding-left: 0.5em;
     font-size: clamp(0.875rem, 1.8rem, 2rem);
   }
+
   & ul {
     gap: 0.4em;
+
     & li {
       display: flex;
       align-items: center;
-      font-size: 1.1rem;
+      font-size: .9rem;
       font-weight: 600;
-      color: $link-color;
+      color: $text-color;
     }
   }
+
   & span {
     min-width: 2.1em;
     max-width: 2.1em;
     min-height: 1.5em;
     max-height: 1.5em;
     text-align: center;
-    color: $second-color;
-    background: $link-color;
+    color: $text-color;
+    background: $primary-color;
     border: 0.1em solid $text-color;
     margin-left: 0.1em;
   }
+
   & .no-color {
     background: transparent;
     color: $text-color;
   }
+
   & .max {
     border: 0.1em solid $text-color;
     color: $second-color;

@@ -5,23 +5,26 @@
   display: grid;
   justify-content: center;
   align-items: start;
-  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
   gap: 1.5rem;
 }
 
 .study a {
   font-weight: 700;
   color: $link-color;
-  font-family: serif;
+  font-family: system-ui, "Source Sans Pro", sans-serif;
 }
+
 .study h3 {
   font-weight: 500;
 }
+
 .study h4 {
   position: relative;
   font-weight: 600;
   padding: 0 2em;
 }
+
 .study h4::before {
   @include arrow();
 }
@@ -31,21 +34,24 @@
   transition: transform 0.25s linear;
   width: min(30vmin, 5em);
   height: min(30vmin, 2.7em);
+
   &:hover {
     transform: scale(1.05);
   }
 }
+
 .show-modal {
   background-color: transparent;
   border: 1px solid $text-color;
   border-radius: 0.3em;
   color: $text-color;
-  font-size: 1.3rem;
+  font-size: 1rem;
   padding: 0.05em 0.5em;
   width: 50%;
   margin-inline: 25%;
   transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
   font-weight: 700;
+
   &:hover {
     background-color: $text-color;
     color: $primary-color;

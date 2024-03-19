@@ -8,11 +8,18 @@ const WorkPage = () => {
   const workMap = work.map((w: Work) => w.everseen)
   return (
     <div className="title-text jobs" id="jobs">
-      <h2>Work</h2>
+      <h3>Work</h3>
       <div className="projects-image">
-        <h3 className="projects-title ">Web Developer Everseen</h3>
+        <h4 className="projects-title ">Web Developer Everseen</h4>
         <div className="left">
-          {workMap[0].map((responsability: string, idx: number) => <h4 key={idx}>{responsability}</h4>)}
+          {/* {workMap[0].map((responsability: string, idx: number) => <h4 key={idx}>{responsability}</h4>)} */}
+          {/* to do: get from config */}
+          <h5>Employed React, TypeScript, SCSS, Bootstrap, and Styled Components within Node.js to create new reusable components and implement innovative functionalities, ensuring cross-browser compatibility.</h5>
+          <h5>UI/UX Collaboration: Successfully collaborated with UX/UI designers to translate design concepts into functional and user-friendly interfaces, driving iterative improvements.</h5>
+          <h5>Agile Development: Adept in Agile workflows using Jira and Confluence, enabling efficient collaboration and project management within fast-paced environments. Proficient in Gitlab for version control, ensuring code maintainability and streamlined development processes.</h5>
+          <h5>Scalable Interface Development: Possesses the expertise to build and enhance scalable interfaces for optimal user experience, catering to diverse user needs and growth demands.</h5>
+          <h5>Teamwork: Collaborative and results-oriented, thrives in team settings to achieve high-quality deliverables by leveraging collective expertise.</h5>
+
         </div>
       </div>
       <br />

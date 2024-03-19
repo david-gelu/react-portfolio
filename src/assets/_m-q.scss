@@ -6,52 +6,75 @@
   }
 }
 
-@media (max-width: 1024px) {
-  html {
-    font-size: 17px;
-  }
-}
-
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1000px) {
   html {
     font-size: 14px;
+    --bs-offcanvas-height: 6dvh;
+    padding-bottom: calc(var(--bs-offcanvas-height) + .6em);
+    max-width: 100dvw;
   }
 
   .btn-name {
     font-size: 0.875rem;
-  }
-  main {
+    background-color: $primary-color;
     width: auto;
-    margin: 0.5rem auto 0.5rem 3.5em;
+    margin-block: calc(var(--bs-offcanvas-height)/ 2);
   }
+
+
+  .offcanvas {
+    flex-direction: row;
+    align-items: normal;
+    gap: .5em;
+    --bs-offcanvas-height: 6dvh;
+    padding-inline: 1em;
+
+    &-header {
+      min-width: 22%;
+    }
+
+    &-body {
+      height: unset;
+      width: 70%;
+      justify-content: space-evenly;
+    }
+
+    .bottom-navbar {
+      flex-direction: row;
+      min-height: 0;
+    }
+  }
+
   .main {
     .main-name-div {
       margin-top: 5em;
       min-width: 20ch;
       padding: 0;
     }
-    .obj-info {
-      margin-left: 0;
-    }
   }
+
   .professional {
     gap: 2em;
   }
+
   .skills {
     & li {
       font-size: 0.875rem;
     }
+
     & span {
       max-width: 1.2em;
       min-width: 1.2em;
       max-height: 1.5em;
       min-height: 1.5em;
     }
+
     & .fa,
     & .fab {
       font-size: 0.875rem;
     }
   }
+
   .study {
     text-align: center;
   }
@@ -68,9 +91,11 @@
     padding: 0.1rem;
     color: $text-color;
   }
+
   .projects__btn {
     padding: 0.1rem;
   }
+
   .fa,
   .fa a,
   .fa span {

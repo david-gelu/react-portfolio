@@ -103,6 +103,45 @@ export const dataProjects = [
 ]
 
 
+export const mongoStudy = [
+  {
+    study: 'Atlas',
+    certificate: 'Introduction to MongoDB',
+    link: 'https://learn.mongodb.com/c/lN1NOKATQXeuuhXTcJ5IjA',
+    date: '(Date: February 2024)',
+    imgBig: images.mongoBig,
+  },
+  {
+    study: ' Document Model',
+  },
+  {
+    study: 'Connecting to a MongoDB Database',
+  },
+  {
+    study: 'Insert and Find Documents',
+  },
+  {
+    study: 'Replace and Delete Documents',
+  },
+  {
+    study: 'Modifying Query Results',
+  },
+  {
+    study: 'Aggregation',
+  },
+  {
+    study: 'Indexes',
+  },
+  {
+    study: 'Atlas Search',
+  },
+  {
+    study: 'Data Modeling Intro',
+  },
+  {
+    study: 'Transactions',
+  }
+]
 export const itSchoolStudy = [
   {
     study: 'HTML 5',

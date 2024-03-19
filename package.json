@@ -1,8 +1,13 @@
 {
+  "author": "David Gelu",
   "homepage": ".",
   "name": "react-portfolio",
-  "version": "0.1.0",
+  "version": "2.1.0",
   "private": true,
+  "repository": {
+    "type": "Public",
+    "url": "github.com/david-gelu/react-portfolio"
+  },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
     "bootstrap": "^5.2.3",
