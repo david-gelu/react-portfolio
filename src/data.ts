@@ -41,7 +41,7 @@ export const dataProjects = [
     key: 'css',
     imgUrl: images.cv,
     imgDesc: 'My CV madein html and css',
-    projectLink: 'https://proiect4.netlify.app',
+    projectLink: 'https://davidgelu-cv.netlify.app',
     projectGit: 'https://github.com/david-gelu/proiect4',
     teh: ['fab fa-html5', 'fab fa-css3-alt']
   },
