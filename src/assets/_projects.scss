@@ -18,7 +18,7 @@
 .json-and-projects {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   gap: 1.5rem;
   width: 100%;
 
@@ -47,7 +47,7 @@
 .projects__items {
   display: grid;
   justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(12em, 1fr));
   gap: 1.5rem;
   width: 100%;
 }
@@ -55,7 +55,7 @@
 .projects__item {
   position: relative;
 
-  max-width: min(80vmin, 10em);
+  max-width: min(80vmin, 15em);
   border-radius: 5%;
   box-shadow: 0px 0px 5px 3px $link-color;
 

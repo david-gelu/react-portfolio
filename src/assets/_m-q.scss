@@ -7,6 +7,10 @@
 }
 
 @media screen and (max-width: 1000px) {
+  main {
+    width: 95dvw;
+  }
+
   html {
     font-size: 14px;
     --bs-offcanvas-height: 6dvh;
@@ -16,8 +20,7 @@
 
   .btn-name {
     font-size: 0.875rem;
-    background-color: $primary-color;
-    width: auto;
+    max-width: max-content;
     margin-block: calc(var(--bs-offcanvas-height)/ 2);
   }
 
@@ -29,26 +32,27 @@
     --bs-offcanvas-height: 6dvh;
     padding-inline: 1em;
 
-    &-header {
-      min-width: 22%;
-    }
-
     &-body {
       height: unset;
-      width: 70%;
-      justify-content: space-evenly;
+      width: 100%;
+      gap: 0;
+      justify-content: center;
     }
 
     .bottom-navbar {
       flex-direction: row;
       min-height: 0;
+
+      .nav-text {
+        transform: scale(0.65);
+      }
     }
   }
 
   .main {
     .main-name-div {
       margin-top: 5em;
-      min-width: 20ch;
+      min-width: 95dvw;
       padding: 0;
     }
   }
