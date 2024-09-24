@@ -24,27 +24,27 @@ const HomePage = () => {
           </div>
           <div className="left contact-data">
             <TooltipWrap desc='Dounload CV'>
-              <a href={"/img/DavidGeluCV.pdf"} download="DavidGeluCV.pdf" alt='download cv' className='d-flex align-items-center text-center rounded-pill ps-2'>
+              <a href={"/img/DavidGeluCV.pdf"} download="DavidGeluCV.pdf" aria-label='download cv' className='d-flex align-items-center text-center rounded-pill ps-2'>
                 DOWNLOAD CV  <i className="far fa-file-alt px-1" style={{ minWidth: '1rem' }} aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='+4 0744 598 995'>
-              <a href="tel:+4 0744 598 995" alt='phone number' className='d-flex flex-column text-center'>
+              <a href="tel:+4 0744 598 995" aria-label='phone number' className='d-flex flex-column text-center'>
                 <i className="fa fa-mobile" aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='david.gelu90@gmail.com'>
-              <a href="mailto:david.gelu90@gmail.com" alt='email' className='d-flex flex-column text-center'>
+              <a href="mailto:david.gelu90@gmail.com" aria-label='email' className='d-flex flex-column text-center'>
                 <i className="fa fa-envelope" aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='https://www.linkedin.com/in/gelu-fanel-david/'>
-              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/" alt='linkedin' className='d-flex flex-column text-center'>
+              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/" aria-label='linkedin' className='d-flex flex-column text-center'>
                 <i className="fab fa-linkedin" aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='Github repo'>
-              <a target={'_blank'} href="https://github.com/david-gelu/react-portfolio" alt='github repo' className='d-flex flex-column text-center'>
+              <a target={'_blank'} href="https://github.com/david-gelu/react-portfolio" aria-label='github repo' className='d-flex flex-column text-center'>
                 <i className="fab fa-github" aria-hidden="true" />
               </a>
             </TooltipWrap>

@@ -28,19 +28,19 @@ function ContactPage() {
         <div className='d-flex flex-column justify-content-center align-items-start gap-5 p-3 mb-5'>
           <div className='d-flex align-items-center gap-3'>
             <i className="icon-border fa fa-envelope" aria-hidden="true" />
-            <a href="mailto:david.gelu90@gmail.com" alt='email' className='d-flex flex-column align-items-start text-start gap-0'>
+            <a href="mailto:david.gelu90@gmail.com" aria-label='email' className='d-flex flex-column align-items-start text-start gap-0'>
               <span style={{ color: 'var(--text-color)', fontSize: '0.75rem' }}>Email: </span>david.gelu90@gmail.com
             </a>
           </div>
           <div className='d-flex align-items-center gap-3'>
             <i className="icon-border fa fa-mobile" aria-hidden="true" />
-            <a href="tel:+4 0744 598 995" alt='phone number' className='d-flex  flex-column align-items-start text-start gap-0'>
+            <a href="tel:+4 0744 598 995" aria-label='phone number' className='d-flex  flex-column align-items-start text-start gap-0'>
               <span style={{ color: 'var(--text-color)', fontSize: '0.75rem' }}>Phone: </span> +4 0744 598 995
             </a>
           </div>
           <div className='d-flex align-items-center gap-3'>
             <i className="icon-border fa fa-map-marker" aria-hidden="true" />
-            <a alt='location' className='d-flex  flex-column align-items-start text-start gap-0'>
+            <a aria-label='location' className='d-flex  flex-column align-items-start text-start gap-0'>
               <span style={{ color: 'var(--text-color)', fontSize: '0.75rem' }}>Location: </span>Brasov
             </a>
           </div>
