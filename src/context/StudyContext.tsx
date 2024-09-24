@@ -1,12 +1,12 @@
 import React, { createContext } from 'react'
-import { itSchoolStudy, freeCodeCampStudy, udemyStudy, mongoStudy } from '../data'
+import { studies } from '../data'
 
 export const StudyContext = createContext(null)
 
 export const StudyProvider = ({ children }: { children: React.ReactNode }) => {
 
   return (
-    <StudyContext.Provider value={{ itSchoolStudy, freeCodeCampStudy, udemyStudy, mongoStudy }}>
+    <StudyContext.Provider value={{ studies }}>
       {children}
     </StudyContext.Provider>
   )

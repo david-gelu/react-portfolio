@@ -9,8 +9,9 @@
 }
 
 .filter-btns {
-  @include display(center, center);
-  flex-wrap: wrap;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   gap: 1em;
   margin-block: 1.5em;
 }
@@ -21,7 +22,6 @@
   grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
   gap: 1.5rem;
   width: 100%;
-
 }
 
 .obj-info {
@@ -55,9 +55,10 @@
 .projects__item {
   position: relative;
 
-  max-width: min(80vmin, 15em);
+  max-width: min(80vmin, 22em);
   border-radius: 5%;
-  box-shadow: 0px 0px 5px 3px $link-color;
+  background-color: $bg-color-accent;
+  // box-shadow: 0px 0px 5px 3px $link-color;
 
   & img {
     aspect-ratio: 1 / 1;
@@ -124,7 +125,9 @@
       border-radius: 0.3em;
       cursor: pointer;
       background-color: $button-color;
-      transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
+      transition:
+        color 0.25s ease-in-out,
+        background-color 0.25s ease-in-out;
 
       &:is(:hover, :focus) {
         background-color: $second-color;

@@ -1,4 +1,5 @@
 @use "./variables.scss" as *;
+@use "./utils.scss" as *;
 
 .professional-title h3 {
   color: $text-color;
@@ -18,52 +19,108 @@
   color: $text-color;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 2em;
+  justify-content: space-between;
+  gap: 5em;
   text-align: left;
   font-size: 1rem;
 }
 
-.skills {
+// .skills {
 
-  & .fa,
-  & .fab {
-    padding-left: 0.5em;
-    font-size: clamp(0.875rem, 1.8rem, 2rem);
+//   & .fa,
+//   & .fab {
+//     padding-left: 0.5em;
+//     font-size: clamp(0.875rem, 1.8rem, 2rem);
+//   }
+
+//   & ul {
+//     gap: 0.4em;
+
+//     & li {
+//       display: flex;
+//       align-items: center;
+//       font-size: .9rem;
+//       font-weight: 600;
+//       color: $text-color;
+//     }
+//   }
+
+//   & span {
+//     min-width: 2.1em;
+//     max-width: 2.1em;
+//     min-height: 1.5em;
+//     max-height: 1.5em;
+//     text-align: center;
+//     color: $text-color;
+//     background: $primary-color;
+//     border: 0.1em solid $text-color;
+//     margin-left: 0.1em;
+//   }
+
+//   & .no-color {
+//     background: transparent;
+//     color: $text-color;
+//   }
+
+//   & .max {
+//     border: 0.1em solid $text-color;
+//     color: $second-color;
+//     background: $text-color;
+//   }
+// }
+
+.btns-skills-and-edu {
+  @include display(null, null, column);
+  gap: 1.5rem;
+  min-width: min(20em, 40dvw);
+  & button {
+    min-width: min(10em, 20dvw);
   }
-
-  & ul {
-    gap: 0.4em;
-
-    & li {
-      display: flex;
-      align-items: center;
-      font-size: .9rem;
-      font-weight: 600;
-      color: $text-color;
+}
+.about-tabs {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+  gap: 3em;
+  padding: 0.5em;
+  padding-right: 1em;
+  font-size: 1rem;
+  max-height: 50dvh;
+  overflow-y: auto;
+  word-wrap: break-word;
+  &.skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+  }
+  & :is(.skill-icon-container, .study-card) {
+    background-color: $bg-color-accent;
+    outline: 2px solid $link-color-accent;
+    outline-offset: 2px;
+    padding: 1em;
+    border-radius: 1em;
+    transition: outline 0.25s linear;
+    &:hover {
+      outline: 2px solid $link-color;
     }
   }
-
-  & span {
-    min-width: 2.1em;
-    max-width: 2.1em;
-    min-height: 1.5em;
-    max-height: 1.5em;
-    text-align: center;
-    color: $text-color;
-    background: $primary-color;
-    border: 0.1em solid $text-color;
-    margin-left: 0.1em;
+  & svg {
+    width: 3em;
+    height: 3em;
+    border-radius: 1em;
+    transition:
+      outline 0.25s linear,
+      fill 0.25s linear;
   }
-
-  & .no-color {
-    background: transparent;
+  .study-card {
     color: $text-color;
-  }
+    display: grid;
+    justify-items: start;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
+    text-align: start;
 
-  & .max {
-    border: 0.1em solid $text-color;
-    color: $second-color;
-    background: $text-color;
+    & span:first-of-type {
+      font-weight: bolder;
+      color: $link-color;
+    }
   }
 }

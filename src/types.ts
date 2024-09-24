@@ -12,12 +12,17 @@ export type DataProjects = {
   teh: string[]
 }
 
+// export type Studies = {
+//   study?: string,
+//   certificate?: string,
+//   link?: string,
+//   date?: string,
+//   imgBig?: string,
+// }
 export type Studies = {
-  study?: string,
-  certificate?: string,
-  link?: string,
-  date?: string,
-  imgBig?: string,
+  institution: string;
+  study: string;
+  year: string;
 }
 
 export type Work = {

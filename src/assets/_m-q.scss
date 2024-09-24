@@ -14,31 +14,40 @@
   html {
     font-size: 14px;
     --bs-offcanvas-height: 6dvh;
-    padding-bottom: calc(var(--bs-offcanvas-height) + .6em);
+    padding-bottom: calc(var(--bs-offcanvas-height) + 0.6em);
     max-width: 100dvw;
   }
 
   .btn-name {
     font-size: 0.875rem;
     max-width: max-content;
-    margin-block: calc(var(--bs-offcanvas-height)/ 2);
+    margin-block: calc(var(--bs-offcanvas-height) / 2);
+    padding-inline: 0.5em;
   }
-
 
   .offcanvas {
     flex-direction: row;
     align-items: normal;
-    gap: .5em;
+    gap: 0.5em;
     --bs-offcanvas-height: 6dvh;
-    padding-inline: 1em;
+    padding-inline: 0 1em;
+
+    &-header {
+      padding: 0.25em;
+    }
 
     &-body {
       height: unset;
       width: 100%;
       gap: 0;
-      justify-content: center;
-    }
 
+      & .nav-link {
+        padding-inline: 0;
+        &::after {
+          box-shadow: 0px 0px 0px var(--link-color);
+        }
+      }
+    }
     .bottom-navbar {
       flex-direction: row;
       min-height: 0;
@@ -60,32 +69,49 @@
   .professional {
     gap: 2em;
   }
-
-  .skills {
-    & li {
-      font-size: 0.875rem;
+  .skills-and-edu-container {
+    flex-direction: column;
+    .btns-skills-and-edu {
+      flex-direction: row;
+      min-width: min(20em, 80dvw);
+      & > button {
+        min-width: min(10em, 40dvw);
+      }
     }
-
-    & span {
-      max-width: 1.2em;
-      min-width: 1.2em;
-      max-height: 1.5em;
-      min-height: 1.5em;
+    & svg {
+      width: 2.3em;
+      height: 2.3em;
     }
-
-    & .fa,
-    & .fab {
-      font-size: 0.875rem;
-    }
+    // .study-card {
+    //   width: min(25em, 80dvw);
+    //   min-height: 30dvh;
+    // }
   }
+  // .skills {
+  //   & li {
+  //     font-size: 0.875rem;
+  //   }
+
+  //   & span {
+  //     max-width: 1.2em;
+  //     min-width: 1.2em;
+  //     max-height: 1.5em;
+  //     min-height: 1.5em;
+  //   }
+
+  //   & .fa,
+  //   & .fab {
+  //     font-size: 0.875rem;
+  //   }
+  // }
 
   .study {
     text-align: center;
   }
 
-  .study h5:last-child {
-    padding-bottom: 0.7rem;
-  }
+  // .study h5:last-child {
+  //   padding-bottom: 0.7rem;
+  // }
 
   .jobs {
     text-align: center;

@@ -8,18 +8,18 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  // gap: 2em;
+  gap: 2em;
   min-height: 60dvh;
 
   &-name-div {
-    min-width: 50ch;
-    text-align: center;
+    max-width: 50ch;
+    text-align: start;
     font-family: serif;
     font-weight: 500;
 
     & h2 {
       font-family: serif;
-      font-size: clamp(1.2rem, 3dvh + 0.7rem, 1.2rem);
+      // font-size: clamp(1.2rem, 3dvh + 0.7rem, 1.2rem);
       font-weight: 500;
       line-height: 1;
       justify-content: center;
@@ -32,6 +32,7 @@
 
     span {
       font-size: clamp(2rem, 4dvh + 1rem, 4rem);
+      color: $text-color;
     }
   }
 }
@@ -39,13 +40,14 @@
 .max-content {
   min-width: max-content;
   max-width: max-content;
-  font-size: clamp(1.4rem, 3dvmin + 1rem, 3rem);
+  font-size: clamp(1.3rem, 1.5dvmin + 1rem, 2rem);
 }
 
 .tx-color {
-  background: linear-gradient(177deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
+  // background: linear-gradient(177deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
   background-clip: text;
-  color: transparent;
+  color: $text-color;
+  word-break: break-word;
 }
 
 .show-text {
@@ -53,7 +55,7 @@
   animation: typing 2s steps(12, end);
   white-space: nowrap;
   overflow: hidden;
-  color: $link-color;
+  color: $text-color;
 }
 
 @keyframes typing {
@@ -64,17 +66,20 @@
 
 .contact-data {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   margin-top: 2em;
-  margin-left: -1em;
   gap: 0.5em;
 
   a,
   span {
-    color: $text-color;
+    color: $link-color;
+    border-radius: 50%;
+    border: 1px solid $link-color;
 
     & i {
-      padding: 1em 1em 0;
+      padding: 0.5em;
+      width: 2em;
+      aspect-ratio: 1/1;
     }
   }
 }

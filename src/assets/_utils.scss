@@ -11,28 +11,33 @@ main {
 }
 
 .title-text {
-  margin-top: min(20vmin, 15em);
-
   color: $text-color;
   text-align: center;
 
-  & h2 {
-    margin-bottom: 1em;
+  & > :is(h2) {
+    margin-top: min(20vmin, 15em);
+    margin-bottom: min(10vmin, 7em);
+  }
+  & > :is(h3) {
+    margin-block: min(10vmin, 7em);
   }
 }
 
 .fancy-border {
-  border-inline: 0.4em solid;
-  border-block: 0.4em solid;
-  border-image-source: linear-gradient(-45deg, var(--text-color), transparent 25%, transparent 75%, var(--text-color));
-  border-image-slice: 1;
+  position: relative;
   padding: 0.5em;
+  border-radius: 10%;
+  background:
+    linear-gradient($bg-color, $bg-color) padding-box,
+    linear-gradient(-45deg, $link-color, transparent 25%, transparent 75%, $link-color) border-box;
+  border: 0.4em solid transparent;
 }
 
-@mixin display($align: null, $justify: null) {
+@mixin display($align: null, $justify: null, $direction: null) {
   display: flex;
   align-items: $align;
   justify-content: $justify;
+  flex-direction: $direction;
 }
 
 .loading {
@@ -40,7 +45,7 @@ main {
   min-width: 100vw;
   color: $text-color;
   font-size: 2rem;
-  background: $second-color;
+  background: $bg-color;
   @include display(center, center);
 }
 
@@ -63,7 +68,7 @@ main {
   border-radius: 50%;
 }
 
-.carousel-indicators>button {
+.carousel-indicators > button {
   background-color: $text-color !important;
   border: 3px solid #302f2f !important;
 
@@ -83,25 +88,35 @@ main {
   }
 
   &.bs-tooltip-start .tooltip-arrow::before {
-    border-left-color: $text-color;
+    border-left-color: $link-color;
   }
 
   &.bs-tooltip-top .tooltip-arrow::before {
-    border-top-color: $text-color;
+    border-top-color: $link-color;
   }
 
   &.bs-tooltip-end .tooltip-arrow::before {
-    border-right-color: $text-color;
+    border-right-color: $link-color;
   }
 
   &.bs-tooltip-bottom .tooltip-arrow::before {
-    border-bottom-color: $text-color;
+    border-bottom-color: $link-color;
   }
 
   .tooltip-inner {
     border-radius: calc(0.3em - 1px);
-    color: $text-color;
+    color: $link-color;
     background-color: $bg-color;
-    border: 1px solid $text-color;
+    border: 1px solid $link-color;
   }
+}
+
+.fs-small {
+  font-size: clamp(0.75rem, 1.8vh - 0.1rem, 0.75rem);
+  font-weight: 500;
+  line-height: 1.6;
+}
+.mw-25 {
+  max-width: 25%;
+  min-width: 100%;
 }

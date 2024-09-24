@@ -7,21 +7,21 @@ import { NavBarProvider } from "./context/NavBarContext"
 import { ProjectsProvider } from "./context/ProjectsContext"
 import { StudyProvider } from "./context/StudyContext"
 import { WorkProvider } from "./context/WorkContext"
-import { eventHandler } from "./components/NavBar"
+// import { eventHandler } from "./components/NavBar"
 
 const HomePage = React.lazy(() => import('./components/HomePage'))
 const NavBar = React.lazy(() => import('./components/NavBar'))
 const ProjectsPage = React.lazy(() => import('./components/ProjectsPage'))
 const AboutMePage = React.lazy(() => import('./components/AboutMePage'))
+const ContactPage = React.lazy(() => import('./components/ContactPage'))
 
 const App = () => {
 
-  useEffect(() => {
-    window.addEventListener("beforeinstallprompt", eventHandler)
-  }, [])
+  // useEffect(() => {
+  //   window.addEventListener("beforeinstallprompt", eventHandler)
+  // }, [])
 
   useEffect(() => {
-    console.log(window.scrollY)
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
@@ -39,6 +39,7 @@ const App = () => {
           < AboutMePage />
         </WorkProvider>
       </StudyProvider>
+      <ContactPage />
     </Suspense>
   )
 }

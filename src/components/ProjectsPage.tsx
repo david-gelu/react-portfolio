@@ -21,17 +21,17 @@ const ProjectsPage = () => {
   const noFilterBy = () => {
     setFiltered(dataProjects); setActive('all')
   }
-  const activeAll = `${active === 'all' ? 'dark-btn' : 'outline-dark-btn'}`
-  const activeJs = `${active === 'js' ? 'dark-btn' : 'outline-dark-btn'}`
-  const activeCss = `${active === 'css' ? 'dark-btn' : 'outline-dark-btn'}`
+  const activeAll = `${active === 'all' ? 'success' : 'outline-success'}`
+  const activeJs = `${active === 'js' ? 'success' : 'outline-success'}`
+  const activeCss = `${active === 'css' ? 'success' : 'outline-success'}`
 
   return (
     <main className='title-text' id='projects'>
-      <h2>Projects</h2>
+      <h2>Personal projects</h2>
       <div className='filter-btns'>
-        <Button className={activeAll} size='sm' onClick={() => noFilterBy()}>All</Button>
-        <Button className={activeJs} size='sm' onClick={() => filterBy('js')}>Js / Ts / React</Button>
-        <Button className={activeCss} size='sm' onClick={() => filterBy('css')}>HTML / CSS </Button>
+        <Button variant={`${activeAll} mw-25`} size='sm' onClick={() => noFilterBy()}>All</Button>
+        <Button variant={`${activeJs} mw-25`} size='sm' onClick={() => filterBy('js')}>Ts / React / NextJs</Button>
+        <Button variant={`${activeCss} mw-25`} size='sm' onClick={() => filterBy('css')}>HTML / CSS / Scss </Button>
       </div>
       <div className='json-and-projects'>
 
@@ -44,7 +44,7 @@ const ProjectsPage = () => {
                 initial={{ opacity: 0 }}
                 exit={{ opacity: 0 }}
                 key={d.projectLink}
-                className='projects__item'>
+                className='projects__item fancy-border'>
                 <LazyLoadImage
                   useIntersectionObserver={true}
                   threshold={100}
@@ -55,15 +55,11 @@ const ProjectsPage = () => {
                 <div className='teh-title-container'>
                   <a href={d.projectLink} target='_blank' className='teh-title full-bg'>
                     <i className='fas fa-link' aria-hidden='true'></i>
-                    <span >
-                      link
-                    </span>
+                    <span> link </span>
                   </a>
                   <a href={d.projectGit} target='_blank' className='teh-title full-bg'>
                     <i className='fab fa-github' aria-hidden='true'></i>
-                    <span >
-                      github
-                    </span>
+                    <span> github </span>
                   </a>
                   {d?.teh?.map((icon: string, idx: number) => <span key={icon} className={`teh-title tech-used-${idx}`}><i key={icon} className={icon} /> </span>)}
                 </div>
