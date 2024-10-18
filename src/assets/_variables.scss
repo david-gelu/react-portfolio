@@ -12,7 +12,7 @@
   --bg-color: #ebe6da;
   --bg-color-accent: #e8e2d4;
   --link-color-accent: rgb(55.9736842105, 64.3697368421, 85.8263157895);
-  // --bg-img: url("../../public/img/light-bg-crop.jpg");
+  --text-with-transparency: rgba(36, 36, 36, 0.3);
 }
 
 [data-theme="dark"] {
@@ -25,11 +25,11 @@
   --key-color: #87aec0;
   --theme-name-color: var(--text-color);
   --property-color: #cce6f1;
-  // --bg-img: url("./img/dark-bg.webp");
   --bg-color: #001e2b;
   --bg-color-accent: #00212f;
   --link-color-accent: rgb(0.8, 101.2, 62.8);
   --button-color: var(--text-color);
+  --text-with-transparency: rgba(220, 235, 241, 0.3);
 }
 
 $primary-color: var(--primary-color);
@@ -46,6 +46,7 @@ $bg-color: var(--bg-color);
 $bg-color-accent: var(--bg-color-accent);
 $button-color: var(--button-color);
 $theme-name-color: var(--theme-name-color);
+$text-with-transparency: var(--text-with-transparency);
 $success: #008533;
 $danger: #c23854;
 $warning: #ffce52;

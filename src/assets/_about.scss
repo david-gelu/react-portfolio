@@ -1,12 +1,14 @@
 @use "./variables.scss" as *;
 @use "./utils.scss" as *;
 
-.professional-title h3 {
+.professional-title {
   color: $text-color;
-  width: 100%;
-  text-align: start;
+  h3 {
+    color: $text-color;
+    width: 100%;
+    text-align: start;
+  }
 }
-
 .bio-desc {
   max-width: 60ch;
   font-size: clamp(1.2rem, 3vh + 0.7rem, 1.2rem);

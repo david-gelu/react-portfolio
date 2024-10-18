@@ -20,7 +20,7 @@ function ContactPage() {
       <div className='contact mt-5'>
         <form className="contact-form" onSubmit={sendEmail}>
           <label htmlFor="emailFrom">Email:</label>
-          <input pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" maxLength={64} required type="text" name="email_from" id="emailFrom" className="w-100" placeholder="person@example.com" />
+          <input pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" maxLength={64} required type="email" name="email_from" id="emailFrom" className="w-100" placeholder="person@example.com" />
           <label htmlFor="message">Message:</label>
           <textarea required placeholder='Enter your message here, maxim 500 characters' name="message" maxLength={500} rows={5} id="message" className="w-100"></textarea>
           <motion.button className='btn btn-success' whileTap={{ scale: 0.85 }} type="submit">Send message</motion.button>

@@ -65,7 +65,7 @@ const AboutMePage = () => {
                   <TooltipWrap placement="top" key='NextJs' desc={'NextJs'}><div className="skill-icon-container"><RiNextjsFill /></div></TooltipWrap>
                   <TooltipWrap placement="top" key='NodeJs' desc={'NodeJs'}><div className="skill-icon-container"> <IoLogoNodejs /></div></TooltipWrap>
                   <TooltipWrap placement="top" key='MongoDb' desc={'MongoDb'}><div className="skill-icon-container"><BiLogoMongodb /></div></TooltipWrap>
-                  <TooltipWrap placement="top" key='MongoDb' desc={'GitHub'}><div className="skill-icon-container"><IoLogoGithub /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='GitHub' desc={'GitHub'}><div className="skill-icon-container"><IoLogoGithub /></div></TooltipWrap>
                 </motion.div>
               </AnimatePresence>}
             {content === 'education' &&

@@ -11,15 +11,38 @@ main {
 }
 
 .title-text {
-  color: $text-color;
-  text-align: center;
+  // text-align: center;
 
-  & > :is(h2) {
+  & :is(h3, h4, h5) {
+    color: $text-with-transparency;
+    background-clip: text;
+    background-repeat: no-repeat;
+    background-size: 100% 0%;
+    background-image: linear-gradient(180deg, $text-color 50%, $text-color);
+    animation: text-reveal linear forwards;
+    animation-timeline: view();
+    transition: color 0.3s ease-in-out;
+  }
+
+  & :is(h2) {
     margin-top: min(20vmin, 15em);
     margin-bottom: min(10vmin, 7em);
+    // animation-range-start: cover calc(10dvh + min(10vmin, 7em));
+    // animation-range-end: cover 25dvh;
+  }
+
+  & :is(h3, h4, h5) {
+    animation-range-start: cover 25.5dvh;
+    animation-range-end: cover 50dvh;
   }
   & > :is(h3) {
     margin-block: min(10vmin, 7em);
+  }
+}
+
+@keyframes text-reveal {
+  to {
+    background-size: 100% 100%;
   }
 }
 
