@@ -20,7 +20,7 @@ const AboutMePage = () => {
         <div >
           <h3 className=" "> Greetings!</h3>
           <h4>
-            I am a dedicated and passionate web developer with a strong commitment to learning and contributing to the field.
+            Dedicated and passionate web developer with a strong commitment to learning and contributing to the field.
             My expertise spans a range of front-end technologies including React, JavaScript, TypeScript, HTML, CSS/SASS, Styled Components, and Bootstrap.
             I am continuously seeking new opportunities to enhance my skills and work collaboratively to achieve exceptional results.
           </h4>
