@@ -19,7 +19,9 @@ main {
     background-repeat: no-repeat;
     background-size: 100% 0%;
     background-image: linear-gradient(180deg, $text-color 50%, $text-color);
-    animation: text-reveal linear forwards;
+    animation-name: text-reveal;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
     animation-timeline: view();
     transition: color 0.3s ease-in-out;
   }
