@@ -16,6 +16,14 @@ export const linkData = [
 
 export const dataProjects = [
   {
+    key: 'nextjs',
+    imgUrl: images.tasks,
+    imgDesc: 'Tasks project',
+    projectLink: 'https://tasks-dv.vercel.app/',
+    projectGit: 'https://github.com/david-gelu/tasks',
+    teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+  },
+  {
     key: 'js',
     imgUrl: images.book,
     imgDesc: 'Books project',
