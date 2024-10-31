@@ -37,5 +37,15 @@
       "platform": "webapp",
       "url": "https://davidgelu.netlify.app/manifest.json"
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "drawer-iframe.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
   ]
 }

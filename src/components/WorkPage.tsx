@@ -10,9 +10,9 @@ const WorkPage = () => {
     <div className="title-text jobs" id="jobs">
       <h2 className='title-text'>Work</h2>
       <div className="projects-image">
-        <h3 className="projects-title ">Web Developer Everseen</h3>
+        <h3 className="projects-titl ">Web Developer Everseen</h3>
         <div className="left">
-          {workMap[0].map((responsability: string, idx: number) => <h5 key={idx}>{responsability}</h5>)}
+          {workMap[0].map((responsability: string, idx: number) => <h4 key={idx}>{responsability}</h4>)}
         </div>
       </div>
     </div>

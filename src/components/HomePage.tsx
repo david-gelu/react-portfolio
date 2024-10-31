@@ -54,9 +54,9 @@ const HomePage = () => {
       <div className="h-100">
         <AnimatePresence>
           <LazyLoadImage
-            useIntersectionObserver={true}
-            threshold={100}
-            visibleByDefault={false}
+            useIntersectionObserver={false}
+            threshold={0}
+            visibleByDefault={true}
             effect="blur"
             className="fancy-border  p-3"
             style={{ backgroundColor: 'var(--bg-color-accent)' }}

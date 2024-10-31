@@ -56,7 +56,7 @@ const NavBar = () => {
 
   return (
     <>
-      <Offcanvas show={true} placement={width > 1000 ? 'start' : 'bottom'} scroll backdrop={false} aria-labelledby="navbar">
+      <Offcanvas show={true} aria-label="navbar" placement={width > 1000 ? 'start' : 'bottom'} scroll backdrop={false} aria-labelledby="navbar">
         <Offcanvas.Header>
           <div className='btn-name'>
             Gelu
