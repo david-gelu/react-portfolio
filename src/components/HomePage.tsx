@@ -24,7 +24,7 @@ const HomePage = () => {
           </div>
           <div className="left contact-data">
             <TooltipWrap desc='Dounload CV'>
-              <a href={"/img/DavidGeluCV.pdf"} download="DavidGeluCV.pdf" aria-label='download cv' className='d-flex align-items-center text-center rounded-pill ps-2'>
+              <a href={"img/DavidGeluCV.pdf"} download="DavidGeluCV.pdf" aria-label='download cv' className='d-flex align-items-center text-center rounded-pill ps-2'>
                 DOWNLOAD CV  <i className="far fa-file-alt px-1" style={{ minWidth: '1rem' }} aria-hidden="true" />
               </a>
             </TooltipWrap>
@@ -60,7 +60,7 @@ const HomePage = () => {
             effect="blur"
             className="fancy-border  p-3"
             style={{ backgroundColor: 'var(--bg-color-accent)' }}
-            src={'/img/logo/code.png'}
+            src={'img/logo/code.png'}
             alt={'image with code'} />
         </AnimatePresence>
       </div>

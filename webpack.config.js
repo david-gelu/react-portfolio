@@ -3,6 +3,8 @@ const path = require('path');
 const Dotenv = require('dotenv-webpack');
 const { InjectManifest } = require('workbox-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const purgecss = require('@fullhuman/postcss-purgecss'); // Import PurgeCSS
 
 const webpackPlugins = [
   new HtmlWebpackPlugin({
@@ -23,7 +25,7 @@ const webpackPlugins = [
   }),
 ];
 
-if ('production' === process.env.NODE_ENV) {
+if (process.env.NODE_ENV === 'production') {
   webpackPlugins.push(new InjectManifest({
     swSrc: './src/service-worker.js',
     swDest: 'sw.js',
@@ -52,11 +54,37 @@ module.exports = {
         use: ['style-loader', 'css-loader'],
       },
       {
-        test: /\.(png|j?g|svg|gif|webp)?$/,
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  require('autoprefixer'),
+                  ...(process.env.NODE_ENV === 'production' ? [purgecss({
+                    content: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+                    defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
+                  })] : []),
+                ],
+              },
+            },
+          },
+          'sass-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|svg|gif|webp)?$/,
         use: 'file-loader?name=./static/media/[name].[ext]',
       },
     ],
-
   },
-  plugins: webpackPlugins,
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+    ...webpackPlugins,
+  ],
 };

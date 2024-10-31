@@ -40,9 +40,9 @@ function ContactPage() {
           </div>
           <div className='d-flex align-items-center gap-3'>
             <i className="icon-border fa fa-map-marker" aria-hidden="true" />
-            <a aria-label='location' className='d-flex  flex-column align-items-start text-start gap-0'>
+            <span style={{ color: 'var(--link-color)' }} aria-label='location' className='d-flex flex-column align-items-start text-start gap-0'>
               <span style={{ color: 'var(--text-color)', fontSize: '0.75rem' }}>Location: </span>Brasov
-            </a>
+            </span>
           </div>
         </div>
       </div>

@@ -14,6 +14,9 @@
     max-width: min(80vmin, 30em);
     height: 100%;
   }
+  & a:hover {
+    color: $link-color;
+  }
 }
 
 .contact-form {

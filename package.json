@@ -59,6 +59,7 @@
     ]
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^6.0.0",
     "@types/react-lazy-load-image-component": "^1.5.2",
     "@types/webpack-env": "^1.18.0",
     "compress-create-react-app": "^1.2.1"
