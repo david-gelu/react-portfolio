@@ -15,7 +15,8 @@
   },
   "include": [
     "./src/**/*",
-    "reportWebVitals.ts"
+    "reportWebVitals.ts",
+    "src/data.ts"
   ],
   "exclude": [
     "./node_modules",

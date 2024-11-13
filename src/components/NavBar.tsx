@@ -21,7 +21,7 @@ const NavBar = () => {
     updateWindowDimensions()
     window.addEventListener("resize", updateWindowDimensions)
     return () => window.removeEventListener("resize", updateWindowDimensions)
-  }, [])
+  }, [width])
 
   const { scrollY } = useScroll()
 

@@ -23,7 +23,7 @@ const HomePage = () => {
             delivering high-quality, cross-browser web applications in Agile environments.
           </div>
           <div className="left contact-data">
-            <TooltipWrap desc='Dounload CV'>
+            <TooltipWrap desc='Download CV'>
               <a href={"img/DavidGeluCV.pdf"} download="DavidGeluCV.pdf" aria-label='download cv' className='d-flex align-items-center text-center rounded-pill ps-2'>
                 DOWNLOAD CV  <i className="far fa-file-alt px-1" style={{ minWidth: '1rem' }} aria-hidden="true" />
               </a>

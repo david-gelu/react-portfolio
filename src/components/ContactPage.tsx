@@ -1,6 +1,5 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Button } from "react-bootstrap"
 import emailjs from '@emailjs/browser'
 
 function ContactPage() {
