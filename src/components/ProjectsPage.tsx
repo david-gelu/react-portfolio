@@ -3,7 +3,7 @@ import { ProjectsContext } from '../context/ProjectsContext'
 
 import { DataProjects } from '../types'
 import { Button } from 'react-bootstrap'
-import { LazyLoadImage } from "react-lazy-load-image-component";
+import { LazyLoadImage, LazyLoadImageProps } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css"
 import { motion, AnimatePresence } from 'framer-motion'
 
@@ -33,6 +33,7 @@ const ProjectsPage = () => {
   const activeAll = `${active === 'all' ? 'success' : 'outline-success'}`
   const activeJs = `${active === 'js' ? 'success' : 'outline-success'}`
   const activeCss = `${active === 'css' ? 'success' : 'outline-success'}`
+  const LazyImage = LazyLoadImage as unknown as React.FC<LazyLoadImageProps>
 
   return (
     <main className='title-text' id='projects'>
@@ -54,7 +55,8 @@ const ProjectsPage = () => {
                 exit={{ opacity: 0 }}
                 key={d.projectLink}
                 className='projects__item fancy-border'>
-                <LazyLoadImage
+                 // @t
+                <LazyImage
                   useIntersectionObserver={true}
                   threshold={100}
                   visibleByDefault={false}

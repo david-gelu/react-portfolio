@@ -3,7 +3,7 @@ import { WorkContext } from "../context/WorkContext"
 import { Work } from "../types"
 
 const WorkPage = () => {
-  const { work } = useContext(WorkContext)
+  const work = useContext(WorkContext)
 
   const workMap = work.map((w: Work) => w.everseen)
   return (

@@ -1,9 +1,9 @@
-import React, { useState, useContext, useEffect } from 'react'
-import { Button, Nav, Offcanvas } from "react-bootstrap"
+import { useState, useContext, useEffect } from 'react'
+import { Nav, Offcanvas } from "react-bootstrap"
 import { NavBarContext } from '../context/NavBarContext'
 import { useScroll } from 'framer-motion'
 import ThemeColor from './ThemeColor'
-import { LinkData } from 'src/types'
+import { LinkData } from '../types'
 
 // let installPrompt: any
 // export const eventHandler = (event: Event) => installPrompt = event

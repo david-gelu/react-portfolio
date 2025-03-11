@@ -1,9 +1,10 @@
 import { AnimatePresence } from "framer-motion"
 import React, { Suspense } from "react"
-import { LazyLoadImage } from "react-lazy-load-image-component"
+import { LazyLoadImage, LazyLoadImageProps } from "react-lazy-load-image-component"
 const TooltipWrap = React.lazy(() => import('./TooltipWrap'))
 
 const HomePage = () => {
+  const LazyImage = LazyLoadImage as unknown as React.FC<LazyLoadImageProps>
 
   return (
     <main className="main accent-background mt-5" id="main">
@@ -53,7 +54,7 @@ const HomePage = () => {
       </div>
       <div className="h-100">
         <AnimatePresence>
-          <LazyLoadImage
+          <LazyImage
             useIntersectionObserver={false}
             threshold={0}
             visibleByDefault={true}
