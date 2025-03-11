@@ -1,8 +1,8 @@
 import React, { createContext, useContext } from 'react';
-import { Study } from '../types'
+import { Studies } from '../types'
 import { studies } from '../data'
 
-const StudyContext = createContext<Study[] | null>(null);
+export const StudyContext = createContext<Studies | null>(null);
 
 export const StudyProvider = ({ children }: { children: React.ReactNode }) => {
 
@@ -12,5 +12,3 @@ export const StudyProvider = ({ children }: { children: React.ReactNode }) => {
     </StudyContext.Provider>
   );
 };
-
-export const useStudy = () => useContext(StudyContext);

@@ -23,7 +23,7 @@ export type Studies = {
   institution: string;
   study: string;
   year: string;
-}
+}[]
 
 export type Work = {
   everseen: string[];
