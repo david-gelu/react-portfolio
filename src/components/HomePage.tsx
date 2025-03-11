@@ -6,7 +6,7 @@ const TooltipWrap = React.lazy(() => import('./TooltipWrap'))
 const HomePage = () => {
 
   return (
-    <main className="main" id="main">
+    <main className="main accent-background mt-5" id="main">
       <div className="main-name-div p-3" >
         <Suspense fallback={<div className="loading">Loading...</div>}>
           <div className="d-flex max-content mt-2 align-items-center">

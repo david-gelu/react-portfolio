@@ -1,17 +1,26 @@
-import React, { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import { ProjectsContext } from '../context/ProjectsContext'
 
 import { DataProjects } from '../types'
 import { Button } from 'react-bootstrap'
-import { LazyLoadImage } from 'react-lazy-load-image-component'
-import 'react-lazy-load-image-component/src/effects/blur.css'
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css"
 import { motion, AnimatePresence } from 'framer-motion'
 
 const ProjectsPage = () => {
-  const { dataProjects } = useContext(ProjectsContext)
+  const context = useContext(ProjectsContext)
+  if (!context) {
+    return <div>Error: ProjectsContext is null</div>
+  }
+  const { dataProjects } = context
 
   const [filtered, setFiltered] = useState(dataProjects)
+  console.log(` filtered:`, filtered)
   const [active, setActive] = useState('all')
+
+  useEffect(() => {
+    setFiltered(dataProjects)
+  }, [dataProjects])
 
   const filterBy = (key: string) => {
     const filteredData = dataProjects.filter((k: DataProjects) => k.key.includes(key))

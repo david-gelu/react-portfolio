@@ -1,6 +1,7 @@
 import React, { Suspense, useEffect } from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "./index.css";
 import "./assets/style.scss";
 import { NavBarProvider } from "./context/NavBarContext";
 import { ProjectsProvider } from "./context/ProjectsContext";

@@ -143,11 +143,11 @@ hr {
   width: 0.35em;
 }
 
-::-moz-scrollbar-button,
-::-webkit-scrollbar-button {
-  width: 0px;
+:is(::-moz-scrollbar-button, ::-webkit-scrollbar-button) {
+  width: 0;
+  height: 0;
   display: none;
-  visibility: hidden;
+  background: transparent;
 }
 
 ::-webkit-scrollbar-track {

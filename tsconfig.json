@@ -1,24 +1,27 @@
 {
   "compilerOptions": {
-    "jsx": "react",
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "esModuleInterop": false,
-    "module": "commonjs",
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
     "moduleResolution": "node",
-    "noImplicitAny": true,
-    "outDir": "dist",
     "resolveJsonModule": true,
-    "sourceMap": true,
-    "target": "es2019",
-    "ignoreDeprecations": "5.0",
+    "isolatedModules": true,
+    "jsx": "react-jsx"
   },
   "include": [
-    "./src/**/*",
-    "reportWebVitals.ts",
-    "src/data.ts"
+    "src"
   ],
   "exclude": [
-    "./node_modules",
+    "node_modules"
   ]
 }
