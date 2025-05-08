@@ -23,6 +23,14 @@ const loadImages = async () => {
     },
     {
       key: 'js',
+      imgUrl: images['img-transformer'],
+      imgDesc: 'Image transformer project made in Next.js',
+      projectLink: 'https://image-transformer-app.vercel.app//',
+      projectGit: 'https://github.com/david-gelu/image-transformer-app',
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+    },
+    {
+      key: 'js',
       imgUrl: images['book'],
       imgDesc: 'Books project',
       projectLink: 'https://booksproject.netlify.app/',
