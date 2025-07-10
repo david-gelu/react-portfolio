@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @use "./variables.scss" as *;
 @use "./utils.scss" as *;
 
@@ -32,7 +34,7 @@
     color: $text-color;
 
     &::placeholder {
-      color: lighten(#242424, 50%);
+      color: color.adjust(#242424, $lightness: 50%);
     }
 
     &:not(:placeholder-shown):user-valid {

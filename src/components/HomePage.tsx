@@ -11,22 +11,24 @@ const HomePage = () => {
       <div className="main-name-div p-3" >
         <Suspense fallback={<div className="loading">Loading...</div>}>
           <div className="d-flex max-content mt-2 align-items-center">
-            <span className="tx-color">&#60; </span>
-            <div className="show-text">Web Developer</div>
-            <span className="tx-color"> &#47;&#62;</span>
+            <div className="d-flex align-items-center justify-content-center">
+              <div className="logo-arrow">
+                <span className="tx-color me-1" >&#60;</span><span className="tx-color">&#47;&#62;</span>
+              </div>
+              <div className="d-flex flex-column">
+                <h1>David Gelu </h1>
+                <div className="show-textt">Software Developer</div>
+              </div>
+            </div>
           </div>
-          <h1><span>Hello, I'm</span>
-            <br />
-            David Gelu
-          </h1>
-          <div className="tx-color">
+          <div className="tx-color mt-3">
             Skilled in React, TypeScript, and UX/UI collaboration,
             delivering high-quality, cross-browser web applications in Agile environments.
           </div>
           <div className="left contact-data">
             <TooltipWrap desc='Download CV'>
-              <a href={"img/DavidGeluCV.pdf"} download="DavidGeluCV.pdf" aria-label='download cv' className='d-flex align-items-center text-center rounded-pill ps-2'>
-                DOWNLOAD CV  <i className="far fa-file-alt px-1" style={{ minWidth: '1rem' }} aria-hidden="true" />
+              <a href={"img/DavidGeluCV.pdf"} download="DavidGeluCV.pdf" aria-label='download cv' className='btn-success download-cv'>
+                DOWNLOAD CV  <i className="far fa-file-alt p-2 pe-0 w-auto" aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='+4 0744 598 995'>

@@ -5,6 +5,7 @@ export type LinkData = {
 
 export type DataProjects = {
   key: string,
+  title: string,
   imgUrl: string,
   imgDesc: string,
   projectLink: string,

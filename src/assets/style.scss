@@ -68,6 +68,12 @@
   }
 }
 
+:is(.btn-success, .btn-success:focus, .btn-success:active) {
+  background-color: $text-color;
+  color: $bg-color;
+  border: none;
+}
+
 .icon-border {
   color: $link-color;
   border-radius: 50%;

@@ -16,6 +16,7 @@ const loadImages = async () => {
     {
       key: 'js',
       imgUrl: images['tasks'],
+      title: 'Tasks project',
       imgDesc: 'Tasks project made in Next.js',
       projectLink: 'https://tasks-dv.vercel.app/',
       projectGit: 'https://github.com/david-gelu/tasks',
@@ -24,6 +25,7 @@ const loadImages = async () => {
     {
       key: 'js',
       imgUrl: images['img-transformer'],
+      title: 'Image Transformer',
       imgDesc: 'Image transformer project made in Next.js',
       projectLink: 'https://image-transformer-app.vercel.app//',
       projectGit: 'https://github.com/david-gelu/image-transformer-app',
@@ -32,6 +34,7 @@ const loadImages = async () => {
     {
       key: 'js',
       imgUrl: images['book'],
+      title: 'Book project',
       imgDesc: 'Books project',
       projectLink: 'https://booksproject.netlify.app/',
       projectGit: 'https://github.com/david-gelu/books-project',
@@ -40,6 +43,7 @@ const loadImages = async () => {
     {
       key: 'css',
       imgUrl: images['it'],
+      title: 'ItSchool homepage',
       imgDesc: 'Copy ItSchool homepage project',
       projectLink: 'https://proiect16.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect16',
@@ -48,6 +52,7 @@ const loadImages = async () => {
     {
       key: 'js',
       imgUrl: images['poke'],
+      title: 'Pokemon project',
       imgDesc: 'Pokemon project',
       projectLink: 'https://proiect18.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect18',
@@ -56,6 +61,7 @@ const loadImages = async () => {
     {
       key: 'css',
       imgUrl: images['cv'],
+      title: 'My CV',
       imgDesc: 'My CV made in HTML and CSS',
       projectLink: 'https://davidgelu-cv.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect4',
@@ -64,6 +70,7 @@ const loadImages = async () => {
     {
       key: 'js',
       imgUrl: images['metal'],
+      title: 'Metal vision',
       imgDesc: 'Metal vision project',
       projectLink: 'https://project-metal.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect2',
@@ -72,6 +79,7 @@ const loadImages = async () => {
     {
       key: 'js',
       imgUrl: images['pl'],
+      title: 'Personal blog',
       imgDesc: 'Walking through Romania project',
       projectLink: 'https://proiect-11.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect11',
@@ -80,6 +88,7 @@ const loadImages = async () => {
     {
       key: 'css',
       imgUrl: images['ano'],
+      title: 'Animation of seasons',
       imgDesc: 'Year seasons animation',
       projectLink: 'http://proiect12.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect12',
@@ -88,6 +97,7 @@ const loadImages = async () => {
     {
       key: 'css',
       imgUrl: images['inv'],
+      title: 'Invitation card',
       imgDesc: 'Trying to make a paper folding',
       projectLink: 'https://invitatie.netlify.app/',
       projectGit: 'https://github.com/david-gelu/invitatie-test',
@@ -115,7 +125,7 @@ export const studies = [
   {
     institution: 'Faculty of Economic Sciences and Business Administration',
     study: 'Marketing study programme',
-    year: '2022 - currently'
+    year: '2022 - 2025'
   },
   {
     institution: 'Udemy',

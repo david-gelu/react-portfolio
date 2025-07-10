@@ -1,33 +1,36 @@
 [data-theme="light"] {
   --primary-color: #ffffff;
   --second-color: #fafafa;
-  --text-color: #242424;
+  --text-color: #3c455c;
   --link-color: #3c455c;
   --nav-color: var(--text-color);
-  --nav-bg: #242424;
+  --nav-bg: #e8e2d4;
+  --nav-bg-color: #e8e2d4;
+  --bg-color-transparent: rgba(232, 226, 212, 0.9);
   --key-color: #242424;
   --property-color: #064664;
   --theme-name-color: var(--text-color);
   --button-color: var(--text-color);
-  --bg-color: #ebe6da;
-  --bg-color-accent: #e8e2d4;
+  --bg-color-accent: #ebe6da;
+  --bg-color: #e8e2d4;
   --link-color-accent: rgb(55.9736842105, 64.3697368421, 85.8263157895);
   --text-with-transparency: rgba(36, 36, 36, 0.3);
 }
-
 [data-theme="dark"] {
   --primary-color: #222;
   --second-color: #2a2a2a;
-  --text-color: #dcebf1;
-  --link-color: #02fd9d;
+  --text-color: #2dd3b5;
+  --link-color: #2dd3b5;
+  --nav-bg: #001e2b;
   --nav-color: #87aec0;
-  --nav-bg: transparent;
+  --nav-bg-color: #001e2b;
+  --bg-color-transparent: rgba(0, 30, 43, 0.9);
   --key-color: #87aec0;
   --theme-name-color: var(--text-color);
   --property-color: #cce6f1;
   --bg-color: #001e2b;
-  --bg-color-accent: #00212f;
-  --link-color-accent: rgb(0.8, 101.2, 62.8);
+  --bg-color-accent: #082b3a;
+  --link-color-accent: rgb(25, 91, 79);
   --button-color: var(--text-color);
   --text-with-transparency: rgba(220, 235, 241, 0.3);
 }
@@ -47,6 +50,6 @@ $bg-color-accent: var(--bg-color-accent);
 $button-color: var(--button-color);
 $theme-name-color: var(--theme-name-color);
 $text-with-transparency: var(--text-with-transparency);
-$success: #008533;
+$success: #2dd3b5;
 $danger: #c23854;
 $warning: #ffce52;

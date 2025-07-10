@@ -15,7 +15,6 @@ const ProjectsPage = () => {
   const { dataProjects } = context
 
   const [filtered, setFiltered] = useState(dataProjects)
-  console.log(` filtered:`, filtered)
   const [active, setActive] = useState('all')
 
   useEffect(() => {
@@ -41,7 +40,7 @@ const ProjectsPage = () => {
       <div className='filter-btns'>
         <Button variant={`${activeAll} mw-25`} size='sm' onClick={() => noFilterBy()}>All</Button>
         <Button variant={`${activeJs} mw-25`} size='sm' onClick={() => filterBy('js')}>Ts / React / NextJs</Button>
-        <Button variant={`${activeCss} mw-25`} size='sm' onClick={() => filterBy('css')}>HTML / CSS / Scss </Button>
+        <Button variant={`${activeCss} mw-25`} size='sm' onClick={() => filterBy('css')}>HTML / CSS / SCSS </Button>
       </div>
       <div className='json-and-projects'>
 
@@ -54,8 +53,9 @@ const ProjectsPage = () => {
                 initial={{ opacity: 0 }}
                 exit={{ opacity: 0 }}
                 key={d.projectLink}
-                className='projects__item fancy-border'>
-                 // @t
+                className='projects__item'>
+                    // @t
+                <p className='teh-title'>{d.title}</p>
                 <LazyImage
                   useIntersectionObserver={true}
                   threshold={100}
@@ -63,16 +63,17 @@ const ProjectsPage = () => {
                   effect="blur"
                   src={d.imgUrl}
                   alt={d.imgDesc} />
-                <div className='teh-title-container'>
-                  <a href={d.projectLink} target='_blank' className='teh-title full-bg'>
+
+                <div className='teh-actions-container'>
+                  <a href={d.projectLink} target='_blank' className='teh-action-btn full-bg'>
                     <i className='fas fa-link' aria-hidden='true'></i>
                     <span> link </span>
                   </a>
-                  <a href={d.projectGit} target='_blank' className='teh-title full-bg'>
+                  <a href={d.projectGit} target='_blank' className='teh-action-btn full-bg'>
                     <i className='fab fa-github' aria-hidden='true'></i>
                     <span> github </span>
                   </a>
-                  {d?.teh?.map((icon: string, idx: number) => <span key={icon} className={`teh-title tech-used-${idx}`}><i key={icon} className={icon} /> </span>)}
+                  {/* {d?.teh?.map((icon: string, idx: number) => <span key={icon} className={`teh-action-btn tech-used-${idx}`}><i key={icon} className={icon} /> </span>)} */}
                 </div>
               </motion.div>
             )}

@@ -29,51 +29,66 @@
 
   &-name-div h1 {
     color: $link-color;
-
-    span {
-      font-size: clamp(2rem, 4dvh + 1rem, 4rem);
-      color: $text-color;
-    }
+    font-size: clamp(2rem, 3dvh + 1rem, 4rem);
   }
 }
 
 .max-content {
   min-width: max-content;
   max-width: max-content;
-  font-size: clamp(1.3rem, 1.5dvmin + 1rem, 2rem);
+  // font-size: clamp(1.3rem, 1.5dvmin + 1rem, 2rem);
 }
 
 .tx-color {
-  // background: linear-gradient(177deg, rgba(2, 0, 36, 1) 0%, rgba(0, 212, 255, 1) 100%);
   background-clip: text;
   color: $text-color;
   word-break: break-word;
 }
-
-.show-text {
-  width: 13ch;
-  animation: typing 2s steps(12, end);
-  white-space: nowrap;
-  overflow: hidden;
-  color: $text-color;
+.logo-arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  height: 5rem;
+  width: 5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5em;
+  box-shadow: 0px 0px 2px 3px $link-color;
 }
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
+.download-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0em 0.5em;
+  font-size: 0.8rem;
+  font-weight: 900;
+  text-decoration: none;
 }
+// .show-text {
+//   width: 13ch;
+//   animation: typing 2s steps(12, end);
+//   white-space: nowrap;
+//   overflow: hidden;
+//   color: $text-color;
+// }
+
+// @keyframes typing {
+//   from {
+//     width: 0;
+//   }
+// }
 
 .contact-data {
   display: flex;
+  align-items: center;
   justify-content: start;
-  margin-top: 2em;
+  margin-top: 4em;
   gap: 0.5em;
 
   a,
   span {
     color: $link-color;
-    border-radius: 50%;
+    border-radius: 0.5em;
     border: 1px solid $link-color;
 
     & i {

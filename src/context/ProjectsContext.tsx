@@ -1,33 +1,25 @@
 import React, { createContext, useEffect, useState } from 'react'
 import { dataProjects } from '../data'
+import { DataProjects } from '../types';
 
-interface Project {
-  key: string;
-  imgUrl: any;
-  imgDesc: string;
-  projectLink: string;
-  projectGit: string;
-  teh: string[];
-}
+
 
 interface ProjectsContextType {
-  dataProjects: Project[];
+  dataProjects: DataProjects[];
 }
 
 export const ProjectsContext = createContext<ProjectsContextType | null>(null)
 
 export const ProjectsProvider = ({ children }: { children: React.ReactNode }) => {
 
-  const [projects, setProjects] = useState<Project[]>([]);
+  const [projects, setProjects] = useState<DataProjects[]>([]);
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const projectsData = await dataProjects;
-        console.log('projectsData:', projectsData);
-        if (projectsData) {
-          setProjects(projectsData);
-        }
+        if (projectsData) setProjects(projectsData);
+        else console.error("No projects data found");
       } catch (error) {
         console.error("Error fetching projects:", error);
       }
