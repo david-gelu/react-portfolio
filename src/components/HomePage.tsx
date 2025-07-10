@@ -17,7 +17,7 @@ const HomePage = () => {
               </div>
               <div className="d-flex flex-column">
                 <h1>David Gelu </h1>
-                <div className="show-textt">Software Developer</div>
+                <h2 className="show-textt">Software Developer</h2>
               </div>
             </div>
           </div>

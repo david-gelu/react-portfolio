@@ -54,7 +54,6 @@ const ProjectsPage = () => {
                 exit={{ opacity: 0 }}
                 key={d.projectLink}
                 className='projects__item'>
-                    // @t
                 <p className='teh-title'>{d.title}</p>
                 <LazyImage
                   useIntersectionObserver={true}
