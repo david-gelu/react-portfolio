@@ -2,6 +2,7 @@
   "author": "David Gelu",
   "homepage": ".",
   "name": "react-portfolio",
+  "packageManager": "yarn@4.9.2",
   "version": "2.1.0",
   "private": true,
   "type": "module",

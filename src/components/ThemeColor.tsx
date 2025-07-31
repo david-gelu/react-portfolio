@@ -23,10 +23,21 @@ const ThemeColor = () => {
   }, [theme])
 
   const toggleTheme = () => {
-    setTheme(prevTheme => {
-      const newTheme = !prevTheme
-      localStorage.setItem('dark-mode', newTheme ? 'enabled' : 'disabled')
-      return newTheme
+    if (!document.startViewTransition) {
+      setTheme(prevTheme => {
+        const newTheme = !prevTheme
+        localStorage.setItem('dark-mode', newTheme ? 'enabled' : 'disabled')
+        return newTheme
+      })
+      return
+    }
+
+    document.startViewTransition(() => {
+      setTheme(prevTheme => {
+        const newTheme = !prevTheme
+        localStorage.setItem('dark-mode', newTheme ? 'enabled' : 'disabled')
+        return newTheme
+      })
     })
   }
 

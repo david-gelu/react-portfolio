@@ -15,10 +15,10 @@
 .offcanvas {
   background-image: linear-gradient(
     180deg,
-    var(--bg-color-transparent) 2%,
+    var(--bg-color-transparent) 0%,
     var(--nav-bg) 8%,
     var(--nav-bg) 92%,
-    var(--bg-color-transparent) 98%
+    var(--bg-color-transparent) 100%
   );
 
   // background-image: linear-gradient(0deg, red 1%, green, red 99%);
@@ -118,4 +118,29 @@
   transform: scale(0.7);
   margin-top: 0.3em;
   line-height: 0.3;
+}
+::view-transition-old(root) {
+  animation-delay: 500ms;
+}
+
+::view-transition-new(root) {
+  animation: circle-in 500ms;
+}
+
+@keyframes move-in {
+  from {
+    translate: 100% 0%;
+  }
+  to {
+    translate: 0 0;
+  }
+}
+
+@keyframes circle-in {
+  from {
+    clip-path: circle(0% at 50% 0%);
+  }
+  to {
+    clip-path: circle(120% at 50% 0%);
+  }
 }
