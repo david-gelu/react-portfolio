@@ -15,6 +15,15 @@ const loadImages = async () => {
   return [
     {
       key: 'js',
+      imgUrl: images['dailys'],
+      title: 'Daily tasks project',
+      imgDesc: 'Daily tasks project',
+      projectLink: 'https://time-manager-frontend.vercel.app/',
+      projectGit: 'https://github.com/david-gelu/time-manager',
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+    },
+    {
+      key: 'js',
       imgUrl: images['tasks'],
       title: 'Tasks project',
       imgDesc: 'Tasks project made in Next.js',
