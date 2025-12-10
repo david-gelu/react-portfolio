@@ -17,7 +17,7 @@ const HomePage = () => {
               </div>
               <div className="d-flex flex-column">
                 <h1>David Gelu </h1>
-                <h2 className="show-textt">Software Developer</h2>
+                <h2 className="show-text">Software Developer</h2>
               </div>
             </div>
           </div>
@@ -58,8 +58,8 @@ const HomePage = () => {
         <AnimatePresence>
           <LazyImage
             useIntersectionObserver={false}
-            threshold={0}
-            visibleByDefault={true}
+            threshold={100}
+            visibleByDefault={false}
             effect="blur"
             className="fancy-border  p-3"
             style={{ backgroundColor: 'var(--bg-color-accent)' }}

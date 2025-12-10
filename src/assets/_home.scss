@@ -43,6 +43,7 @@
   background-clip: text;
   color: $text-color;
   word-break: break-word;
+  font-size: clamp(1.2rem, 1dvh + 0.5rem, 1.2rem);
 }
 .logo-arrow {
   display: flex;
