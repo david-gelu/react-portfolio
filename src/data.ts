@@ -14,6 +14,15 @@ const loadImages = async () => {
   const images = await importAll(import.meta.glob('./assets/img/*.webp'))
   return [
     {
+      key: 'css',
+      imgUrl: images['cv'],
+      title: 'My CV',
+      imgDesc: 'My CV made in HTML and CSS',
+      projectLink: 'https://davidgelu-cv.netlify.app',
+      projectGit: 'https://github.com/david-gelu/proiect4',
+      teh: ['fab fa-html5', 'fab fa-css3-alt']
+    },
+    {
       key: 'js',
       imgUrl: images['dailys'],
       title: 'Daily tasks project',
@@ -66,15 +75,6 @@ const loadImages = async () => {
       projectLink: 'https://proiect18.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect18',
       teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-css3-alt']
-    },
-    {
-      key: 'css',
-      imgUrl: images['cv'],
-      title: 'My CV',
-      imgDesc: 'My CV made in HTML and CSS',
-      projectLink: 'https://davidgelu-cv.netlify.app',
-      projectGit: 'https://github.com/david-gelu/proiect4',
-      teh: ['fab fa-html5', 'fab fa-css3-alt']
     },
     {
       key: 'js',

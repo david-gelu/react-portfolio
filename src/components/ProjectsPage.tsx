@@ -1,84 +1,82 @@
 import { useState, useContext, useEffect } from 'react'
 import { ProjectsContext } from '../context/ProjectsContext'
-
 import { DataProjects } from '../types'
-import { Button } from 'react-bootstrap'
-import { LazyLoadImage, LazyLoadImageProps } from "react-lazy-load-image-component";
+import { LazyLoadImage, LazyLoadImageProps } from "react-lazy-load-image-component"
 import "react-lazy-load-image-component/src/effects/blur.css"
 import { motion, AnimatePresence } from 'framer-motion'
+import { Button } from 'react-bootstrap'
 
 const ProjectsPage = () => {
   const context = useContext(ProjectsContext)
-  if (!context) {
-    return <div>Error: ProjectsContext is null</div>
-  }
-  const { dataProjects } = context
+  if (!context) return <div>Error: ProjectsContext is null</div>
 
+  const { dataProjects } = context
   const [filtered, setFiltered] = useState(dataProjects)
   const [active, setActive] = useState('all')
 
-  useEffect(() => {
-    setFiltered(dataProjects)
-  }, [dataProjects])
+  useEffect(() => setFiltered(dataProjects), [dataProjects])
 
   const filterBy = (key: string) => {
-    const filteredData = dataProjects.filter((k: DataProjects) => k.key.includes(key))
-    setFiltered(filteredData)
+    setFiltered(dataProjects.filter((k) => k.key.includes(key)))
     setActive(key)
   }
-  const noFilterBy = () => {
-    setFiltered(dataProjects); setActive('all')
-  }
-  const activeAll = `${active === 'all' ? 'success' : 'outline-success'}`
-  const activeJs = `${active === 'js' ? 'success' : 'outline-success'}`
-  const activeCss = `${active === 'css' ? 'success' : 'outline-success'}`
+
+  const isActive = (k: string) => (active === k ? 'success' : 'outline-success')
   const LazyImage = LazyLoadImage as unknown as React.FC<LazyLoadImageProps>
 
   return (
-    <main className='title-text' id='projects'>
-      <h2>Personal projects</h2>
-      <div className='filter-btns'>
-        <Button variant={`${activeAll} mw-25`} size='sm' onClick={() => noFilterBy()}>All</Button>
-        <Button variant={`${activeJs} mw-25`} size='sm' onClick={() => filterBy('js')}>Ts / React / NextJs</Button>
-        <Button variant={`${activeCss} mw-25`} size='sm' onClick={() => filterBy('css')}>HTML / CSS / SCSS </Button>
-      </div>
-      <div className='json-and-projects'>
+    <main id="projects" className="projects-modern title-text">
+      <h2>Personal Projects</h2>
 
-        <motion.div layout className='projects__items'>
-          <AnimatePresence>
-            {filtered.map((d: DataProjects) =>
-              <motion.div
-                layout
-                animate={{ opacity: 1 }}
-                initial={{ opacity: 0 }}
-                exit={{ opacity: 0 }}
-                key={d.projectLink}
-                className='projects__item'>
-                <p className='teh-title'>{d.title}</p>
+      <div className="projects-filters">
+        <Button size="sm" variant={isActive("all")} onClick={() => { setFiltered(dataProjects); setActive("all") }}>All</Button>
+        <Button size="sm" variant={isActive("js")} onClick={() => filterBy("js")}>Ts / React / NextJs</Button>
+        <Button size="sm" variant={isActive("css")} onClick={() => filterBy("css")}>HTML / CSS / SCSS</Button>
+      </div>
+
+      <motion.div layout className="projects-grid">
+        <AnimatePresence>
+          {filtered.map((p: DataProjects) => (
+            <motion.div
+              key={p.projectLink}
+              layout
+              className="project-card-modern"
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.25 }}
+            >
+              <div className="project-img-wrapper">
                 <LazyImage
-                  useIntersectionObserver={true}
-                  threshold={100}
-                  visibleByDefault={false}
+                  src={p.imgUrl}
+                  alt={p.imgDesc}
                   effect="blur"
-                  src={d.imgUrl}
-                  alt={d.imgDesc} />
+                  className="project-img"
+                />
+              </div>
 
-                <div className='teh-actions-container'>
-                  <a href={d.projectLink} target='_blank' className='teh-action-btn full-bg'>
-                    <i className='fas fa-link' aria-hidden='true'></i>
-                    <span> link </span>
-                  </a>
-                  <a href={d.projectGit} target='_blank' className='teh-action-btn full-bg'>
-                    <i className='fab fa-github' aria-hidden='true'></i>
-                    <span> github </span>
-                  </a>
-                  {/* {d?.teh?.map((icon: string, idx: number) => <span key={icon} className={`teh-action-btn tech-used-${idx}`}><i key={icon} className={icon} /> </span>)} */}
+              <div className="project-info">
+                <p className="project-title">{p.title}</p>
+
+                <div className="project-tech">
+                  {p.teh?.slice(0, 4).map((t: string, i: number) => (
+                    <i key={i} className={t} />
+                  ))}
                 </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.div>
-      </div>
+
+                <div className="project-buttons">
+                  <a className="btn-modern" target="_blank" href={p.projectLink}>
+                    <i className="fas fa-link" /> <span>Live</span>
+                  </a>
+                  <a className="btn-modern" target="_blank" href={p.projectGit}>
+                    <i className="fab fa-github" /> <span>Code</span>
+                  </a>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </motion.div>
     </main>
   )
 }
