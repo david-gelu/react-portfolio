@@ -80,7 +80,7 @@
 
       .months-container {
         display: flex;
-        gap: 0.009rem;
+        gap: 0.5rem;
         padding-bottom: 0.625em;
         min-width: min-content;
 
@@ -118,14 +118,7 @@
                   z-index: 10;
                 }
 
-                // Dark theme colors
                 [data-theme="dark"] & {
-                  &.level-0 {
-                    background-color: #082b3a;
-                    &:hover {
-                      box-shadow: 0 0 0.5em #082b3a;
-                    }
-                  }
                   &.level-1 {
                     background-color: #0d4d5f;
                     &:hover {
@@ -152,14 +145,7 @@
                   }
                 }
 
-                // Light theme colors
                 [data-theme="light"] & {
-                  &.level-0 {
-                    background-color: #ebe6da;
-                    &:hover {
-                      box-shadow: 0 0 0.5em #ebe6da;
-                    }
-                  }
                   &.level-1 {
                     background-color: #b8d4a8;
                     &:hover {
@@ -194,7 +180,7 @@
 
     .years-container {
       display: flex;
-      gap: 0.03125em;
+      gap: 0.25em;
       margin-top: 0.625em;
       flex-wrap: wrap;
 
@@ -230,11 +216,7 @@
         border-radius: 0.125em;
         border: 0.0625em solid $bg-color-accent;
 
-        // Dark theme colors
         [data-theme="dark"] & {
-          &.level-0 {
-            background-color: #082b3a;
-          }
           &.level-1 {
             background-color: #0d4d5f;
           }
@@ -249,11 +231,7 @@
           }
         }
 
-        // Light theme colors
         [data-theme="light"] & {
-          &.level-0 {
-            background-color: #ebe6da;
-          }
           &.level-1 {
             background-color: #b8d4a8;
           }
@@ -271,7 +249,7 @@
     }
 
     .auto-update-label {
-      font-size: 0.6875rem;
+      font-size: 0.75rem;
       color: $text-color;
     }
   }

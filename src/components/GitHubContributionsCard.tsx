@@ -52,10 +52,9 @@ const GitHubContributionsCard = (): JSX.Element => {
         const formattedData: Contribution[] = data.contributions.map((day) => {
           const count = day.count;
           let level: number;
-          if (count === 0) level = 0;
-          else if (count < 5) level = 1;
-          else if (count < 10) level = 2;
-          else if (count < 15) level = 3;
+          if (count === 0) level = 1;
+          else if (count < 5) level = 2;
+          else if (count < 10) level = 3;
           else level = 4;
 
           return {
@@ -185,7 +184,7 @@ const GitHubContributionsCard = (): JSX.Element => {
       <div className="card-footer">
         <div className="legend">
           <span>Less</span>
-          {[0, 1, 2, 3, 4].map((level) => (
+          {[1, 2, 3, 4].map((level) => (
             <div key={level} className={`legend-box level-${level}`} />
           ))}
           <span>More</span>

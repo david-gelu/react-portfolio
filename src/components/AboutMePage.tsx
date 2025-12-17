@@ -35,6 +35,7 @@ const AboutMePage = () => {
             <a style={{ marginLeft: '0.2rem', color: 'var(--link-color)', fontWeight: 700 }}
               href='https://github.com/david-gelu?tab=repositories'
               rel='https://github.com/david-gelu?tab=repositories'
+              target="_blank"
             >my GitHub</a>
             — there's plenty of projects that showcase what I'm capable of. Hit me up if you want to chat about code, opportunities, or just tech in general!
           </h4>
