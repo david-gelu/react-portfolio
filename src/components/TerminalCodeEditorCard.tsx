@@ -28,20 +28,21 @@ const TerminalCodeEditorCard = (): JSX.Element => {
   const codeSnippet: string = `import React from 'react';
 import { motion } from 'framer-motion';
 
-const Portfolio = () => {
+const PageHeader = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      <h1>David Gelu</h1>
-      <p>Software Developer</p>
+    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
+      <div>
+        <div>
+          <div><span><</span>DG<span>/></span></div>
+          <div><h1>David Gelu</h1><h2Software Developer</h2></div>
+        </div>
+      </div>
+      <div> Building modern, scalable web applications using React and TypeScript, working closely with UX/UI designers to deliver clean, user-friendly, and cross-browser experiences.</div>
     </motion.div>
   );
 };
 
-export default Portfolio;`;
+export default PageHeader;`;
 
   useEffect(() => {
     const fullText: string = terminalCommands.join('\n');
@@ -132,7 +133,7 @@ export default Portfolio;`;
               <div className="button yellow" />
               <div className="button green" />
             </div>
-            <span className="window-title">Portfolio.tsx</span>
+            <span className="window-title">PageHeader.tsx</span>
           </div>
           <pre className="code-content">
             {codeText.split('\n').map((line, i) => (

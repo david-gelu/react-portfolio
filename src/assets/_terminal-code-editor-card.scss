@@ -8,10 +8,6 @@
     display: grid;
     gap: 1em;
     grid-template-columns: 1fr;
-
-    @media (min-width: 37.5rem) {
-      grid-template-columns: 1fr 1fr;
-    }
   }
 
   .card-header {
@@ -90,8 +86,6 @@
     }
     .info {
       color: $text-color;
-    }
-    .output {
     }
 
     .cursor {

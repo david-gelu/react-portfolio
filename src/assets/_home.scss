@@ -5,7 +5,7 @@
   color: $link-color;
   border-radius: 1.11em;
 
-  min-height: 60dvh;
+  // min-height: 60dvh;
 
   &-name-div {
     text-align: start;
@@ -94,6 +94,7 @@
 
   a,
   span {
+    font-size: 1rem;
     color: $link-color;
     border-radius: 0.5em;
     border: 1px solid $link-color;

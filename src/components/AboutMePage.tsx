@@ -25,19 +25,19 @@ const AboutMePage = () => {
           </h4>
           <h3><strong>What I do?</strong></h3>
           <h4> &#8226;
-            I'm a full-stack developer with strong expertise in frontend technologies like React, TypeScript, and modern CSS (SCSS, Styled Components). I'm comfortable working with HTML5, JavaScript, Bootstrap, TailWind and everything in between. On the backend, I work with Node.js, Express, and MongoDB to build complete applications. My focus is on writing clean, maintainable code that actually works — from database to UI.</h4>
+            I'm a full-stack developer with strong expertise in frontend technologies like React, TypeScript, and modern CSS (SCSS, Styled Components). I'm comfortable working with HTML5, JavaScript, Bootstrap, TailWind and everything in between. On the backend, I work with Node.js, Express, and MongoDB to build complete applications. My focus is on writing clean, maintainable code — from database to UI.</h4>
           <h3><strong>What I'm exploring?</strong></h3>
           <h4>
             &#8226; Backend Development: Actively learning MongoDB, Next.js, Node.js, and Express to enhance my backend development capabilities and improve my full-stack expertise.</h4>
           <h4>
             Want to see my work?
             Head over to
-            <a style={{ marginLeft: '0.2rem', color: 'var(--link-color)', fontWeight: 700 }}
+            <a style={{ marginInline: '0.5rem', color: 'var(--link-color)', fontWeight: 700 }}
               href='https://github.com/david-gelu?tab=repositories'
               rel='https://github.com/david-gelu?tab=repositories'
               target="_blank"
-            >my GitHub</a>
-            — there's plenty of projects that showcase what I'm capable of. Hit me up if you want to chat about code, opportunities, or just tech in general!
+            > my GitHub</a>
+            — there's plenty of projects that showcase what I'm capable of. Contact me up if you want to chat about code, opportunities, or just tech in general!
           </h4>
           <h4>Thank you for your time and consideration.</h4>
         </div>

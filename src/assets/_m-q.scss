@@ -22,7 +22,6 @@
   .btn-name {
     font-size: 0.875rem;
     max-width: max-content;
-    // margin-block: calc(var(--bs-offcanvas-height) / 2);
     padding-inline: 0.5em;
   }
 
@@ -48,7 +47,7 @@
       & .nav-link {
         padding: 0.75em 0;
         &::after {
-          box-shadow: 0px 0px 0px var(--link-color);
+          box-shadow: 0px 0px 0px $link-color;
         }
       }
     }
@@ -86,36 +85,11 @@
       width: 2.3em;
       height: 2.3em;
     }
-    // .study-card {
-    //   width: min(25em, 80dvw);
-    //   min-height: 30dvh;
-    // }
   }
-  // .skills {
-  //   & li {
-  //     font-size: 0.875rem;
-  //   }
-
-  //   & span {
-  //     max-width: 1.2em;
-  //     min-width: 1.2em;
-  //     max-height: 1.5em;
-  //     min-height: 1.5em;
-  //   }
-
-  //   & .fa,
-  //   & .fab {
-  //     font-size: 0.875rem;
-  //   }
-  // }
 
   .study {
     text-align: center;
   }
-
-  // .study h5:last-child {
-  //   padding-bottom: 0.7rem;
-  // }
 
   .projects__btns {
     padding: 0.1rem;
@@ -130,5 +104,13 @@
   .fa a,
   .fa span {
     font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 37.5rem) {
+  .terminal-code-editor-card {
+    .terminal-code-editor-container {
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
