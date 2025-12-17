@@ -21,21 +21,22 @@ const AboutMePage = () => {
         <div >
           <h3 className=" "> Greetings!</h3>
           <h4>
-            Dedicated and passionate web developer with a strong commitment to learning and contributing to the field.
-            My expertise spans a range of front-end technologies including React, JavaScript, TypeScript, HTML, CSS/SASS, Styled Components, and Bootstrap.
-            I am continuously seeking new opportunities to enhance my skills and work collaboratively to achieve exceptional results.
+            I'm a passionate web developer who loves building beautiful and functional user interfaces. I'm always eager to learn new technologies and collaborate with talented people to create exceptional digital experiences.
           </h4>
-          <h3><strong>Technical Skills:</strong></h3>
-          <h4> &#8226; Frontend Development: HTML5, CSS3, SCSS, Bootstrap, JavaScript, React, TypeScript, Styled Components</h4>
-          <h3><strong>Current Learning:</strong></h3>
+          <h3><strong>What I do?</strong></h3>
+          <h4> &#8226;
+            I'm a full-stack developer with strong expertise in frontend technologies like React, TypeScript, and modern CSS (SCSS, Styled Components). I'm comfortable working with HTML5, JavaScript, Bootstrap, TailWind and everything in between. On the backend, I work with Node.js, Express, and MongoDB to build complete applications. My focus is on writing clean, maintainable code that actually works — from database to UI.</h4>
+          <h3><strong>What I'm exploring?</strong></h3>
           <h4>
             &#8226; Backend Development: Actively learning MongoDB, Next.js, Node.js, and Express to enhance my backend development capabilities and improve my full-stack expertise.</h4>
           <h4>
-            I invite you to explore my work and projects on my
+            Want to see my work?
+            Head over to
             <a style={{ marginLeft: '0.2rem', color: 'var(--link-color)', fontWeight: 700 }}
               href='https://github.com/david-gelu?tab=repositories'
               rel='https://github.com/david-gelu?tab=repositories'
-            >GitHub repository.</a>
+            >my GitHub</a>
+            — there's plenty of projects that showcase what I'm capable of. Hit me up if you want to chat about code, opportunities, or just tech in general!
           </h4>
           <h4>Thank you for your time and consideration.</h4>
         </div>

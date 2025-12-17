@@ -161,11 +161,11 @@ export const studies = [
 export const work = [
   {
     everseen: [
-      'Component Development: Employed React, TypeScript, SCSS, Bootstrap, and Styled Components within a Node.js environment to develop reusable components and implement innovative features, ensuring cross-browser compatibility and consistent performance across platforms.',
-      'UI/UX Collaboration: Worked closely with UX/UI designers to transform design concepts into functional, user-friendly interfaces. Through ongoing collaboration, contributed to iterative design improvements, enhancing the overall user experience.',
-      'Agile Development: Experienced in Agile methodologies, utilizing tools such as Jira and Confluence to foster efficient collaboration and project management in fast-paced development environments. Proficient with GitLab for version control, ensuring code integrity, maintainability, and seamless team collaboration.',
+      'Full-Stack Development: Built reusable components and features using React, TypeScript, SCSS, Bootstrap on the frontend, while leveraging Node.js, Express, and MongoDB on the backend. Ensured cross-browser compatibility, consistent performance, and seamless integration between client and server.',
+      'UI/UX Collaboration: Worked closely with UX/UI designers to transform design concepts into functional, user-friendly interfaces. Through ongoing collaboration, contributed to iterative design improvements and implemented backend APIs to support the designed user experiences.',
+      'Agile Development: Experienced in Agile methodologies, utilizing tools such as Jira and Confluence for efficient collaboration and project management. Proficient with GitLab for version control, code reviews, and maintaining code integrity across the full stack.',
       'Scalable Interface Development: Skilled in building and optimizing scalable interfaces that deliver a seamless user experience, addressing diverse user needs and supporting business growth objectives.',
-      'Teamwork: A collaborative and results-driven team player, excels in dynamic team environments by leveraging collective expertise to achieve high-quality outcomes. Consistently contributes to project success through effective communication and shared problem-solving.',
+      'Teamwork: A collaborative and results-driven team player who excels in dynamic environments by combining frontend and backend expertise. Consistently contributes to project success through effective communication, shared problem-solving, and cross-functional collaboration.',
     ]
   }
 ]
