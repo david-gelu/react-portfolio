@@ -2,15 +2,15 @@
 
 .github-contributions-card {
   background-color: $bg-color;
-  outline: 2px solid $link-color-accent;
-  outline-offset: 2px;
-  padding: 1em;
+  outline: 0.125em solid $link-color-accent;
+  outline-offset: 0.125em;
+  padding: 0.625em;
   border-radius: 1em;
   transition: outline 0.25s linear;
-  &:hover {
-    outline: 2px solid $link-color;
-  }
   margin: 0 auto;
+  &:hover {
+    outline: 0.125em solid $link-color;
+  }
 
   .card-header {
     display: flex;
@@ -18,17 +18,15 @@
     align-items: center;
 
     .header-info {
+      color: $text-color;
+
       .card-title {
-        margin: 0;
-        font-size: 20px;
+        font-size: 1.25rem;
         font-weight: 600;
-        color: $text-color;
       }
 
       .card-subtitle {
-        margin: 4px 0 0 0;
-        font-size: 14px;
-        opacity: 0.7;
+        font-size: 0.875rem;
       }
     }
   }
@@ -36,36 +34,38 @@
   .github-link {
     color: $link-color;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 500;
     display: inline-block;
-    transition: opacity 0.2s;
+    transition: outline 0.2s;
+    border-radius: 0.5rem;
+    padding: 0.5em;
 
     &:hover {
-      opacity: 0.8;
+      outline: 0.0125em solid $link-color;
     }
   }
 
   .error-message {
     background: $bg-color-accent;
-    border: 1px solid $danger;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 1rem;
-    font-size: 13px;
+    border: 0.0625em solid $danger;
+    border-radius: 0.5em;
+    padding: 0.75em;
+    margin-bottom: 0.625em;
+    font-size: 0.8125rem;
     color: $warning;
   }
 
   .loading-container {
     text-align: center;
-    padding: 40px;
+    padding: 2.5em;
 
     .spinner {
       display: inline-block;
-      width: 40px;
-      height: 40px;
-      border: 3px solid $bg-color-accent;
-      border-top: 3px solid $link-color;
+      width: 2.5em;
+      height: 2.5em;
+      border: 0.1875em solid $bg-color-accent;
+      border-top: 0.1875em solid $link-color;
       border-radius: 50%;
       animation: spin 1s linear infinite;
     }
@@ -75,44 +75,43 @@
     .contributions-grid {
       overflow-x: auto;
       overflow-y: hidden;
-      padding: 8px 0;
+      padding: 0.5em 0;
       position: relative;
 
       .months-container {
         display: flex;
-        gap: 0.15rem;
-        padding-bottom: 1rem;
+        gap: 0.009rem;
+        padding-bottom: 0.625em;
         min-width: min-content;
 
         .month-section {
           display: flex;
           flex-direction: column;
-          // align-items: center;
 
           .month-header {
-            font-size: 12px;
+            font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 0.5em;
             color: $text-color;
             text-align: start;
           }
 
           .weeks-container {
             display: flex;
-            gap: 3px;
+            gap: 0.1875em;
 
             .week-column {
               display: flex;
               flex-direction: column;
-              gap: 3px;
+              gap: 0.1875em;
 
               .contribution-day {
-                width: 12px;
-                height: 12px;
-                border-radius: 2px;
+                width: 0.75em;
+                height: 0.75em;
+                border-radius: 0.125em;
                 cursor: pointer;
                 transition: all 0.2s;
-                border: 1px solid $bg-color;
+                border: 0.0625em solid $bg-color;
 
                 &:hover {
                   transform: scale(1.4);
@@ -124,31 +123,31 @@
                   &.level-0 {
                     background-color: #082b3a;
                     &:hover {
-                      box-shadow: 0 0 8px #082b3a;
+                      box-shadow: 0 0 0.5em #082b3a;
                     }
                   }
                   &.level-1 {
                     background-color: #0d4d5f;
                     &:hover {
-                      box-shadow: 0 0 8px #0d4d5f;
+                      box-shadow: 0 0 0.5em #0d4d5f;
                     }
                   }
                   &.level-2 {
                     background-color: #1a7a8a;
                     &:hover {
-                      box-shadow: 0 0 8px #1a7a8a;
+                      box-shadow: 0 0 0.5em #1a7a8a;
                     }
                   }
                   &.level-3 {
                     background-color: #2dd3b5;
                     &:hover {
-                      box-shadow: 0 0 8px #2dd3b5;
+                      box-shadow: 0 0 0.5em #2dd3b5;
                     }
                   }
                   &.level-4 {
                     background-color: #3dffc9;
                     &:hover {
-                      box-shadow: 0 0 8px #3dffc9;
+                      box-shadow: 0 0 0.5em #3dffc9;
                     }
                   }
                 }
@@ -158,31 +157,31 @@
                   &.level-0 {
                     background-color: #ebe6da;
                     &:hover {
-                      box-shadow: 0 0 8px #ebe6da;
+                      box-shadow: 0 0 0.5em #ebe6da;
                     }
                   }
                   &.level-1 {
                     background-color: #b8d4a8;
                     &:hover {
-                      box-shadow: 0 0 8px #b8d4a8;
+                      box-shadow: 0 0 0.5em #b8d4a8;
                     }
                   }
                   &.level-2 {
                     background-color: #8fc07a;
                     &:hover {
-                      box-shadow: 0 0 8px #8fc07a;
+                      box-shadow: 0 0 0.5em #8fc07a;
                     }
                   }
                   &.level-3 {
                     background-color: #5fa84c;
                     &:hover {
-                      box-shadow: 0 0 8px #5fa84c;
+                      box-shadow: 0 0 0.5em #5fa84c;
                     }
                   }
                   &.level-4 {
                     background-color: #3d8a2e;
                     &:hover {
-                      box-shadow: 0 0 8px #3d8a2e;
+                      box-shadow: 0 0 0.5em #3d8a2e;
                     }
                   }
                 }
@@ -195,15 +194,15 @@
 
     .years-container {
       display: flex;
-      gap: 0.5rem;
-      margin-top: 1rem;
+      gap: 0.03125em;
+      margin-top: 0.625em;
       flex-wrap: wrap;
 
       .year-button {
-        padding: 6px 12px;
-        font-size: 12px;
-        border: 1px solid;
-        border-radius: 4px;
+        padding: 0.375em 0.75em;
+        font-size: 0.75rem;
+        border: 0.0625em solid;
+        border-radius: 0.25em;
         cursor: pointer;
         transition: all 0.2s;
         font-weight: 500;
@@ -215,20 +214,21 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-top: 1rem;
-    font-size: 12px;
-    opacity: 0.7;
+    margin-top: 0.625em;
+    font-size: 0.75rem;
 
     .legend {
       display: flex;
       align-items: center;
-      gap: 8px;
-
+      gap: 0.5em;
+      span {
+        color: $text-color;
+      }
       .legend-box {
-        width: 12px;
-        height: 12px;
-        border-radius: 2px;
-        border: 1px solid $bg-color-accent;
+        width: 0.75em;
+        height: 0.75em;
+        border-radius: 0.125em;
+        border: 0.0625em solid $bg-color-accent;
 
         // Dark theme colors
         [data-theme="dark"] & {
@@ -271,8 +271,8 @@
     }
 
     .auto-update-label {
-      font-size: 11px;
-      opacity: 0.5;
+      font-size: 0.6875rem;
+      color: $text-color;
     }
   }
 }
