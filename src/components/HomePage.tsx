@@ -13,7 +13,7 @@ const HomePage = () => {
           <div className="d-flex max-content mt-2 align-items-center">
             <div className="d-flex align-items-center justify-content-center">
               <div className="logo-arrow">
-                <span className="tx-color me-1" >&#60;</span><span className="tx-color">&#47;&#62;</span>
+                <span className="tx-color me-1" >&#60;</span>DG <span className="tx-color ms-1"> &#47;&#62;</span>
               </div>
               <div className="d-flex flex-column">
                 <h1>David Gelu </h1>
@@ -22,8 +22,7 @@ const HomePage = () => {
             </div>
           </div>
           <div className="tx-color mt-3">
-            Skilled in React, TypeScript, and UX/UI collaboration,
-            delivering high-quality, cross-browser web applications in Agile environments.
+            Building modern, scalable web applications using React and TypeScript, working closely with UX/UI designers to deliver clean, user-friendly, and cross-browser experiences.
           </div>
           <div className="left contact-data">
             <TooltipWrap desc='Download CV'>
@@ -32,22 +31,22 @@ const HomePage = () => {
               </a>
             </TooltipWrap>
             <TooltipWrap desc='+4 0744 598 995'>
-              <a href="tel:+4 0744 598 995" aria-label='phone number' className='d-flex flex-column text-center'>
+              <a href="tel:+4 0744 598 995" aria-label='phone number' className='d-flex flex-column text-center btn-outline-success'>
                 <i className="fa fa-mobile" aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='david.gelu90@gmail.com'>
-              <a href="mailto:david.gelu90@gmail.com" aria-label='email' className='d-flex flex-column text-center'>
+              <a href="mailto:david.gelu90@gmail.com" aria-label='email' className='d-flex flex-column text-center btn-outline-success'>
                 <i className="fa fa-envelope" aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='https://www.linkedin.com/in/gelu-fanel-david/'>
-              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/" aria-label='linkedin' className='d-flex flex-column text-center'>
+              <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/" aria-label='linkedin' className='d-flex flex-column text-center btn-outline-success'>
                 <i className="fab fa-linkedin" aria-hidden="true" />
               </a>
             </TooltipWrap>
             <TooltipWrap desc='Github repo'>
-              <a target={'_blank'} href="https://github.com/david-gelu/react-portfolio" aria-label='github repo' className='d-flex flex-column text-center'>
+              <a target={'_blank'} href="https://github.com/david-gelu/react-portfolio" aria-label='github repo' className='d-flex flex-column text-center btn-outline-success'>
                 <i className="fab fa-github" aria-hidden="true" />
               </a>
             </TooltipWrap>

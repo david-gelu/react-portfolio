@@ -1,0 +1,287 @@
+@use "./variables.scss" as *;
+
+.github-contributions-card {
+  background-color: $bg-color;
+  outline: 2px solid $link-color-accent;
+  outline-offset: 2px;
+  padding: 1em;
+  border-radius: 1em;
+  transition: outline 0.25s linear;
+  &:hover {
+    outline: 2px solid $link-color;
+  }
+  margin: 0 auto;
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-info {
+      .card-title {
+        margin: 0;
+        font-size: 20px;
+        font-weight: 600;
+        color: $text-color;
+      }
+
+      .card-subtitle {
+        margin: 4px 0 0 0;
+        font-size: 14px;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .github-link {
+    color: $link-color;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .error-message {
+    background: $bg-color-accent;
+    border: 1px solid $danger;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 1rem;
+    font-size: 13px;
+    color: $warning;
+  }
+
+  .loading-container {
+    text-align: center;
+    padding: 40px;
+
+    .spinner {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      border: 3px solid $bg-color-accent;
+      border-top: 3px solid $link-color;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  .graph-container {
+    .contributions-grid {
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 8px 0;
+      position: relative;
+
+      .months-container {
+        display: flex;
+        gap: 0.15rem;
+        padding-bottom: 1rem;
+        min-width: min-content;
+
+        .month-section {
+          display: flex;
+          flex-direction: column;
+          // align-items: center;
+
+          .month-header {
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: $text-color;
+            text-align: start;
+          }
+
+          .weeks-container {
+            display: flex;
+            gap: 3px;
+
+            .week-column {
+              display: flex;
+              flex-direction: column;
+              gap: 3px;
+
+              .contribution-day {
+                width: 12px;
+                height: 12px;
+                border-radius: 2px;
+                cursor: pointer;
+                transition: all 0.2s;
+                border: 1px solid $bg-color;
+
+                &:hover {
+                  transform: scale(1.4);
+                  z-index: 10;
+                }
+
+                // Dark theme colors
+                [data-theme="dark"] & {
+                  &.level-0 {
+                    background-color: #082b3a;
+                    &:hover {
+                      box-shadow: 0 0 8px #082b3a;
+                    }
+                  }
+                  &.level-1 {
+                    background-color: #0d4d5f;
+                    &:hover {
+                      box-shadow: 0 0 8px #0d4d5f;
+                    }
+                  }
+                  &.level-2 {
+                    background-color: #1a7a8a;
+                    &:hover {
+                      box-shadow: 0 0 8px #1a7a8a;
+                    }
+                  }
+                  &.level-3 {
+                    background-color: #2dd3b5;
+                    &:hover {
+                      box-shadow: 0 0 8px #2dd3b5;
+                    }
+                  }
+                  &.level-4 {
+                    background-color: #3dffc9;
+                    &:hover {
+                      box-shadow: 0 0 8px #3dffc9;
+                    }
+                  }
+                }
+
+                // Light theme colors
+                [data-theme="light"] & {
+                  &.level-0 {
+                    background-color: #ebe6da;
+                    &:hover {
+                      box-shadow: 0 0 8px #ebe6da;
+                    }
+                  }
+                  &.level-1 {
+                    background-color: #b8d4a8;
+                    &:hover {
+                      box-shadow: 0 0 8px #b8d4a8;
+                    }
+                  }
+                  &.level-2 {
+                    background-color: #8fc07a;
+                    &:hover {
+                      box-shadow: 0 0 8px #8fc07a;
+                    }
+                  }
+                  &.level-3 {
+                    background-color: #5fa84c;
+                    &:hover {
+                      box-shadow: 0 0 8px #5fa84c;
+                    }
+                  }
+                  &.level-4 {
+                    background-color: #3d8a2e;
+                    &:hover {
+                      box-shadow: 0 0 8px #3d8a2e;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .years-container {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+
+      .year-button {
+        padding: 6px 12px;
+        font-size: 12px;
+        border: 1px solid;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.2s;
+        font-weight: 500;
+      }
+    }
+  }
+
+  .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+    font-size: 12px;
+    opacity: 0.7;
+
+    .legend {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .legend-box {
+        width: 12px;
+        height: 12px;
+        border-radius: 2px;
+        border: 1px solid $bg-color-accent;
+
+        // Dark theme colors
+        [data-theme="dark"] & {
+          &.level-0 {
+            background-color: #082b3a;
+          }
+          &.level-1 {
+            background-color: #0d4d5f;
+          }
+          &.level-2 {
+            background-color: #1a7a8a;
+          }
+          &.level-3 {
+            background-color: #2dd3b5;
+          }
+          &.level-4 {
+            background-color: #3dffc9;
+          }
+        }
+
+        // Light theme colors
+        [data-theme="light"] & {
+          &.level-0 {
+            background-color: #ebe6da;
+          }
+          &.level-1 {
+            background-color: #b8d4a8;
+          }
+          &.level-2 {
+            background-color: #8fc07a;
+          }
+          &.level-3 {
+            background-color: #5fa84c;
+          }
+          &.level-4 {
+            background-color: #3d8a2e;
+          }
+        }
+      }
+    }
+
+    .auto-update-label {
+      font-size: 11px;
+      opacity: 0.5;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

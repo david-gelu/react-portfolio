@@ -2,7 +2,6 @@ import { useState, useContext, useEffect } from 'react'
 import { ProjectsContext } from '../context/ProjectsContext'
 import { DataProjects } from '../types'
 import { LazyLoadImage, LazyLoadImageProps } from "react-lazy-load-image-component"
-import "react-lazy-load-image-component/src/effects/blur.css"
 import { motion, AnimatePresence } from 'framer-motion'
 import { Button } from 'react-bootstrap'
 

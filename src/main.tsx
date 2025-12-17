@@ -1,8 +1,8 @@
 import { StrictMode } from 'react'
 import './index.css'
+import "react-lazy-load-image-component/src/effects/blur.css"
 import App from './App'
 import { createRoot } from "react-dom/client"
-
 
 const rootElement = document.getElementById("root")
 if (rootElement) {

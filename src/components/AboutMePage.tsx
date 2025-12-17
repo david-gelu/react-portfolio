@@ -6,6 +6,7 @@ import { BiLogoTypescript, BiLogoJavascript, BiLogoMongodb } from "react-icons/b
 import { IoLogoSass, IoLogoReact, IoLogoNodejs, IoLogoGithub } from "react-icons/io5";
 import { RiNextjsFill, RiBootstrapFill } from "react-icons/ri";
 import { Button } from "react-bootstrap";
+import GitHubContributionsCard from "./GitHubContributionsCard";
 
 const StudyPage = React.lazy(() => import("./StudyPage"))
 const WorkPage = React.lazy(() => import("./WorkPage"))
@@ -38,6 +39,9 @@ const AboutMePage = () => {
           </h4>
           <h4>Thank you for your time and consideration.</h4>
         </div>
+      </div>
+      <div>
+        <GitHubContributionsCard />
       </div>
       <div className="professional-title">
         <div className="d-flex skills-and-edu-container mt-5" style={{ gap: '3em' }}>
