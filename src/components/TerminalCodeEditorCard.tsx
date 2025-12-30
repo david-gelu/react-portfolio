@@ -4,6 +4,7 @@ const TerminalCodeEditorCard = (): JSX.Element => {
   const [terminalText, setTerminalText] = useState<string>('');
   const [codeText, setCodeText] = useState<string>('');
   const [terminalCursor, setTerminalCursor] = useState<boolean>(true);
+  const [isTerminalTextEnd, setisTerminalTextEnd] = useState<boolean>(false);
   const [codeCursor, setCodeCursor] = useState<boolean>(true);
 
   const terminalCommands: string[] = [
@@ -47,12 +48,14 @@ export default PageHeader;`;
   useEffect(() => {
     const fullText: string = terminalCommands.join('\n');
     let index: number = 0;
+    setisTerminalTextEnd(false);
 
     const interval = setInterval(() => {
       if (index < fullText.length) {
         setTerminalText(fullText.substring(0, index + 1));
         index++;
       } else {
+        setisTerminalTextEnd(true);
         clearInterval(interval);
       }
     }, 30);
@@ -61,22 +64,20 @@ export default PageHeader;`;
   }, []);
 
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      let index: number = 0;
-      const interval = setInterval(() => {
-        if (index < codeSnippet.length) {
-          setCodeText(codeSnippet.substring(0, index + 1));
-          index++;
-        } else {
-          clearInterval(interval);
-        }
-      }, 20);
+    if (!isTerminalTextEnd) return;
 
-      return () => clearInterval(interval);
-    }, 500);
+    let index: number = 0;
+    const interval = setInterval(() => {
+      if (index < codeSnippet.length) {
+        setCodeText(codeSnippet.substring(0, index + 1));
+        index++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 20);
 
-    return () => clearTimeout(timeout);
-  }, []);
+    return () => clearInterval(interval);
+  }, [isTerminalTextEnd]);
 
   useEffect(() => {
     const interval1 = setInterval(() => {
@@ -126,7 +127,7 @@ export default PageHeader;`;
           </pre>
         </div>
 
-        <div className="code-editor-section">
+        {isTerminalTextEnd && <div className="code-editor-section">
           <div className="window-header">
             <div className="window-buttons">
               <div className="button red" />
@@ -144,7 +145,7 @@ export default PageHeader;`;
             ))}
             <span className={`cursor code-cursor ${codeCursor ? 'visible' : ''}`} />
           </pre>
-        </div>
+        </div>}
       </div>
       <div className="card-footer">
         <div className="tech-badge">⚡ React + TypeScript</div>
