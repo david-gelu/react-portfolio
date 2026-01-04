@@ -7,7 +7,7 @@ const HomePage = () => {
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-      <main className="main accent-background mt-5" id="main">
+      <section className="main accent-background mt-5" id="main">
         <div className="main-name-div p-3" >
           <Suspense fallback={<div className="loading">Loading...</div>}>
             <div className="test">
@@ -59,10 +59,8 @@ const HomePage = () => {
             </div>
           </Suspense>
         </div>
-      </main>
-      <main className="main accent-background mt-5">
-        <TerminalCodeEditorCard />
-      </main>
+      </section>
+      <TerminalCodeEditorCard />
     </motion.div>
   )
 }

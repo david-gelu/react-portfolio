@@ -1,17 +1,22 @@
-const importAll = async (r: Record<string, () => Promise<{ default: string }>>) => {
-  let images: Record<string, string> = {}
+type ImageModule = { default: string }
 
-  const promises = Object.keys(r).map((path) => {
-    const key = path.replace('./assets/img/', '').replace('.webp', '')
-    return r[path]().then((module) => images[key] = module.default)
-  })
+const importAll = async (r: Record<string, () => Promise<ImageModule>>) => {
+  const images: Record<string, string> = {}
 
-  await Promise.all(promises)
+  await Promise.all(
+    Object.entries(r).map(async ([path, importFn]) => {
+      const key = path.replace('./assets/img/', '').replace('.webp', '')
+      const module = await importFn()
+      images[key] = module.default
+    })
+  )
+
   return images
 }
-
 const loadImages = async () => {
-  const images = await importAll(import.meta.glob('./assets/img/*.webp'))
+  const images = await importAll(
+    import.meta.glob('./assets/img/*.webp') as Record<string, () => Promise<ImageModule>>
+  )
   return [
     {
       key: 'css',
@@ -162,10 +167,10 @@ export const work = [
   {
     everseen: [
       'Full-Stack Development: Built reusable components and features using React, TypeScript, SCSS, Bootstrap on the frontend, while leveraging Node.js, Express, and MongoDB on the backend. Ensured cross-browser compatibility, consistent performance, and seamless integration between client and server.',
+      'Teamwork: A collaborative and results-driven team player who excels in dynamic environments by combining frontend and backend expertise. Consistently contributes to project success through effective communication, shared problem-solving, and cross-functional collaboration.',
       'UI/UX Collaboration: Worked closely with UX/UI designers to transform design concepts into functional, user-friendly interfaces. Through ongoing collaboration, contributed to iterative design improvements and implemented backend APIs to support the designed user experiences.',
       'Agile Development: Experienced in Agile methodologies, utilizing tools such as Jira and Confluence for efficient collaboration and project management. Proficient with GitLab for version control, code reviews, and maintaining code integrity across the full stack.',
       'Scalable Interface Development: Skilled in building and optimizing scalable interfaces that deliver a seamless user experience, addressing diverse user needs and supporting business growth objectives.',
-      'Teamwork: A collaborative and results-driven team player who excels in dynamic environments by combining frontend and backend expertise. Consistently contributes to project success through effective communication, shared problem-solving, and cross-functional collaboration.',
     ]
   }
 ]

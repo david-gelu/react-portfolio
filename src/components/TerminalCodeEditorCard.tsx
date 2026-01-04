@@ -1,4 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { AppContext } from '../context/AppContext';
 
 const TerminalCodeEditorCard = (): JSX.Element => {
   const [terminalText, setTerminalText] = useState<string>('');
@@ -6,6 +8,14 @@ const TerminalCodeEditorCard = (): JSX.Element => {
   const [terminalCursor, setTerminalCursor] = useState<boolean>(true);
   const [isTerminalTextEnd, setisTerminalTextEnd] = useState<boolean>(false);
   const [codeCursor, setCodeCursor] = useState<boolean>(true);
+
+  const context = useContext(AppContext);
+
+  if (!context) {
+    throw new Error('AppContext trebuie folosit în interiorul AppProvider');
+  }
+
+  const { finishedTyping, isFinishedTyping } = context;
 
   const terminalCommands: string[] = [
     '$ yarn install',
@@ -27,19 +37,24 @@ const TerminalCodeEditorCard = (): JSX.Element => {
   ];
 
   const codeSnippet: string = `import React from 'react';
-import { motion } from 'framer-motion';
 
-const PageHeader = () => {
+const App = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
-      <div>
-        <div>
-          <div><span><</span>DG<span>/></span></div>
-          <div><h1>David Gelu</h1><h2Software Developer</h2></div>
-        </div>
-      </div>
-      <div> Building modern, scalable web applications using React and TypeScript, working closely with UX/UI designers to deliver clean, user-friendly, and cross-browser experiences.</div>
-    </motion.div>
+    <Suspense fallback={<div className="loading">Loading...</div>}>
+        <NavBarProvider>
+          <NavBar />
+        </NavBarProvider>
+        <HomePage />
+        <ProjectsProvider>
+          <ProjectsPage />
+        </ProjectsProvider>
+        <StudyProvider>
+          <WorkProvider>
+            <AboutMePage />
+          </WorkProvider>
+        </StudyProvider>
+        <ContactPage />
+      </Suspense>
   );
 };
 
@@ -94,66 +109,87 @@ export default PageHeader;`;
     };
   }, []);
 
-  return (
-    <div className="terminal-code-editor-card">
-      <div className="card-header">
-        <h3 className="card-title">Development Environment</h3>
-      </div>
-      <div className="terminal-code-editor-container">
-        <div className="terminal-section">
-          <div className="window-header">
-            <div className="window-buttons">
-              <div className="button red" />
-              <div className="button yellow" />
-              <div className="button green" />
-            </div>
-            <span className="window-title">Terminal</span>
-          </div>
-          <pre className="terminal-content">
-            {terminalText.split('\n').map((line, i) => (
-              <div key={i} className="terminal-line">
-                {line.startsWith('$') ? (
-                  <span className="command">{line}</span>
-                ) : line.startsWith('✓') ? (
-                  <span className="success">{line}</span>
-                ) : line.startsWith('>') ? (
-                  <span className="info">{line}</span>
-                ) : (
-                  <span className="output">{line}</span>
-                )}
-              </div>
-            ))}
-            <span className={`cursor ${terminalCursor ? 'visible' : ''}`} />
-          </pre>
-        </div>
+  useEffect(() => {
+    if (codeText === codeSnippet) {
+      const timeout = setTimeout(() => {
+        finishedTyping();
+      }, 1000);
 
-        {isTerminalTextEnd && <div className="code-editor-section">
-          <div className="window-header">
-            <div className="window-buttons">
-              <div className="button red" />
-              <div className="button yellow" />
-              <div className="button green" />
+      return () => clearTimeout(timeout);
+    }
+  }, [codeText, codeSnippet]);
+
+  return (
+    <AnimatePresence>
+      {!isFinishedTyping && (
+        <motion.section
+          className="main accent-background mt-5"
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0, y: -50 }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+          <div className="terminal-code-editor-card">
+            <div className="card-header">
+              <h3 className="card-title">Development Environment</h3>
             </div>
-            <span className="window-title">PageHeader.tsx</span>
-          </div>
-          <pre className="code-content">
-            {codeText.split('\n').map((line, i) => (
-              <div key={i} className="code-line">
-                <span className="line-number">{i + 1}</span>
-                <span className="code-text">{line}</span>
+            <div className="terminal-code-editor-container">
+              <div className="terminal-section">
+                <div className="window-header">
+                  <div className="window-buttons">
+                    <div className="button red" />
+                    <div className="button yellow" />
+                    <div className="button green" />
+                  </div>
+                  <span className="window-title">Terminal</span>
+                </div>
+                <pre className="terminal-content">
+                  {terminalText.split('\n').map((line, i) => (
+                    <div key={i} className="terminal-line">
+                      {line.startsWith('$') ? (
+                        <span className="command">{line}</span>
+                      ) : line.startsWith('✓') ? (
+                        <span className="success">{line}</span>
+                      ) : line.startsWith('>') ? (
+                        <span className="info">{line}</span>
+                      ) : (
+                        <span className="output">{line}</span>
+                      )}
+                    </div>
+                  ))}
+                  <span className={`cursor ${terminalCursor ? 'visible' : ''}`} />
+                </pre>
               </div>
-            ))}
-            <span className={`cursor code-cursor ${codeCursor ? 'visible' : ''}`} />
-          </pre>
-        </div>}
-      </div>
-      <div className="card-footer">
-        <div className="tech-badge">⚡ React + TypeScript</div>
-        <div className="tech-badge">📦 Vite</div>
-        <div className="tech-badge">🎨 SCSS</div>
-        <div className="tech-badge">✨ Framer Motion</div>
-      </div>
-    </div>
+
+              {isTerminalTextEnd && <div className="code-editor-section">
+                <div className="window-header">
+                  <div className="window-buttons">
+                    <div className="button red" />
+                    <div className="button yellow" />
+                    <div className="button green" />
+                  </div>
+                  <span className="window-title">PageHeader.tsx</span>
+                </div>
+                <pre className="code-content">
+                  {codeText.split('\n').map((line, i) => (
+                    <div key={i} className="code-line">
+                      <span className="line-number">{i + 1}</span>
+                      <span className="code-text">{line}</span>
+                    </div>
+                  ))}
+                  <span className={`cursor code-cursor ${codeCursor ? 'visible' : ''}`} />
+                </pre>
+              </div>}
+            </div>
+            <div className="card-footer">
+              <div className="tech-badge">⚡ React + TypeScript</div>
+              <div className="tech-badge">📦 Vite</div>
+              <div className="tech-badge">🎨 SCSS</div>
+              <div className="tech-badge">✨ Framer Motion</div>
+            </div>
+          </div>
+        </motion.section>
+      )}
+    </AnimatePresence>
   );
 };
 

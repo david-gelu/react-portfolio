@@ -24,7 +24,7 @@ const ProjectsPage = () => {
   const LazyImage = LazyLoadImage as unknown as React.FC<LazyLoadImageProps>
 
   return (
-    <main id="projects" className="projects-modern title-text">
+    <section id="projects" className="projects-modern title-text">
       <h2>Personal Projects</h2>
 
       <div className="projects-filters">
@@ -76,7 +76,7 @@ const ProjectsPage = () => {
           ))}
         </AnimatePresence>
       </motion.div>
-    </main>
+    </section>
   )
 }
 

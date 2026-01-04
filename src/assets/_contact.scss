@@ -13,7 +13,7 @@
   & > :is(form, div) {
     width: 100%;
     margin-inline: auto;
-    max-width: min(80vmin, 30em);
+    max-width: min(100vmin, 30em);
     height: 100%;
   }
   & a:hover {

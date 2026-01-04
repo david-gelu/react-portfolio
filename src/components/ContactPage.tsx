@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import ProgressBar from 'react-bootstrap/ProgressBar'
 import emailjs from '@emailjs/browser'
 
 function ContactPage() {
@@ -8,13 +9,11 @@ function ContactPage() {
 
   const sendEmail = (e: any) => {
     e.preventDefault()
-    console.log(`e:`, e)
     emailjs.sendForm('service_8dkv0jh', 'template_t2tba9l', e.target, 'u0Jo1bqtqbl6bWq10')
       .then(
         res => {
-          console.log(res.text, res.status)
-          // Resetează contorul după trimitere
           setMessageLength(0)
+            ; (e.target as HTMLFormElement).reset()
         },
         error => console.error(error.text)
       )
@@ -24,8 +23,16 @@ function ContactPage() {
     setMessageLength(e.target.value.length)
   }
 
+  const progressPercentage = (messageLength / maxLength) * 100
+
+  const getProgressVariant = () => {
+    if (progressPercentage < 50) return 'success'
+    if (progressPercentage < 80) return 'warning'
+    return 'danger'
+  }
+
   return (
-    <main className='title-text pb-5' id='contact' style={{ minHeight: '100dvh' }}>
+    <section className='main title-text pb-5' id='contact' style={{ minHeight: '100dvh' }}>
       <h2>Contact me</h2>
       <div className='contact mt-5'>
         <form className="contact-form accent-background" onSubmit={sendEmail}>
@@ -51,14 +58,24 @@ function ContactPage() {
             className="w-100"
             onChange={handleMessageChange}
           ></textarea>
-          <div style={{
-            fontSize: '0.875rem',
-            color: messageLength >= maxLength ? 'var(--danger, #dc3545)' : 'var(--text-color)',
-            marginTop: '0.25rem',
-            textAlign: 'right'
-          }}>
-            {messageLength} / {maxLength} characters
+
+          <div className='mt-2 w-100'>
+            <ProgressBar
+              now={progressPercentage}
+              variant={getProgressVariant()}
+              animated
+              style={{ height: '8px' }}
+            />   <div style={{
+              fontSize: '0.875rem',
+              color: messageLength >= maxLength ? 'var(--danger, #dc3545)' : 'var(--text-color)',
+              textAlign: 'left'
+            }}>
+              {messageLength} / {maxLength} characters
+            </div>
           </div>
+
+
+
           <motion.button className='btn btn-success' whileTap={{ scale: 0.85 }} type="submit">
             Send message
           </motion.button>
@@ -87,7 +104,7 @@ function ContactPage() {
           </div>
         </div>
       </div>
-    </main>
+    </section>
   )
 }
 

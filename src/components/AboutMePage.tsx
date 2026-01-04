@@ -1,7 +1,7 @@
 import React, { Suspense, useState } from "react"
 import { motion, AnimatePresence } from 'framer-motion'
-import { SiStyledcomponents } from "react-icons/si"
-import { FaHtml5, FaCss3 } from "react-icons/fa";
+import { SiStyledcomponents, SiShadcnui } from "react-icons/si"
+import { FaHtml5, FaCss3, FaGitlab } from "react-icons/fa";
 import { BiLogoTypescript, BiLogoJavascript, BiLogoMongodb } from "react-icons/bi";
 import { IoLogoSass, IoLogoReact, IoLogoNodejs, IoLogoGithub } from "react-icons/io5";
 import { RiNextjsFill, RiBootstrapFill } from "react-icons/ri";
@@ -15,7 +15,7 @@ const TooltipWrap = React.lazy(() => import("./TooltipWrap"))
 const AboutMePage = () => {
   const [content, setContent] = useState('skills')
   return (
-    <main className="about title-text" id="about">
+    <section className="about title-text" id="about">
       <h2 >About me</h2>
       <div className="professional">
         <div >
@@ -60,18 +60,20 @@ const AboutMePage = () => {
                   initial={{ opacity: 0 }}
                   exit={{ opacity: 0 }}
                   className="about-tabs skills-container">
-                  <TooltipWrap placement="top" key='HTML 5' desc={'HTML 5'}><div className="skill-icon-container"><FaHtml5 /></div></TooltipWrap>
-                  <TooltipWrap placement="top" key='CSS 3' desc={'CSS 3'}><div className="skill-icon-container"><FaCss3 /></div></TooltipWrap>
-                  <TooltipWrap placement="top" key='Sass' desc={'Sass'}><div className="skill-icon-container"><IoLogoSass /></div></TooltipWrap>
-                  <TooltipWrap placement="top" key='Bootstrap' desc={'Bootstrap'}><div className="skill-icon-container"><RiBootstrapFill /></div></TooltipWrap>
-                  <TooltipWrap placement="top" key='styled' desc={'Styled components'}><div className="skill-icon-container"><SiStyledcomponents /></div></TooltipWrap>
                   <TooltipWrap placement="top" key='JavaScript' desc={'JavaScript'}><div className="skill-icon-container"><BiLogoJavascript /></div></TooltipWrap>
                   <TooltipWrap placement="top" key='TypeScript' desc={'TypeScript'}><div className="skill-icon-container"><BiLogoTypescript /></div></TooltipWrap>
                   <TooltipWrap placement="top" key='ReactJs' desc={'ReactJs'}><div className="skill-icon-container"> <IoLogoReact /></div></TooltipWrap>
-                  <TooltipWrap placement="top" key='NextJs' desc={'NextJs'}><div className="skill-icon-container"><RiNextjsFill /></div></TooltipWrap>
                   <TooltipWrap placement="top" key='NodeJs' desc={'NodeJs'}><div className="skill-icon-container"> <IoLogoNodejs /></div></TooltipWrap>
                   <TooltipWrap placement="top" key='MongoDb' desc={'MongoDb'}><div className="skill-icon-container"><BiLogoMongodb /></div></TooltipWrap>
                   <TooltipWrap placement="top" key='GitHub' desc={'GitHub'}><div className="skill-icon-container"><IoLogoGithub /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='Gitlab' desc={'Gitlab'}><div className="skill-icon-container"><FaGitlab /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='Shadcn' desc={'Shadcn'}><div className="skill-icon-container"><SiShadcnui /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='Sass' desc={'Sass'}><div className="skill-icon-container"><IoLogoSass /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='Bootstrap' desc={'Bootstrap'}><div className="skill-icon-container"><RiBootstrapFill /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='HTML 5' desc={'HTML 5'}><div className="skill-icon-container"><FaHtml5 /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='CSS 3' desc={'CSS 3'}><div className="skill-icon-container"><FaCss3 /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='styled' desc={'Styled components'}><div className="skill-icon-container"><SiStyledcomponents /></div></TooltipWrap>
+                  <TooltipWrap placement="top" key='NextJs' desc={'NextJs'}><div className="skill-icon-container"><RiNextjsFill /></div></TooltipWrap>
                 </motion.div>
               </AnimatePresence>}
             {content === 'education' &&
@@ -93,7 +95,7 @@ const AboutMePage = () => {
       <Suspense fallback={<div className="loading">Loading...</div>}>
         <WorkPage />
       </Suspense>
-    </main >
+    </section >
   )
 }
 

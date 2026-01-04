@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 1000px) {
-  main {
+  section {
     width: 95dvw;
     margin: 0 auto;
   }
@@ -26,12 +26,19 @@
   }
 
   .offcanvas {
+    background-image: linear-gradient(
+      90deg,
+      var(--bg-color-transparent) 0%,
+      var(--nav-bg) 4%,
+      var(--nav-bg) 96%,
+      var(--bg-color-transparent) 100%
+    );
     flex-direction: row;
     align-items: center;
     max-height: fit-content;
     gap: 0.5em;
     --bs-offcanvas-height: 6dvh;
-    padding-inline: 0 1em;
+    padding: 1em 1em 1em 0em;
     &.offcanvas-bottom {
       max-height: fit-content;
     }
@@ -45,7 +52,7 @@
       gap: 0;
 
       & .nav-link {
-        padding: 0.75em 0;
+        padding: 0.5em 0;
         &::after {
           box-shadow: 0px 0px 0px $link-color;
         }

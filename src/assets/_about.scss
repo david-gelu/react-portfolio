@@ -90,9 +90,16 @@
   max-height: 50dvh;
   overflow-y: auto;
   word-wrap: break-word;
+
+  &:hover > :not(:is(.skill-icon-container, .study-card):hover) {
+    filter: blur(0.1em);
+    transition: filter 0.03s ease;
+  }
+
   &.skills-container {
     grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
   }
+
   & :is(.skill-icon-container, .study-card) {
     background-color: $bg-color-accent;
     outline: 2px solid $link-color-accent;
@@ -100,10 +107,12 @@
     padding: 1em;
     border-radius: 1em;
     transition: outline 0.25s linear;
+
     &:hover {
       outline: 2px solid $link-color;
     }
   }
+
   & svg {
     width: 3em;
     height: 3em;
