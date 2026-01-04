@@ -38,6 +38,15 @@ const loadImages = async () => {
     },
     {
       key: 'js',
+      imgUrl: images['time-pass'],
+      title: 'Time passed since',
+      imgDesc: 'Time passed since',
+      projectLink: 'https://time-passed.netlify.app/',
+      projectGit: 'https://github.com/david-gelu/time-passed',
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+    },
+    {
+      key: 'js',
       imgUrl: images['tasks'],
       title: 'Tasks project',
       imgDesc: 'Tasks project made in Next.js',
