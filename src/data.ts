@@ -47,6 +47,15 @@ const loadImages = async () => {
     },
     {
       key: 'js',
+      imgUrl: images['check'],
+      title: 'Diiference checker project',
+      imgDesc: 'Tasks project made to find the difference between data sets',
+      projectLink: 'https://checker-js.netlify.app/',
+      projectGit: 'https://github.com/david-gelu/checker',
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+    },
+    {
+      key: 'js',
       imgUrl: images['tasks'],
       title: 'Tasks project',
       imgDesc: 'Tasks project made in Next.js',

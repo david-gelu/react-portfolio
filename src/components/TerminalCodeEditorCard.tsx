@@ -73,7 +73,7 @@ export default PageHeader;`;
         setisTerminalTextEnd(true);
         clearInterval(interval);
       }
-    }, 30);
+    }, 5);
 
     return () => clearInterval(interval);
   }, []);
@@ -89,7 +89,7 @@ export default PageHeader;`;
       } else {
         clearInterval(interval);
       }
-    }, 20);
+    }, 5);
 
     return () => clearInterval(interval);
   }, [isTerminalTextEnd]);
@@ -97,11 +97,11 @@ export default PageHeader;`;
   useEffect(() => {
     const interval1 = setInterval(() => {
       setTerminalCursor(prev => !prev);
-    }, 530);
+    }, 230);
 
     const interval2 = setInterval(() => {
       setCodeCursor(prev => !prev);
-    }, 530);
+    }, 230);
 
     return () => {
       clearInterval(interval1);
@@ -113,7 +113,7 @@ export default PageHeader;`;
     if (codeText === codeSnippet) {
       const timeout = setTimeout(() => {
         finishedTyping();
-      }, 1000);
+      }, 200);
 
       return () => clearTimeout(timeout);
     }
