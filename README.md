@@ -1,60 +1,65 @@
-# React Portfolio
+# 👋 Hi, I'm David
 
-This project is a personal portfolio built with React and Vite. It showcases various projects and utilizes modern web technologies.
+Full-Stack Developer building scalable, high-performance web applications using React, Next.js, and TypeScript.
 
-## Features
+I focus on clean architecture, reusable components, and performance optimization — turning complex ideas into fast, maintainable, and user-friendly solutions.
 
-- Dynamic project filtering
-- Lazy loading of images
-- Responsive design using Bootstrap
-- Context API for state management
+---
 
-## Getting Started
+## 🚀 Tech Stack
+- React, Next.js, TypeScript
+- React Query (server state management)
+- Node.js, MongoDB
+- Tailwind, SCSS, Bootstrap, Styled Components
 
-To get a local copy up and running, follow these steps:
+---
 
-### Prerequisites
+## 💡 What I Do
+- Design scalable frontend architectures
+- Optimize performance and rendering behavior
+- Build reusable, maintainable component systems
+- Integrate APIs and manage data efficiently
+- Deliver responsive, user-focused interfaces
 
-- Node.js (version 14 or later)
-- npm (comes with Node.js)
+---
 
-### Installation
+## 📌 Featured Projects
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/react-portfolio.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd react-portfolio
-   ```
-3. Install the dependencies:
-   ```bash
-   npm install
-   ```
+### 🔹 Task Management App (Next.js + MongoDB)
+Full-stack application with infinite scroll and grouped data rendering.  
+Focused on performance, scalable data handling, and efficient UI updates.
 
-### Running the Application
+### 🔹 Interactive Portfolio (React + TypeScript)
+Modern portfolio with reusable components and optimized rendering.  
+Designed for performance, scalability, and smooth user experience.
 
-To start the development server, run:
-```bash
-yarn dev
-```
+### 🔹 Interactive CV App
+Dynamic CV built as a web application with downloadable PDF support.  
+Focused on structured UI, accessibility, and extensibility.
 
-Your application will be running at `http://localhost:3000`.
+### 🔹 Image Transformer
+Real-time image processing tool with optimized rendering flow.  
+Ensures smooth interaction and responsive UI updates.
 
-### Building for Production
+### 🔹 Time Passed Since
+Utility app for real-time time calculations and updates.  
+Focused on accurate date handling and efficient rendering.
 
-To create a production build, run:
-```bash
-yarn build
-```
+### 🔹 Difference Checker
+Validation-based app handling input logic and edge cases.  
+Built with focus on reliability and predictable behavior.
 
-The build artifacts will be stored in the `dist` directory.
+---
 
-## Contributing
+## ⚡ Strengths
+- Problem-solving mindset
+- Clean, maintainable code
+- Fast learner and adaptable
+- Strong team collaboration
+- Focus on performance and scalability
 
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
+---
 
-## License
-
-This project is licensed under the MIT License. See the LICENSE file for details.
+## 📫 Contact
+- LinkedIn: https://linkedin.com/in/gelu-fanel-david
+- Portfolio: https://davidgelu.netlify.app

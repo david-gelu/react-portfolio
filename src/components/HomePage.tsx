@@ -24,7 +24,17 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="tx-color mt-3">
-                  Building modern, scalable web applications using React and TypeScript, working closely with UX/UI designers to deliver clean, user-friendly, and cross-browser experiences.
+                  Full-Stack Developer focused on building fast, scalable, and maintainable web applications.{'\n'}
+                  I specialize in React, Node.js, and TypeScript — creating clean architectures and high-performance user interfaces.
+                </div>
+                <div className="tx-color mt-3">
+                  WHAT I DO:
+                  <ul className="d-flex flex-column gap-2 mt-2 p-3 accent-background" style={{ borderRadius: '8px' }} >
+                    <li>&#8226; Build scalable frontend architectures</li>
+                    <li>&#8226; Develop reusable UI components</li>
+                    <li>&#8226; Optimize performance and rendering</li>
+                    <li>&#8226; Integrate APIs and manage data efficiently</li>
+                  </ul>
                 </div>
               </div>
               <div className="left contact-data">

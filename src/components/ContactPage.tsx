@@ -33,7 +33,7 @@ function ContactPage() {
 
   return (
     <section className='main title-text pb-5' id='contact' style={{ minHeight: '100dvh' }}>
-      <h2>Contact me</h2>
+      <h2>Interested in working together? Let's build something great.</h2>
       <div className='contact mt-5'>
         <form className="contact-form accent-background" onSubmit={sendEmail}>
           <label htmlFor="emailFrom">Email:</label>

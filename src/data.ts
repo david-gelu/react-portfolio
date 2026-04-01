@@ -19,13 +19,24 @@ const loadImages = async () => {
   )
   return [
     {
+      key: 'js',
+      imgUrl: images['portfolio'],
+      title: 'Interactive Portfiolio',
+      imgDesc: 'Interactive Portfiolio built with React and TypeScript',
+      projectLink: 'https://davidgelu.netlify.app',
+      projectGit: 'https://github.com/david-gelu/react-portfolio',
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass'],
+      desc: 'Designed and developed a scalable personal portfolio using React and TypeScript, focused on performance, clean architecture, and user experience. Implemented reusable component patterns and optimized rendering to ensure fast load times and smooth navigation. Structured the project for easy extensibility and long-term maintainability. Reduced unnecessary re-renders through optimized component structure. Structured codebase for scalability and long-term maintainability. Improved UI responsiveness through efficient state management.'
+    },
+    {
       key: 'css',
       imgUrl: images['cv'],
-      title: 'My CV',
-      imgDesc: 'My CV made in HTML and CSS',
+      title: 'Interactive CV App',
+      imgDesc: 'Interactive CV App (React)',
       projectLink: 'https://davidgelu-cv.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect4',
-      teh: ['fab fa-html5', 'fab fa-css3-alt']
+      teh: ['fab fa-html5', 'fab fa-css3-alt'],
+      desc: 'A modern, interactive CV application built with React, designed to present professional experience in a dynamic and downloadable format. This project reimagines a traditional CV as a web application, focusing on user experience, accessibility, and real-time interaction.'
     },
     {
       key: 'js',
@@ -34,7 +45,8 @@ const loadImages = async () => {
       imgDesc: 'Daily tasks project',
       projectLink: 'https://time-manager-frontend.vercel.app/',
       projectGit: 'https://github.com/david-gelu/time-manager',
-      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass'],
+      desc: 'Built a task management application with a focus on efficient state handling and scalable UI architecture using React, React-query, MongoDB, Nodejs, Typescript. Implemented dynamic updates and optimized component rendering to ensure a responsive and consistent user experience. Designed reusable logic to support future feature expansion. Designed reusable components to improve development efficiency.'
     },
     {
       key: 'js',
@@ -43,16 +55,18 @@ const loadImages = async () => {
       imgDesc: 'Time passed since',
       projectLink: 'https://time-passed.netlify.app/',
       projectGit: 'https://github.com/david-gelu/time-passed',
-      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass'],
+      desc: 'Built a time-tracking utility that dynamically calculates and displays time differences in real time. Focused on accurate date handling, efficient updates, and optimized rendering to ensure smooth and responsive UI behavior.'
     },
     {
       key: 'js',
       imgUrl: images['check'],
-      title: 'Diiference checker project',
+      title: 'Diference checker project',
       imgDesc: 'Tasks project made to find the difference between data sets',
       projectLink: 'https://checker-js.netlify.app/',
       projectGit: 'https://github.com/david-gelu/checker',
-      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass'],
+      desc: 'Developed a validation-focused application handling user input and conditional logic with a structured and maintainable approach. Focused on clean logic separation, predictable state handling, and ensuring reliability through clear validation flows and user feedback.'
     },
     {
       key: 'js',
@@ -61,7 +75,8 @@ const loadImages = async () => {
       imgDesc: 'Tasks project made in Next.js',
       projectLink: 'https://tasks-dv.vercel.app/',
       projectGit: 'https://github.com/david-gelu/tasks',
-      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass'],
+      desc: 'Developed a full-stack task management system using Next.js, Prisma, and MongoDB, focusing on scalable data handling and performance. Implemented infinite scrolling and grouped data rendering to optimize UI performance and improve user interaction. Designed backend data structures to support efficient querying and future scalability.'
     },
     {
       key: 'js',
@@ -70,16 +85,18 @@ const loadImages = async () => {
       imgDesc: 'Image transformer project made in Next.js',
       projectLink: 'https://image-transformer-app.vercel.app//',
       projectGit: 'https://github.com/david-gelu/image-transformer-app',
-      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass'],
+      desc: 'Built an image processing tool with real-time transformations and preview capabilities. Optimized rendering flow to ensure smooth interaction and minimal performance overhead, focusing on efficient updates and user responsiveness.'
     },
     {
       key: 'js',
       imgUrl: images['book'],
-      title: 'Book project',
+      title: 'Books project',
       imgDesc: 'Books project',
       projectLink: 'https://booksproject.netlify.app/',
       projectGit: 'https://github.com/david-gelu/books-project',
-      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass']
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass'],
+      desc: 'Web application for browsing and managing book content, built with React and TypeScript.Implements dynamic UI rendering and structured data handling, focusing on usability and clean interface design.'
     },
     {
       key: 'css',
@@ -88,7 +105,8 @@ const loadImages = async () => {
       imgDesc: 'Copy ItSchool homepage project',
       projectLink: 'https://proiect16.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect16',
-      teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-bootstrap']
+      teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-bootstrap'],
+      desc: 'Built responsive and accessible user interfaces using modern HTML, CSS, and layout techniques. Focused on visual hierarchy, cross-device compatibility, and clean, maintainable styling.'
     },
     {
       key: 'js',
@@ -97,7 +115,8 @@ const loadImages = async () => {
       imgDesc: 'Pokemon project',
       projectLink: 'https://proiect18.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect18',
-      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-css3-alt']
+      teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-css3-alt'],
+      desc: 'Developed an API-driven application consuming external data sources, focusing on asynchronous data handling and UI consistency. Implemented efficient data fetching strategies and error handling to ensure reliability and smooth user experience.'
     },
     {
       key: 'js',
@@ -106,7 +125,8 @@ const loadImages = async () => {
       imgDesc: 'Metal vision project',
       projectLink: 'https://project-metal.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect2',
-      teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-bootstrap', 'fab fa-js-square']
+      teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-bootstrap', 'fab fa-js-square'],
+      desc: 'Built responsive and accessible user interfaces using modern HTML, CSS, and layout techniques.Focused on visual hierarchy, cross-device compatibility, and clean, maintainable styling.'
     },
     {
       key: 'js',
@@ -115,7 +135,8 @@ const loadImages = async () => {
       imgDesc: 'Walking through Romania project',
       projectLink: 'https://proiect-11.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect11',
-      teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-js-square']
+      teh: ['fab fa-html5', 'fab fa-css3-alt', 'fab fa-js-square'],
+      desc: 'Created a content-focused web application with structured data rendering and responsive layout. Designed for readability and scalability, with a focus on clean UI architecture and maintainable styling.'
     },
     {
       key: 'css',
@@ -124,17 +145,18 @@ const loadImages = async () => {
       imgDesc: 'Year seasons animation',
       projectLink: 'http://proiect12.netlify.app',
       projectGit: 'https://github.com/david-gelu/proiect12',
-      teh: ['fab fa-html5', 'fab fa-css3-alt']
+      teh: ['fab fa-html5', 'fab fa-css3-alt'],
+      desc: 'Developed interactive UI experiences using advanced CSS animations and JavaScript logic. Focused on smooth transitions, performance optimization, and creating engaging visual interactions without compromising usability.'
     },
-    {
-      key: 'css',
-      imgUrl: images['inv'],
-      title: 'Invitation card',
-      imgDesc: 'Trying to make a paper folding',
-      projectLink: 'https://invitatie.netlify.app/',
-      projectGit: 'https://github.com/david-gelu/invitatie-test',
-      teh: ['fab fa-html5', 'fab fa-css3-alt']
-    }
+    // {
+    //   key: 'css',
+    //   imgUrl: images['inv'],
+    //   title: 'Invitation card',
+    //   imgDesc: 'Trying to make a paper folding',
+    //   projectLink: 'https://invitatie.netlify.app/',
+    //   projectGit: 'https://github.com/david-gelu/invitatie-test',
+    //   teh: ['fab fa-html5', 'fab fa-css3-alt']
+    // }
   ]
 }
 
@@ -184,11 +206,17 @@ export const studies = [
 export const work = [
   {
     everseen: [
-      'Full-Stack Development: Built reusable components and features using React, TypeScript, SCSS, Bootstrap on the frontend, while leveraging Node.js, Express, and MongoDB on the backend. Ensured cross-browser compatibility, consistent performance, and seamless integration between client and server.',
-      'Teamwork: A collaborative and results-driven team player who excels in dynamic environments by combining frontend and backend expertise. Consistently contributes to project success through effective communication, shared problem-solving, and cross-functional collaboration.',
-      'UI/UX Collaboration: Worked closely with UX/UI designers to transform design concepts into functional, user-friendly interfaces. Through ongoing collaboration, contributed to iterative design improvements and implemented backend APIs to support the designed user experiences.',
-      'Agile Development: Experienced in Agile methodologies, utilizing tools such as Jira and Confluence for efficient collaboration and project management. Proficient with GitLab for version control, code reviews, and maintaining code integrity across the full stack.',
-      'Scalable Interface Development: Skilled in building and optimizing scalable interfaces that deliver a seamless user experience, addressing diverse user needs and supporting business growth objectives.',
+      'Built scalable web applications using React, TypeScript, Node.js, and MongoDB.',
+      'Developed components and improved code maintainability by reduceing code duplication through reusable component patterns.',
+      'Optimized performance and rendering behavior to enhance user experience by optimizing component rendering.',
+      'Collaborated with designer to deliver responsive UIs and seamless user experiences across devices.',
+      'Worked in Agile teams using Jira and GitLab  for project management and version control and participated in code reviews to maintain code quality and share knowledge.'
     ]
   }
+]
+export const softSkills = [
+  'Problem-solving mindset.',
+  'Clean code & maintainability focus ',
+  'Strong team collaboration',
+  'Fast learner & adaptable ',
 ]

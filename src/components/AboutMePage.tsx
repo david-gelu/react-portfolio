@@ -9,6 +9,7 @@ import { Button } from "react-bootstrap";
 import GitHubContributionsCard from "./GitHubContributionsCard";
 
 const StudyPage = React.lazy(() => import("./StudyPage"))
+const SoftSkillsPage = React.lazy(() => import("./SoftSkillsPage"))
 const WorkPage = React.lazy(() => import("./WorkPage"))
 const TooltipWrap = React.lazy(() => import("./TooltipWrap"))
 
@@ -21,17 +22,20 @@ const AboutMePage = () => {
         <div >
           <h3 className=" "> Greetings!</h3>
           <h4>
-            I'm a passionate web developer who loves building beautiful and functional user interfaces. I'm always eager to learn new technologies and collaborate with talented people to create exceptional digital experiences.
-          </h4>
+            I'm a Full-Stack Developer with 4+ years of experience building modern web applications.</h4>
           <h3><strong>What I do?</strong></h3>
-          <h4> &#8226;
-            I'm a full-stack developer with strong expertise in frontend technologies like React, TypeScript, and modern CSS (SCSS, Styled Components). I'm comfortable working with HTML5, JavaScript, Bootstrap, TailWind and everything in between. On the backend, I work with Node.js, Express, and MongoDB to build complete applications. My focus is on writing clean, maintainable code — from database to UI.</h4>
+          <h4> <ul>
+            <li>&#8226; I specialize in React, Node.js, and TypeScript, focusing on clean, scalable architectures and high-performance interfaces.</li>
+            <li>&#8226; I enjoy solving complex problems, optimizing applications, and turning ideas into fast, user-friendly products.
+            </li>
+          </ul>
+          </h4>
           <h3><strong>What I'm exploring?</strong></h3>
           <h4>
-            &#8226; Backend Development: Actively learning MongoDB, Next.js, Node.js, and Express to enhance my backend development capabilities and improve my full-stack expertise.</h4>
+            &#8226; Currently, I'm expanding my backend skills with Node.js, MongoDB, and Express.
+          </h4>
           <h4>
-            Want to see my work?
-            Head over to
+            Want to see my work? Head over to
             <a style={{ marginInline: '0.5rem', color: 'var(--link-color)', fontWeight: 700 }}
               href='https://github.com/david-gelu?tab=repositories'
               rel='https://github.com/david-gelu?tab=repositories'
@@ -49,6 +53,7 @@ const AboutMePage = () => {
         <div className="d-flex skills-and-edu-container mt-5" style={{ gap: '3em' }}>
           <div className="btns-skills-and-edu">
             <Button onClick={() => setContent('skills')} variant={`${content === 'skills' ? '' : 'outline-'}success`}>Skills</Button>
+            <Button onClick={() => setContent('softSkills')} variant={`${content === 'softSkills' ? '' : 'outline-'}success`}>Soft Skills</Button>
             <Button onClick={() => setContent('education')} variant={`${content === 'education' ? '' : 'outline-'}success`}>Education</Button>
           </div>
           <div className="w-100">
@@ -86,6 +91,19 @@ const AboutMePage = () => {
                   className="study title-text">
                   <Suspense fallback={<div className="loading">Loading...</div>}>
                     <StudyPage />
+                  </Suspense>
+                </motion.div>
+              </AnimatePresence>}
+            {content === 'softSkills' &&
+              <AnimatePresence>
+                <motion.div
+                  animate={{ opacity: 1 }}
+                  initial={{ opacity: 0 }}
+                  transition={{ duration: 1 }}
+                  exit={{ opacity: 0 }}
+                  className="study title-text">
+                  <Suspense fallback={<div className="loading">Loading...</div>}>
+                    <SoftSkillsPage />
                   </Suspense>
                 </motion.div>
               </AnimatePresence>}

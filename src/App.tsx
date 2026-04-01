@@ -8,6 +8,7 @@ import { NavBarProvider } from "./context/NavBarContext";
 import { ProjectsProvider } from "./context/ProjectsContext";
 import { StudyProvider } from "./context/StudyContext";
 import { WorkProvider } from "./context/WorkContext";
+import { SoftSkillsProvider } from "./context/SoftSkillsContext";
 import { AppProvider, AppContext } from "./context/AppContext";
 
 const HomePage = React.lazy(() => import('./components/HomePage'));
@@ -45,7 +46,9 @@ const AppContent = () => {
             </ProjectsProvider>
             <StudyProvider>
               <WorkProvider>
-                <AboutMePage />
+                <SoftSkillsProvider>
+                  <AboutMePage />
+                </SoftSkillsProvider >
               </WorkProvider>
             </StudyProvider>
             <ContactPage />
