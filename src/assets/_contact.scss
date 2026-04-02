@@ -1,52 +1,316 @@
-@use "sass:color";
-
 @use "./variables.scss" as *;
 @use "./utils.scss" as *;
 
-.contact {
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr));
-  gap: 1.5rem;
-  width: 100%;
+// ─── Layout ───────────────────────────────────────────────────────────────────
 
-  & > :is(form, div) {
-    width: 100%;
-    margin-inline: auto;
-    max-width: min(100vmin, 30em);
-    height: 100%;
+.contact-section {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+.contact-card {
+  background: $bg-color;
+  color: $text-color;
+  width: 100%;
+  border: 0.5px solid $text-with-transparency;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+// ─── Header ───────────────────────────────────────────────────────────────────
+
+.contact-header {
+  background: var(--nav-bg);
+  color: var(--nav-color);
+  padding: 28px 32px 24px;
+
+  &__eyebrow {
+    letter-spacing: 0.12em;
+    margin-bottom: 6px;
+    text-transform: uppercase;
   }
-  & a:hover {
+
+  &__title {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &__summary {
+    line-height: 1.65;
+    opacity: 0.75;
+    margin-bottom: 16px;
+  }
+
+  &__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+}
+
+.meta-item {
+  opacity: 0.8;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.meta-dot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: $link-color;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+// ─── Body: 2-column ───────────────────────────────────────────────────────────
+
+.contact-body {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+
+  @media (max-width: 560px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ─── Sidebar ──────────────────────────────────────────────────────────────────
+
+.contact-sidebar {
+  background: $bg-color-accent;
+  padding: 20px 16px;
+  border-right: 0.5px solid $text-with-transparency;
+
+  @media (max-width: 560px) {
+    border-right: none;
+    border-bottom: 0.5px solid $text-with-transparency;
+  }
+}
+
+.sidebar-section {
+  margin-bottom: 20px;
+
+  &__title {
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $link-color;
+    border-bottom: 1.5px solid $link-color;
+    padding-bottom: 4px;
+    margin-bottom: 10px;
+  }
+}
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: $text-color;
+  padding: 3px 0;
+  text-decoration: none;
+  transition: color 0.2s;
+
+  i {
+    color: $link-color;
+    font-size: 12px;
+    width: 14px;
+    text-align: center;
+  }
+
+  &:hover {
     color: $link-color;
   }
 }
 
+.availability-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: $success;
+  margin-bottom: 6px;
+}
+
+.availability-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: $success;
+  display: inline-block;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(45, 211, 181, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(45, 211, 181, 0);
+  }
+}
+
+.availability-note {
+  color: $text-color;
+  opacity: 0.6;
+  line-height: 1.5;
+}
+
+// ─── Main / Form ──────────────────────────────────────────────────────────────
+
+.contact-main {
+  padding: 20px 24px;
+}
+
+.form-section-title {
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: $link-color;
+  border-bottom: 1.5px solid $link-color;
+  padding-bottom: 4px;
+  margin-bottom: 16px;
+}
+
 .contact-form {
-  @include display(flex-start, null, column);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
   label {
+    font-weight: 500;
     color: $text-color;
   }
-  :is(input, textarea) {
-    border-radius: 1em;
-    padding: 1em;
-    background-color: $bg-color;
-    border: 1px solid $text-color;
+
+  input,
+  textarea {
+    background: $bg-color;
+    border: 1px solid $text-with-transparency;
+    border-radius: 0.6rem;
+    padding: 0.65em 0.9em;
     color: $text-color;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s;
 
     &::placeholder {
-      color: color.adjust(#242424, $lightness: 50%);
+      color: $text-with-transparency;
+    }
+
+    &:focus {
+      outline: none;
+      border-color: $link-color;
     }
 
     &:not(:placeholder-shown):user-valid {
       border-color: $success;
     }
-
     &:not(:placeholder-shown):user-invalid {
       border-color: $danger;
     }
-
     &:focus:invalid {
       border-color: $warning;
     }
   }
+}
+
+// ─── Char counter bar ─────────────────────────────────────────────────────────
+
+.char-track {
+  height: 4px;
+  background: $text-with-transparency;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.char-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition:
+    width 0.2s,
+    background 0.3s;
+
+  &--success {
+    background: $success;
+  }
+  &--warning {
+    background: $warning;
+  }
+  &--danger {
+    background: $danger;
+  }
+}
+
+.char-count {
+  font-size: 0.9rem;
+  color: $text-color;
+  opacity: 0.5;
+  text-align: right;
+
+  &--danger {
+    color: $danger;
+    opacity: 1;
+  }
+}
+
+// ─── Submit button ────────────────────────────────────────────────────────────
+
+.submit-btn {
+  align-self: flex-start;
+  background: $link-color;
+  color: var(--bg-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6em 1.4em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.85;
+  }
+}
+
+// ─── Footer note bar ──────────────────────────────────────────────────────────
+
+.contact-note {
+  background: $bg-color-accent;
+  border-top: 0.5px solid $text-with-transparency;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+
+.note-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 10px;
+  color: $link-color;
+}
+
+.note-check {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: $link-color;
+  color: var(--bg-color);
+  font-size: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }

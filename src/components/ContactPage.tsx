@@ -32,76 +32,122 @@ function ContactPage() {
   }
 
   return (
-    <section className='main title-text pb-5' id='contact' style={{ minHeight: '100dvh' }}>
-      <h2>Interested in working together? Let's build something great.</h2>
-      <div className='contact mt-5'>
-        <form className="contact-form accent-background" onSubmit={sendEmail}>
-          <label htmlFor="emailFrom">Email:</label>
-          <input
-            pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
-            maxLength={64}
-            required
-            type="email"
-            name="email_from"
-            id="emailFrom"
-            className="w-100"
-            placeholder="person@example.com"
-          />
-          <label htmlFor="message">Message:</label>
-          <textarea
-            required
-            placeholder='Enter your message here, maxim 500 characters'
-            name="message"
-            maxLength={maxLength}
-            rows={5}
-            id="message"
-            className="w-100"
-            onChange={handleMessageChange}
-          ></textarea>
+    <section className="contact-section" id="contact">
+      <div className="contact-card">
 
-          <div className='mt-2 w-100'>
-            <ProgressBar
-              now={progressPercentage}
-              variant={getProgressVariant()}
-              animated
-              style={{ height: '8px' }}
-            />   <div style={{
-              fontSize: '0.875rem',
-              color: messageLength >= maxLength ? 'var(--danger, #dc3545)' : 'var(--text-color)',
-              textAlign: 'left'
-            }}>
-              {messageLength} / {maxLength} characters
+        {/* Header — same as CV mockup */}
+        <div className="contact-header">
+          <div className="contact-header__eyebrow">GET IN TOUCH</div>
+          <h2 className="contact-header__title">Interested in working together?</h2>
+          <p className="contact-header__summary">
+            I'm currently open to new opportunities. Whether you have a project in mind
+            or just want to say hi — my inbox is always open.
+          </p>
+          <div className="contact-header__meta">
+            <span className="meta-item"><span className="meta-dot" />Brașov, Romania</span>
+            <span className="meta-item"><span className="meta-dot" />david.gelu90@gmail.com</span>
+            <span className="meta-item"><span className="meta-dot" />+40 744 598 995</span>
+          </div>
+        </div>
+
+        {/* Body — 2 columns like CV mockup */}
+        <div className="contact-body">
+
+          {/* Sidebar */}
+          <aside className="contact-sidebar">
+            <div className="sidebar-section">
+              <div className="sidebar-section__title">Direct links</div>
+              <a href="mailto:david.gelu90@gmail.com" className="sidebar-link">
+                <i className="fa fa-envelope" aria-hidden="true" />
+                david.gelu90@gmail.com
+              </a>
+              <a href="tel:+40744598995" className="sidebar-link">
+                <i className="fa fa-mobile" aria-hidden="true" />
+                +40 744 598 995
+              </a>
+              <a href="https://linkedin.com/in/gelu-fanel-david" target="_blank" rel="noreferrer" className="sidebar-link">
+                <i className="fa fa-linkedin" aria-hidden="true" />
+                LinkedIn
+              </a>
+              <a href="https://github.com/david-gelu" target="_blank" rel="noreferrer" className="sidebar-link">
+                <i className="fa fa-github" aria-hidden="true" />
+                GitHub
+              </a>
+              <a href="https://davidgelu.netlify.app" target="_blank" rel="noreferrer" className="sidebar-link">
+                <i className="fa fa-globe" aria-hidden="true" />
+                Portfolio
+              </a>
             </div>
-          </div>
 
+            <div className="sidebar-section">
+              <div className="sidebar-section__title">Availability</div>
+              <div className="availability-badge">
+                <span className="availability-dot" />
+                Open to opportunities
+              </div>
+              <p className="availability-note">
+                Full-time projects. Remote or Brașov-based.
+              </p>
+            </div>
+          </aside>
 
+          {/* Main — form */}
+          <main className="contact-main">
+            <div className="form-section-title">Send a message</div>
+            <form className="contact-form" onSubmit={sendEmail}>
+              <div className="field-group">
+                <label htmlFor="emailFrom">Email</label>
+                <input
+                  pattern="[A-Za-z0-9._+\-']+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}"
+                  maxLength={64}
+                  required
+                  type="email"
+                  name="email_from"
+                  id="emailFrom"
+                  placeholder="person@example.com"
+                />
+              </div>
 
-          <motion.button className='btn btn-success' whileTap={{ scale: 0.85 }} type="submit">
-            Send message
-          </motion.button>
-        </form>
-        <div className='accent-background d-flex flex-column justify-content-center align-items-start gap-5 p-3 mb-5'>
-          <div className='d-flex align-items-center gap-3'>
-            <i className="icon-border fa fa-envelope" aria-hidden="true" />
-            <a href="mailto:david.gelu90@gmail.com" aria-label='email' className='d-flex flex-column align-items-start text-start gap-0'>
-              <span style={{ color: 'var(--text-color)', fontSize: '0.75rem' }}>Email: </span>
-              david.gelu90@gmail.com
-            </a>
-          </div>
-          <div className='d-flex align-items-center gap-3'>
-            <i className="icon-border fa fa-mobile" aria-hidden="true" />
-            <a href="tel:+4 0744 598 995" aria-label='phone number' className='d-flex flex-column align-items-start text-start gap-0'>
-              <span style={{ color: 'var(--text-color)', fontSize: '0.75rem' }}>Phone: </span>
-              +4 0744 598 995
-            </a>
-          </div>
-          <div className='d-flex align-items-center gap-3'>
-            <i className="icon-border fa fa-map-marker" aria-hidden="true" />
-            <span style={{ color: 'var(--link-color)' }} aria-label='location' className='d-flex flex-column align-items-start text-start gap-0'>
-              <span style={{ color: 'var(--text-color)', fontSize: '0.75rem' }}>Location: </span>
-              Brasov
-            </span>
-          </div>
+              <div className="field-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  required
+                  placeholder="Enter your message here…"
+                  name="message"
+                  maxLength={maxLength}
+                  rows={6}
+                  id="message"
+                  onChange={handleMessageChange}
+                />
+                <div className="char-track">
+                  <div
+                    className={`char-bar char-bar--${getProgressVariant()}`}
+                    style={{ width: `${progressPercentage}%` }}
+                  />
+                </div>
+                <div
+                  className={`char-count ${messageLength >= maxLength ? 'char-count--danger' : ''}`}
+                >
+                  {messageLength} / {maxLength}
+                </div>
+              </div>
+
+              <motion.button
+                className="submit-btn"
+                whileTap={{ scale: 0.94 }}
+                type="submit"
+              >
+                Send message
+              </motion.button>
+            </form>
+          </main>
+        </div>
+
+        {/* Footer note — same as ATS note bar */}
+        <div className="contact-note">
+          <div className="note-item"><span className="note-check">✓</span>Usually replies within 24h</div>
+          <div className="note-item"><span className="note-check">✓</span>Open to remote work</div>
+          <div className="note-item"><span className="note-check">✓</span>React / TypeScript / Node.js</div>
         </div>
       </div>
     </section>

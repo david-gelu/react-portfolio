@@ -29,7 +29,7 @@ const HomePage = () => {
                 </div>
                 <div className="tx-color mt-3">
                   WHAT I DO:
-                  <ul className="d-flex flex-column gap-2 mt-2 p-3 accent-background" style={{ borderRadius: '8px' }} >
+                  <ul className="d-flex flex-column gap-2 mx-auto mt-2 p-3 accent-background" style={{ borderRadius: '8px', maxWidth: '70%' }} >
                     <li>&#8226; Build scalable frontend architectures</li>
                     <li>&#8226; Develop reusable UI components</li>
                     <li>&#8226; Optimize performance and rendering</li>

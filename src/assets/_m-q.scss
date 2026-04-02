@@ -83,6 +83,7 @@
     flex-direction: column;
     .btns-skills-and-edu {
       flex-direction: row;
+      flex-wrap: wrap;
       min-width: min(20em, 80dvw);
       & > button {
         min-width: min(10em, 40dvw);
