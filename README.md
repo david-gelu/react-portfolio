@@ -1,65 +1,82 @@
-# 👋 Hi, I'm David
+# Interactive Portfolio — React + TypeScript
 
-Full-Stack Developer building scalable, high-performance web applications using React, Next.js, and TypeScript.
+> Personal developer portfolio showcasing projects, skills, and experience. Built with a focus on reusable components, clean architecture, and optimized rendering.
 
-I focus on clean architecture, reusable components, and performance optimization — turning complex ideas into fast, maintainable, and user-friendly solutions.
-
----
-
-## 🚀 Tech Stack
-- React, Next.js, TypeScript
-- React Query (server state management)
-- Node.js, MongoDB
-- Tailwind, SCSS, Bootstrap, Styled Components
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Netlify-00C7B7?style=flat-square&logo=netlify)](https://davidgelu.netlify.app)
+[![TypeScript](https://img.shields.io/badge/TypeScript-67.1%25-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![SCSS](https://img.shields.io/badge/SCSS-30.3%25-pink?style=flat-square&logo=sass)](https://sass-lang.com/)
+[![Tests](https://img.shields.io/badge/Tests-Cypress-17202C?style=flat-square&logo=cypress)](https://www.cypress.io/)
 
 ---
 
-## 💡 What I Do
-- Design scalable frontend architectures
-- Optimize performance and rendering behavior
-- Build reusable, maintainable component systems
-- Integrate APIs and manage data efficiently
-- Deliver responsive, user-focused interfaces
+## 📸 Preview
+
+ ![Portfolio Preview](./public/img/imgProjects/portfolio.webp)
+> 🔗 **[View live →](https://davidgelu.netlify.app)**
 
 ---
 
-## 📌 Featured Projects
+## ✨ Features
 
-### 🔹 Task Management App (Next.js + MongoDB)
-Full-stack application with infinite scroll and grouped data rendering.  
-Focused on performance, scalable data handling, and efficient UI updates.
-
-### 🔹 Interactive Portfolio (React + TypeScript)
-Modern portfolio with reusable components and optimized rendering.  
-Designed for performance, scalability, and smooth user experience.
-
-### 🔹 Interactive CV App
-Dynamic CV built as a web application with downloadable PDF support.  
-Focused on structured UI, accessibility, and extensibility.
-
-### 🔹 Image Transformer
-Real-time image processing tool with optimized rendering flow.  
-Ensures smooth interaction and responsive UI updates.
-
-### 🔹 Time Passed Since
-Utility app for real-time time calculations and updates.  
-Focused on accurate date handling and efficient rendering.
-
-### 🔹 Difference Checker
-Validation-based app handling input logic and edge cases.  
-Built with focus on reliability and predictable behavior.
+- **Project showcase** — filterable gallery of personal and professional projects with live demo and source code links
+- **Interactive CV** — downloadable PDF version of the resume built directly into the UI
+- **Responsive design** — optimized for all screen sizes
+- **Reusable component system** — modular architecture with typed props throughout
+- **Smooth navigation** — section-based layout with scroll and routing
+- **E2E tested** — Cypress test suite covering key user flows
 
 ---
 
-## ⚡ Strengths
-- Problem-solving mindset
-- Clean, maintainable code
-- Fast learner and adaptable
-- Strong team collaboration
-- Focus on performance and scalability
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 18 + TypeScript | UI framework |
+| Vite | Build tool & dev server |
+| SCSS | Component-level styling |
+| Tailwind CSS | Utility classes |
+| Cypress | End-to-end testing |
+| Yarn | Package management |
 
 ---
 
-## 📫 Contact
-- LinkedIn: https://linkedin.com/in/gelu-fanel-david
-- Portfolio: https://davidgelu.netlify.app
+
+## 📁 Project Structure
+
+```
+react-portfolio/
+├── cypress/           # E2E test suites
+├── public/            # Static assets
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── pages/         # Route-level views
+│   ├── assets/        # Images, icons, fonts
+│   └── styles/        # Global SCSS variables and mixins
+├── vite.config.ts
+├── tsconfig.json
+└── cypress.config.ts
+```
+
+---
+
+## 📌 Featured Projects (showcased in portfolio)
+
+| Project | Stack | Description |
+|---|---|---|
+| [Daily Tasks](https://github.com/david-gelu/time-manager) | React, Node.js, MongoDB, Firebase | Full-stack task manager with Kanban, Calendar, and Time Zone Converter |
+| [Interactive CV](https://davidgelu-cv.netlify.app) | React, TypeScript | Dynamic CV with downloadable PDF export |
+| [Image Transformer](https://image-transformer-app.vercel.app) | React, TypeScript | Real-time image processing tool |
+| [Time Passed Since](https://time-passed.netlify.app/) | React, TypeScript | Real-time time calculation utility |
+| [Difference Checker](https://checker-js.netlify.app/) | React, TypeScript | Input validation and comparison tool |
+| [Tasks project](https://tasks-dv.vercel.app/)| Nextjs, TypeScript | Fullstack with Nextjs Auth |
+| [Books Project](https://booksproject.netlify.app/) | React, TypeScript | Book listing and management interface |
+
+---
+
+## 👤 Author
+
+**David Gelu-Fanel** — Full-Stack Developer
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-davidgelu.netlify.app-teal?style=flat-square)](https://davidgelu.netlify.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-gelu--fanel--david-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/gelu-fanel-david)
+[![GitHub](https://img.shields.io/badge/GitHub-david--gelu-black?style=flat-square&logo=github)](https://github.com/david-gelu)

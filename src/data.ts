@@ -83,7 +83,7 @@ const loadImages = async () => {
       imgUrl: images['img-transformer'],
       title: 'Image Transformer',
       imgDesc: 'Image transformer project made in Next.js',
-      projectLink: 'https://image-transformer-app.vercel.app//',
+      projectLink: 'https://image-transformer-app.vercel.app/',
       projectGit: 'https://github.com/david-gelu/image-transformer-app',
       teh: ['fab fa-js-square', 'fab fa-react', 'fab fa-sass'],
       desc: 'Built an image processing tool with real-time transformations and preview capabilities. Optimized rendering flow to ensure smooth interaction and minimal performance overhead, focusing on efficient updates and user responsiveness.'
