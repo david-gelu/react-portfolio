@@ -66,10 +66,17 @@
   gap: 1rem;
 }
 
-.project-title {
+p.project-title {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: $text-color;
+}
+
+.project-desc {
+  font-size: 0.8rem;
+  font-weight: 500;
+  height: 8rem;
+  overflow-y: auto;
 }
 
 .project-tech {

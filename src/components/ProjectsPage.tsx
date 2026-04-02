@@ -55,8 +55,9 @@ const ProjectsPage = () => {
               </div>
 
               <div className="project-info">
-                <p className="project-title">{p.title}</p>
-
+                <p className="project-title">{p.title}
+                  <div className="project-desc">{p.desc}</div>
+                </p>
                 <div className="project-tech">
                   {p.teh?.slice(0, 4).map((t: string, i: number) => (
                     <i key={i} className={t} />

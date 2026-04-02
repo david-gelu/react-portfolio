@@ -206,11 +206,11 @@ export const studies = [
 export const work = [
   {
     everseen: [
-      'Built scalable web applications using React, TypeScript, Node.js, and MongoDB.',
-      'Developed components and improved code maintainability by reduceing code duplication through reusable component patterns.',
-      'Optimized performance and rendering behavior to enhance user experience by optimizing component rendering.',
-      'Collaborated with designer to deliver responsive UIs and seamless user experiences across devices.',
-      'Worked in Agile teams using Jira and GitLab  for project management and version control and participated in code reviews to maintain code quality and share knowledge.'
+      'Developed and maintained a real-time analytics dashboard using React, TypeScript, Node.js, and MongoDB, serving enterprise clients across multiple regions',
+      'Built and maintained a library of reusable UI components used across the platform, reducing development time and improving consistency',
+      'Optimized rendering performance and front-end load times, contributing to measurably smoother user experience across data-heavy views',
+      'Collaborated closely with UX/UI designers in a cross-functional team of 3–5 developers to deliver responsive, user-focused interfaces',
+      'Worked in an Agile environment using Jira, Confluence, and GitLab — participating in sprint planning and code reviews',
     ]
   }
 ]

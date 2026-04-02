@@ -10,6 +10,7 @@ export type DataProjects = {
   imgDesc: string,
   projectLink: string,
   projectGit: string,
+  desc: string,
   teh: string[]
 }
 
