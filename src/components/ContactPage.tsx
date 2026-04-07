@@ -40,8 +40,7 @@ function ContactPage() {
           <div className="contact-header__eyebrow">GET IN TOUCH</div>
           <h2 className="contact-header__title">Interested in working together?</h2>
           <p className="contact-header__summary">
-            I'm currently open to new opportunities. Whether you have a project in mind
-            or just want to say hi — my inbox is always open.
+            My inbox is always open.
           </p>
           <div className="contact-header__meta">
             <span className="meta-item"><span className="meta-dot" />Brașov, Romania</span>
