@@ -1,5 +1,3 @@
-import '@cypress/react';
-
 declare global {
   namespace Cypress {
     interface Chainable {

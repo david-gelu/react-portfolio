@@ -1,29 +1,61 @@
 describe('WorkPage Component', () => {
   beforeEach(() => {
     cy.visit('/#jobs');
+    cy.get('div#jobs', { timeout: 10000 }).should('exist');
   });
 
-  it('should render the title of the page', () => {
-    cy.get('h2.title-text').should('have.text', 'Work');
+  it('should render the Work section', () => {
+    cy.get('div#jobs').should('exist');
+    cy.get('div#jobs').should('have.class', 'jobs');
   });
 
-  it('should display the job title', () => {
-    cy.get('h3.projects-titl').should('have.text', 'Web Developer Everseen');
+  it('should display the title "Work"', () => {
+    cy.get('h2.title-text').contains('Work').should('be.visible');
   });
 
-  it('should render all responsibilities from WorkContext', () => {
-    const responsibilities = [
-      'Component Development: Employed React, TypeScript, SCSS, Bootstrap, and Styled Components within a Node.js environment to develop reusable components and implement innovative features, ensuring cross-browser compatibility and consistent performance across platforms.',
-      'UI/UX Collaboration: Worked closely with UX/UI designers to transform design concepts into functional, user-friendly interfaces. Through ongoing collaboration, contributed to iterative design improvements, enhancing the overall user experience.',
-      'Agile Development: Experienced in Agile methodologies, utilizing tools such as Jira and Confluence to foster efficient collaboration and project management in fast-paced development environments. Proficient with GitLab for version control, ensuring code integrity, maintainability, and seamless team collaboration.',
-      'Scalable Interface Development: Skilled in building and optimizing scalable interfaces that deliver a seamless user experience, addressing diverse user needs and supporting business growth objectives.',
-      'Teamwork: A collaborative and results-driven team player, excels in dynamic team environments by leveraging collective expertise to achieve high-quality outcomes. Consistently contributes to project success through effective communication and shared problem-solving.',
-    ];
+  it('should display the job title "Web Developer Everseen"', () => {
+    cy.get('h3.projects-titl').contains('Web Developer Everseen').should('be.visible');
+  });
 
-    cy.get('.left h4').should('have.length', responsibilities.length);
+  it('should render the projects-image container', () => {
+    cy.get('div.projects-image').should('exist');
+  });
 
-    responsibilities.forEach((text, index) => {
-      cy.get('.left h4').eq(index).should('have.text', text);
+  it('should display all job responsibilities', () => {
+    cy.get('.left h4').should('have.length', 5);
+    cy.get('.left h4').each(($el) => {
+      cy.wrap($el).should('not.be.empty');
     });
+  });
+
+  it('should display analytics dashboard responsibility', () => {
+    cy.get('.left h4').contains('analytics dashboard').should('exist');
+  });
+
+  it('should display components library responsibility', () => {
+    cy.get('.left h4').contains('library of reusable UI components').should('exist');
+  });
+
+  it('should display performance optimization responsibility', () => {
+    cy.get('.left h4').contains('rendering performance').should('exist');
+  });
+
+  it('should display UX/UI collaboration responsibility', () => {
+    cy.get('.left h4').contains('UX/UI designers').should('exist');
+  });
+
+  it('should display Agile environment responsibility', () => {
+    cy.get('.left h4').contains('Agile environment').should('exist');
+  });
+
+  it('should have proper structure with .left container', () => {
+    cy.get('.left').should('exist');
+    cy.get('.left h4').should('have.length', 5);
+  });
+
+  it('should contain specific technologies mentioned in responsibilities', () => {
+    cy.get('.left h4').contains('React').should('exist');
+    cy.get('.left h4').contains('TypeScript').should('exist');
+    cy.get('.left h4').contains('MongoDB').should('exist');
   });
 });

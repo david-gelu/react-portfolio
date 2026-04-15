@@ -1,6 +1,6 @@
 import { defineConfig } from "cypress";
 
-module.exports = defineConfig({
+export default defineConfig({
   e2e: {
     baseUrl: "http://localhost:3000",
     supportFile: "cypress/support/e2e.ts",
@@ -8,8 +8,9 @@ module.exports = defineConfig({
 
   component: {
     devServer: {
-      framework: "create-react-app",
-      bundler: "webpack",
+      framework: "react",
+      bundler: "vite",
     },
+    specPattern: "cypress/component/**/*.cy.{js,jsx,ts,tsx}",
   },
 });

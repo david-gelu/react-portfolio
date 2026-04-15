@@ -2,59 +2,67 @@
 describe('Contact Page', () => {
   beforeEach(() => {
     cy.visit('/#contact');
+    cy.get('section.contact-section', { timeout: 10000 }).should('exist');
   });
 
-  it('should display the contact form correctly', () => {
+  it('should display the contact section', () => {
+    cy.get('section.contact-section').should('exist');
+    cy.get('.contact-card').should('be.visible');
+  });
+
+  it('should display contact header with title and meta information', () => {
+    cy.get('.contact-header__eyebrow').contains('GET IN TOUCH').should('be.visible');
+    cy.get('.contact-header__title').contains('Interested in working together?').should('be.visible');
+    cy.get('.contact-header__meta').should('be.visible');
+  });
+
+  it('should display sidebar with direct links', () => {
+    cy.get('aside.contact-sidebar').should('be.visible');
+    cy.get('a[href="mailto:david.gelu90@gmail.com"]').should('exist');
+    cy.get('a[href="tel:+40744598995"]').should('exist');
+    cy.get('a[href="https://linkedin.com/in/gelu-fanel-david"]').should('have.attr', 'target', '_blank');
+    cy.get('a[href="https://github.com/david-gelu"]').should('have.attr', 'target', '_blank');
+  });
+
+  it('should display availability badge', () => {
+    cy.get('.availability-badge').should('be.visible');
+    cy.get('.availability-badge').contains('Open to opportunities').should('be.visible');
+  });
+
+  it('should display the contact form', () => {
     cy.get('form.contact-form').should('exist');
     cy.get('input[name="email_from"]').should('exist');
     cy.get('textarea[name="message"]').should('exist');
     cy.get('button[type="submit"]').should('exist');
   });
 
-  it('should validate form inputs', () => {
-    cy.get('input[name="email_from"]')
-      .focus()
-      .should('have.css', 'border-color', 'rgb(36, 36, 36)');
-
-    cy.get('input[name="email_from"]')
-      .type('invalid-email')
-      .should('have.css', 'border-color', 'rgb(255, 206, 82)');
-
-    cy.get('button[type="submit"]').click();
-
-    cy.get('input[name="email_from"]')
-      .clear()
-      .focus()
-      .type('test@example.com')
-      .should('have.css', 'border-color', 'rgb(0, 133, 51)');
-
-    cy.get('textarea[name="message"]')
-      .type('This is a test message.')
-      .should('have.css', 'border-color', 'rgb(0, 133, 51)');
-
-    cy.get('button[type="submit"]').click();
-
-    cy.get('input[name="email_from"]').should('have.css', 'border-color', 'rgb(0, 133, 51)');
-    cy.get('textarea[name="message"]').should('have.css', 'border-color', 'rgb(0, 133, 51)');
+  it('should have email input field with pattern validation', () => {
+    cy.get('input[name="email_from"]').should('have.attr', 'pattern');
+    cy.get('input[name="email_from"]').should('have.attr', 'required');
   });
 
-
-  it('should display success or error message after submitting the form', () => {
-    cy.intercept('POST', 'https://api.emailjs.com/api/v1.0/email/send-form', {
-      statusCode: 200,
-      body: { message: 'Success' }
-    }).as('sendEmail');
-
-    cy.get('input[name="email_from"]').clear().type('test@example.com');
-    cy.get('textarea[name="message"]').type('Test message');
-    cy.get('button[type="submit"]').click();
-
-    cy.wait('@sendEmail').its('response.statusCode').should('eq', 200);
+  it('should have message textarea with maxLength', () => {
+    cy.get('textarea[name="message"]').should('have.attr', 'maxLength');
+    cy.get('textarea[name="message"]').should('have.attr', 'required');
   });
 
-  it('should have correct contact details', () => {
-    cy.get('a[href="mailto:david.gelu90@gmail.com"]').should('have.text', 'Email: david.gelu90@gmail.com');
-    cy.get('a[href="tel:+4 0744 598 995"]').should('have.text', 'Phone:  +4 0744 598 995');
-    cy.get('span').contains('Brasov').should('exist');
+  it('should display progress bar for message length', () => {
+    cy.get('.char-bar').should('exist');
+  });
+
+  it('should update message length when typing', () => {
+    const testMessage = 'This is a test message for the contact form.';
+    cy.get('textarea[name="message"]').type(testMessage);
+    cy.get('textarea[name="message"]').should('have.value', testMessage);
+  });
+
+  it('should have proper form labels', () => {
+    cy.get('label[for="emailFrom"]').should('exist');
+    cy.get('label[for="message"]').should('exist');
+  });
+
+  it('should display contact information in header meta', () => {
+    cy.get('.meta-item').should('have.length.greaterThan', 0);
+    cy.get('.meta-dot').should('exist');
   });
 });

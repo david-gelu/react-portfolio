@@ -55,12 +55,12 @@ const HomePage = () => {
                     </a>
                   </TooltipWrap>
                   <TooltipWrap desc='https://www.linkedin.com/in/gelu-fanel-david/'>
-                    <a target={'_blank'} href="https://www.linkedin.com/in/gelu-fanel-david/" aria-label='linkedin' className='d-flex flex-column text-center btn-outline-success'>
+                    <a target='_blank' href="https://www.linkedin.com/in/gelu-fanel-david/" aria-label='linkedin' className='d-flex flex-column text-center btn-outline-success'>
                       <i className="fab fa-linkedin" aria-hidden="true" />
                     </a>
                   </TooltipWrap>
                   <TooltipWrap desc='Github repo'>
-                    <a target={'_blank'} href="https://github.com/david-gelu/react-portfolio" aria-label='github repo' className='d-flex flex-column text-center btn-outline-success'>
+                    <a target='_blank' href="https://github.com/david-gelu?tab=repositories" aria-label='github repo' className='d-flex flex-column text-center btn-outline-success'>
                       <i className="fab fa-github" aria-hidden="true" />
                     </a>
                   </TooltipWrap>
