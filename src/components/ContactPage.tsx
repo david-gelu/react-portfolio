@@ -145,7 +145,7 @@ function ContactPage() {
         {/* Footer note — same as ATS note bar */}
         <div className="contact-note">
           <div className="note-item"><span className="note-check">✓</span>Usually replies within 24h</div>
-          <div className="note-item"><span className="note-check">✓</span>Open to remote work</div>
+          {/* <div className="note-item"><span className="note-check">✓</span>Open to remote work</div> */}
           <div className="note-item"><span className="note-check">✓</span>React / TypeScript / Node.js</div>
         </div>
       </div>
