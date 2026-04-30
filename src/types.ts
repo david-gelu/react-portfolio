@@ -11,7 +11,8 @@ export type DataProjects = {
   projectLink: string,
   projectGit: string,
   desc: string,
-  teh: string[]
+  teh: string[],
+  tehUsed: string[]
 }
 
 // export type Studies = {

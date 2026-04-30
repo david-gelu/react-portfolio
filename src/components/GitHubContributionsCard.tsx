@@ -117,22 +117,18 @@ const GitHubContributionsCard = (): JSX.Element => {
   return (
     <div className="github-contributions-card">
       <div className="card-header">
-        <div className="header-info">
-          <h3 className="card-title">GitHub Contributions</h3>
-          <p className="card-subtitle">
-            {loading ? 'Loading...' : `${totalContributions} contributions in ${year}`}
-          </p>
-        </div>
+        <a
+          href={`https://github.com/${username}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="github-link"
+        >
+          @{username} →
+        </a>
+        <span className="card-subtitle">
+          {loading ? 'Loading...' : `${totalContributions} contributions in ${year}`}
+        </span>
       </div>
-
-      <a
-        href={`https://github.com/${username}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="github-link"
-      >
-        @{username} →
-      </a>
 
       {error && !loading && <div className="error-message"> ⚠️ Could not fetch GitHub contributions. Please try again later. </div>}
 

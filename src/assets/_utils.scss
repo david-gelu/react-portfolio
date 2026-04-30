@@ -6,6 +6,86 @@ section {
   padding-inline: 1em;
 }
 
+.section {
+  position: relative;
+  padding: 4rem 0 0;
+  overflow: hidden;
+}
+
+// ─── Header ────────────────────────────────────────────────────────────────
+
+.header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.eyebrow {
+  font-size: 0.68rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: $link-color-accent;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 800;
+  color: $text-color;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  margin: 0;
+  text-align: left;
+}
+
+.header-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, $link-color, transparent);
+  margin-bottom: 0.5rem;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: $link-color;
+  animation: blink 2s infinite;
+  display: inline-block;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.25;
+  }
+}
+
+.badge-container {
+  border-radius: 100px;
+  background: $bg-color-accent;
+  color: $link-color;
+  padding: 0.25em 0.75em;
+  border: 1px solid $link-color;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  font-size: 0.75rem;
+}
+
 .left {
   text-align: left;
 }

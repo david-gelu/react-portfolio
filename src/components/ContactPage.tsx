@@ -32,7 +32,17 @@ function ContactPage() {
   }
 
   return (
-    <section className="contact-section" id="contact">
+    <section className="section" style={{ paddingBottom: '5em' }} id="contact">
+
+      <div aria-hidden="true" />
+
+      <div className="header">
+        <div className="header-left">
+          <span className="eyebrow">// informations</span>
+          <h2 className="title">Contact</h2>
+        </div>
+        <div className="header-line" />
+      </div>
       <div className="contact-card">
 
         {/* Header — same as CV mockup */}

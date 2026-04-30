@@ -43,14 +43,14 @@ const AppContent = () => {
           >
             <ProjectsProvider>
               <ProjectsPage />
+              <StudyProvider>
+                <WorkProvider>
+                  <SoftSkillsProvider>
+                    <AboutMePage />
+                  </SoftSkillsProvider >
+                </WorkProvider>
+              </StudyProvider>
             </ProjectsProvider>
-            <StudyProvider>
-              <WorkProvider>
-                <SoftSkillsProvider>
-                  <AboutMePage />
-                </SoftSkillsProvider >
-              </WorkProvider>
-            </StudyProvider>
             <ContactPage />
           </motion.div>
         )}

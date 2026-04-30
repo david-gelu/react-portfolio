@@ -36,7 +36,8 @@ const NavBar = () => {
       })
     }
 
-    return scrollY.onChange(handleScroll)
+    const unsubscribe = scrollY.on("change", handleScroll)
+    return unsubscribe
   }, [scrollY, linkData])
 
   // const install = () => {

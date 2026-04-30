@@ -1,31 +1,31 @@
 @use "./variables.scss" as *;
 @use "./utils.scss" as *;
 
-.professional-title {
-  color: $text-color;
-  h3 {
-    color: $text-color;
-    width: 100%;
-    text-align: start;
-  }
-}
-.bio-desc {
-  max-width: 60ch;
-  font-size: clamp(1.2rem, 3vh + 0.7rem, 1.2rem);
-  margin: 0 auto;
-  text-align: left;
-  color: $text-color;
-}
+// .professional-title {
+//   color: $text-color;
+//   h3 {
+//     color: $text-color;
+//     width: 100%;
+//     text-align: start;
+//   }
+// }
+// .bio-desc {
+//   max-width: 60ch;
+//   font-size: clamp(1.2rem, 3vh + 0.7rem, 1.2rem);
+//   margin: 0 auto;
+//   text-align: left;
+//   color: $text-color;
+// }
 
-.professional {
-  color: $text-color;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 5em;
-  text-align: left;
-  font-size: 1rem;
-}
+// .professional {
+//   color: $text-color;
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   gap: 5em;
+//   text-align: left;
+//   font-size: 1rem;
+// }
 
 // .skills {
 
@@ -71,9 +71,39 @@
 //   }
 // }
 
+// ── Grid-ul principal ───────────────────────────────
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: $bg-color-accent;
+  border: 1px solid $link-color-accent;
+  border-radius: 1rem;
+  overflow: hidden;
+  color: $text-color;
+}
+
+.about-cell {
+  background: $bg-color;
+  padding: 1.4rem 1.5rem;
+}
+
+.about-cell-wide {
+  grid-column: span 2;
+}
+// ── Responsive ──────────────────────────────────────
+@media (max-width: 640px) {
+  .about-grid {
+    grid-template-columns: 95dvw;
+  }
+  .about-cell-wide {
+    grid-column: span 1;
+  }
+}
+
 .btns-skills-and-edu {
   @include display(null, null, column);
-  gap: 1.5rem;
+  gap: 0.5rem;
   min-width: min(20em, 40dvw);
   & button {
     min-width: min(10em, 20dvw);
@@ -83,7 +113,7 @@
   display: grid;
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
-  gap: 3em;
+  gap: 1em;
   padding: 0.5em;
   padding-right: 1em;
   font-size: 1rem;
@@ -91,32 +121,39 @@
   overflow-y: auto;
   word-wrap: break-word;
 
-  &:hover > :not(:is(.skill-icon-container, .study-card):hover) {
-    filter: blur(0.1em);
-    transition: filter 0.03s ease;
-  }
+  // &:hover > :not(:is(.skill-icon-container, .study-card):hover) {
+  //   filter: blur(0.1em);
+  //   transition: filter 0.03s ease;
+  // }
 
   &.skills-container {
-    grid-template-columns: repeat(auto-fit, minmax(5em, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+
+    // grid-template-columns: repeat(auto-fill, minmax(18ch, 1fr));
+    gap: 1em;
   }
 
   & :is(.skill-icon-container, .study-card) {
     background-color: $bg-color-accent;
     outline: 2px solid $link-color-accent;
+    font-size: 0.75rem;
     outline-offset: 2px;
-    padding: 1em;
-    border-radius: 1em;
+    padding: 0.5em 1em;
+    border-radius: 0.1em;
     transition: outline 0.25s linear;
-
+    flex: 1;
+    text-align: center;
     &:hover {
       outline: 2px solid $link-color;
     }
   }
 
   & svg {
-    width: 3em;
-    height: 3em;
-    border-radius: 1em;
+    width: 1em;
+    height: 1em;
+    padding: 0.2em;
+    border-radius: 0.2em;
     transition:
       outline 0.25s linear,
       fill 0.25s linear;
