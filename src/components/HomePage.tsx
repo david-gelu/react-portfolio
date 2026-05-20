@@ -11,7 +11,29 @@ const HomePage = () => {
   const fetchAllQuotes = async () => {
     const url = `https://dummyjson.com/quotes?limit=100`;
 
-    const categories = ['success', 'motivation', 'work', 'focus', 'productive', 'action', 'do', 'goal', 'progress', 'effort', 'achieve', 'discipline', 'imagination', 'dream'];
+    const categories = ['Change',
+      'Choice',
+      'Confidence',
+      'Courage',
+      'Dreams',
+      'Excellence',
+      'Failure',
+      'Freedom',
+      'Future',
+      'Happiness',
+      'Inspiration',
+      'Kindness',
+      'Leadership',
+      'Life',
+      'Living',
+      'Love',
+      'Success',
+      'Work',
+      'Motivation',
+      'Perseverance',
+      'Resilience',
+      'Self-Improvement',
+      'Strength'];
 
     try {
       const res = await fetch(url);
