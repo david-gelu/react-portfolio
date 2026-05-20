@@ -1,9 +1,58 @@
-import { Suspense, lazy } from "react"
+import { Suspense, lazy, useEffect, useState } from "react"
 import TerminalCodeEditorCard from "./TerminalCodeEditorCard"
 import { motion } from 'framer-motion';
+import { LuRefreshCcw } from "react-icons/lu";
+import { Button } from "react-bootstrap";
 const TooltipWrap = lazy(() => import('./TooltipWrap'))
 
 const HomePage = () => {
+  const [quote, setQuote] = useState<{ quote: string, author: string } | null>(null)
+  const [filteredQuotesList, setFilteredQuotesList] = useState<any[]>([]);
+  const fetchAllQuotes = async () => {
+    const url = `https://dummyjson.com/quotes?limit=100`;
+
+    const categories = ['success', 'motivation', 'work', 'focus', 'productive', 'action', 'do', 'goal', 'progress', 'effort', 'achieve', 'discipline', 'imagination', 'dream'];
+
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error("Error getting data from API");
+
+      const data = await res.json();
+
+      if (data && data.quotes && data.quotes.length > 0) {
+        const filtered = data.quotes.filter((citat: any) => {
+          const quote = citat.quote.toLowerCase();
+          return categories.some(cuvant => quote.includes(cuvant));
+        });
+
+        const finalList = filtered.length > 0 ? filtered : data.quotes;
+
+        setFilteredQuotesList(finalList);
+
+        const randomQuote = finalList[Math.floor(Math.random() * finalList.length)];
+        setQuote({
+          quote: randomQuote.quote,
+          author: randomQuote.author,
+        });
+      }
+    } catch (err) {
+      console.error("API Error:", err);
+    }
+  };
+
+  const handleNextQuoteClick = () => {
+    if (filteredQuotesList.length > 0) {
+      const randomQuote = filteredQuotesList[Math.floor(Math.random() * filteredQuotesList.length)];
+      setQuote({
+        quote: randomQuote.quote,
+        author: randomQuote.author,
+      });
+    }
+  };
+
+  useEffect(() => {
+    fetchAllQuotes();
+  }, []);
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5 }}>
@@ -66,12 +115,35 @@ const HomePage = () => {
                   </TooltipWrap>
                 </div>
               </div>
+              <div>
+                {quote ? (
+                  <div className="d-flex flex-column align-items-center justify-content-center">
+                    <blockquote className="m-0">
+                      <p style={{ fontSize: '0.9rem', fontWeight: 'bold', fontStyle: 'italic' }}>
+                        "{quote.quote}"
+                        <cite style={{ marginLeft: '0.5rem', fontSize: '0.75rem', fontWeight: 'normal', fontStyle: 'normal', color: 'var(--text-color)' }}>— {quote.author}</cite>
+                      </p>
+                    </blockquote>
+
+                    <Button
+                      onClick={handleNextQuoteClick}
+                      variant={'outline-success'}
+                      size="sm"
+                      className="m-auto"
+                    >
+                      <LuRefreshCcw /> New quote
+                    </Button>
+                  </div>
+                ) : (
+                  <p>Loading quote...</p>
+                )}
+              </div>
             </div>
-          </Suspense>
-        </div>
-      </section>
+          </Suspense >
+        </div >
+      </section >
       <TerminalCodeEditorCard />
-    </motion.div>
+    </motion.div >
   )
 }
 
