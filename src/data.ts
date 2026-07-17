@@ -78,18 +78,18 @@ const loadImages = async () => {
       key: 'js',
       imgUrl: images['tasks'],
       title: 'Tasks project',
-      imgDesc: 'Tasks project made in Next.js',
+      imgDesc: 'Tasks project made in Nextjs',
       projectLink: 'https://tasks-dv.vercel.app/',
       projectGit: 'https://github.com/david-gelu/tasks',
       teh: ['fab fa-react', 'fab fa-js-square', 'fab fa-node-js'],
       tehUsed: ['NextJs', 'Typescript', 'Prisma', 'MongoDB', 'NextAuth', 'REST API design', 'Git / GitHub / GitLab',],
-      desc: 'Full-stack task management system built with Next.js, Prisma, and MongoDB. Features infinite scrolling and grouped data rendering for optimized UI performance and efficient backend querying.'
+      desc: 'Full-stack task management system built with Nextjs, Prisma, and MongoDB. Features infinite scrolling and grouped data rendering for optimized UI performance and efficient backend querying.'
     },
     {
       key: 'js',
       imgUrl: images['img-transformer'],
       title: 'Image Transformer',
-      imgDesc: 'Image transformer project made in Next.js',
+      imgDesc: 'Image transformer project made in Nextjs',
       projectLink: 'https://image-transformer-app.vercel.app/',
       projectGit: 'https://github.com/david-gelu/image-transformer-app',
       teh: ['fab fa-react', 'fab fa-js-square', 'fab fa-sass'],

@@ -2,11 +2,11 @@
 describe('Contact Page', () => {
   beforeEach(() => {
     cy.visit('/#contact');
-    cy.get('section.contact-section', { timeout: 10000 }).should('exist');
+    cy.get('section#contact', { timeout: 10000 }).should('exist');
   });
 
   it('should display the contact section', () => {
-    cy.get('section.contact-section').should('exist');
+    cy.get('section#contact').should('exist');
     cy.get('.contact-card').should('be.visible');
   });
 
@@ -22,6 +22,7 @@ describe('Contact Page', () => {
     cy.get('a[href="tel:+40744598995"]').should('exist');
     cy.get('a[href="https://linkedin.com/in/gelu-fanel-david"]').should('have.attr', 'target', '_blank');
     cy.get('a[href="https://github.com/david-gelu"]').should('have.attr', 'target', '_blank');
+    cy.get('a[href="https://davidgelu.netlify.app"]').should('have.attr', 'target', '_blank');
   });
 
   it('should display availability badge', () => {

@@ -11,7 +11,7 @@ describe('HomePage Tests', () => {
   it('should display the logo with name and title', () => {
     cy.contains('David Gelu').should('be.visible');
     cy.contains('Software Developer').should('be.visible');
-    cy.contains('Software Developer focused on building fast, scalable').should('be.visible');
+    cy.contains('Software Developer with 4+ years of experience').should('be.visible');
   });
 
   it('should display WHAT I DO section with list items', () => {

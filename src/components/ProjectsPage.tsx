@@ -8,7 +8,7 @@ import TooltipWrap from './TooltipWrap'
 
 const FILTERS = [
   { label: 'All', key: 'all' },
-  { label: 'Ts / React / Next.js', key: 'js' },
+  { label: 'Ts / React / Nextjs', key: 'js' },
   { label: 'HTML / CSS / SCSS', key: 'css' },
 ]
 

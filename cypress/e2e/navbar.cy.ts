@@ -27,10 +27,13 @@ describe('NavBar Tests', () => {
     cy.get('i.fas.fa-laptop-code').should('exist');
     cy.get('i.fas.fa-address-card').should('exist');
     cy.get('i.fas.fa-briefcase').should('exist');
-    cy.get('i.fas.fa-solid.fa-at').should('exist');
+    cy.get('i.fas.fa-at').should('exist');
   });
 
   it('should navigate to each section when clicking links', () => {
+    // Wait for other components to become visible (typing animation completes)
+    cy.get('#projects', { timeout: 15000 }).should('be.visible');
+
     linkData.forEach((link) => {
       cy.get(`a[href="#${link.id}"]`).click();
       cy.url().should('include', `#${link.id}`);

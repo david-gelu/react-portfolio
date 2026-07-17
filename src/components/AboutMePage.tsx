@@ -13,7 +13,6 @@ const skills = [
   'Bootstrap', 'HTML', 'CSS', 'Sass', 'Styled components',
   'Shadcn',
   'Tailwind',
-  'Styled components',
   'Javascript',
   'ReactJs',
   'React-query',
