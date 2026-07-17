@@ -75,7 +75,7 @@ react-portfolio/
 
 ## 👤 Author
 
-**David Gelu-Fanel** — Full-Stack Developer
+**David Gelu-Fanel** — Software Developer
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-davidgelu.netlify.app-teal?style=flat-square)](https://davidgelu.netlify.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-gelu--fanel--david-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/gelu-fanel-david)

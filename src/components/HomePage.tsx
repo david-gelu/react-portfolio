@@ -95,8 +95,9 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="tx-color mt-3">
-                  Full-Stack Developer focused on building fast, scalable, and maintainable web applications.{'\n'}
-                  I specialize in React, Node.js, and TypeScript — creating clean architectures and high-performance user interfaces.
+                  Software Developer with 4+ years of experience building real-time analytics dashboards and scalable web applications using React, TypeScript,
+                  Node.js and MongoDB. Focused on performance optimization, reusable component systems, API integration and clean, maintainable architecture.
+                  Experienced in Agile teams of 3–6 developers.
                 </div>
                 <div className="tx-color mt-3">
                   WHAT I DO:

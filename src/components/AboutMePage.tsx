@@ -10,9 +10,31 @@ const WorkPage = React.lazy(() => import("./WorkPage"))
 const TooltipWrap = React.lazy(() => import("./TooltipWrap"))
 
 const skills = [
-  'JavaScript', 'TypeScript', 'ReactJs', 'NodeJs', 'MongoDb',
-  'NextJs', 'GitHub', 'Gitlab', 'Shadcn', 'Sass',
-  'Bootstrap', 'HTML', 'CSS', 'Styled components'
+  'Bootstrap', 'HTML', 'CSS', 'Sass', 'Styled components',
+  'Shadcn',
+  'Tailwind',
+  'Styled components',
+  'Javascript',
+  'ReactJs',
+  'React-query',
+  'Typescript',
+  'Framer Motion',
+  'DayJs',
+  'Jimp',
+  'NodeJs',
+  'Express',
+  'NextJs',
+  'Prisma',
+  'NextAuth',
+  'Firebase',
+  'MongoDB',
+  'PostgreSQL',
+  'SQLite',
+  'REST API design',
+  'Git / GitHub / GitLab',
+  'Postman',
+  'Docker',
+  'Agile / Jira / Confluence',
 ]
 
 const skillKeyMap: Record<string, string> = {
@@ -48,7 +70,7 @@ const AboutMePage = () => {
           <span className="d-flex gap-2 align-items-center pb-3" style={{ fontSize: '0.85rem', opacity: '0.7' }}><span className="dot" /> IDENTITY</span>
           <div >
             <h3 className="d-flex gap-2 align-items-center">
-              Full-Stack Developer: 4+ years</h3>
+              Software Developer: 4+ years</h3>
             <h4>
               I specialize in React, Node.js, and TypeScript — clean, scalable architectures and high-performance interfaces.</h4>
             <h3><strong>What I do?</strong></h3>
@@ -56,7 +78,7 @@ const AboutMePage = () => {
             </h4>
             <h3><strong>What I'm exploring?</strong></h3>
             <h4>
-              Currently expanding backend skills with Node.js, MongoDB, and Express. Always eager to learn new technologies and best practices in web development.
+              Currently expanding backend skills with Node.js, MongoDB, PostgreSQL and Express. Always eager to learn new technologies and best practices in web development.
             </h4>
             <h4>
               Want to see my work? Head over to
@@ -92,7 +114,7 @@ const AboutMePage = () => {
                       <TooltipWrap
                         key={skillKeyMap[skill] ?? skill}
                         placement="top"
-                        desc={skillUsedIn ? `Used in: ${skillUsedIn}` : 'No projects using this skill yet'}
+                        desc={skillUsedIn ? `Used in: ${skillUsedIn}` : 'Not yet implemented in any personal projects.'}
                       >
                         <div
                           className="skill-icon-container"

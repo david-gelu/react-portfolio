@@ -10,7 +10,7 @@ describe('AboutMePage', () => {
 
   it('should display professional summary sections', () => {
     cy.contains('h3', 'Greetings!').should('be.visible')
-    cy.contains('Full-Stack Developer with 4+ years of experience').should('be.visible')
+    cy.contains('Software Developer with 4+ years of experience').should('be.visible')
   })
 
   it('should display what I do section', () => {
